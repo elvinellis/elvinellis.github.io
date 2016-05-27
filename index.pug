@@ -1,0 +1,33 @@
+---
+layout: exposure
+title: Elvin &amp; Ellis
+permalink: /index
+---
+header
+	#cover(style="background-image:url(https://4.bp.blogspot.com/-IrxKXsw6Br4/V0Y5vg1zCoI/AAAAAAABVpY/Hw6xP7cQALMp2i_m-BZUZCTQH4lYPFlAgCLcB/s1600/P1060748.jpg)")
+		.content
+			h1 Elvin &amp; Ellis
+			h2 Merry Adventures
+			.date Est. 2013
+
+mixin square(link, title, description, date)
+	.square
+		.bg&attributes(attributes)
+			a(href=link)
+				.description
+					h4 #{title}
+					h5 #{description}
+					.date #{date}	
+.panel
+	h2 Romance
+	.story Made of love
+	+square("wedding","Wedding","We got married","June 2015")(style="background-image:url(http://4.bp.blogspot.com/-pUQO47Q3ymk/Veb7cWuxQ-I/AAAAAAABEA8/l8gylBtUPj8/s400/0053.jpg)")
+	+square("","","","","")(style="background-image:url()")
+.clear
+.panel
+	h2 Travel
+	.story Pack your bags and go on a journey of fun.
+	+square("https://4.bp.blogspot.com/-IrxKXsw6Br4/V0Y5vg1zCoI/AAAAAAABVpY/Hw6xP7cQALMp2i_m-BZUZCTQH4lYPFlAgCLcB/s400/P1060748.jpg", "penang", "Penang", "Hot Summer", "May 2016")
+	+square("","nellim","Nellim","Winter wonderland","Jan 2016")
+	+square("","","","","")
+.clear
