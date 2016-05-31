@@ -10,8 +10,8 @@
 ">
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Roboto+Condensed:700'>
 		<link rel="stylesheet" href="/css/colorbox.css" />
-		<link rel="canonical" href="http://yourdomain.com/index">
-		<link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml">
+		<link rel="canonical" href="http://elvinellis.com/index">
+		<link rel="alternate" type="application/rss+xml" title="Elvin & Ellis" href="http://elvinellis.com/feed.xml">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script src="/js/photoset.min.js"></script>
 		<script src="/js/jquery.colorbox.js"></script>
@@ -99,14 +99,13 @@ header{
 	top: 54%;
 	width: 100%;
 	margin-top: -122px;
-	padding: 0 20%;
+	padding: 0 15%;
 	box-sizing: border-box;
 }
 
 #cover h1{
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	font-size: 65px;
 	font-size: 5.2vw;
 	line-height: 6vw;
 	margin: 0 0 1% 0;
@@ -115,10 +114,11 @@ header{
 #cover h2{
 	font-family: Lora, serif;
 	font-style: italic;
-	font-size: 2vw;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: normal;
 	margin-bottom: 1%;
+	margin-top: 1%
 }
 .date{
 	font-size: 12px;
@@ -225,7 +225,6 @@ header{
 	margin-top: 0;
 	margin-bottom: 5%;
 }
-
 .group{
 	position: relative;
 	text-align: left;
@@ -233,7 +232,6 @@ header{
 	margin: 0px auto;
 	margin-bottom: 6%;
 }
-
 .group h2{
 	line-height: normal;
 	font-size: 39px;
@@ -265,6 +263,44 @@ header{
 .photoset.wide{
 	margin-top: -4%;
 	margin-bottom: 6%;
+}
+
+@media (max-width: 1200px) {
+	.square {
+		width: 33%;
+		padding-bottom: 33%;
+	}
+}
+@media (max-width: 750px) {
+	#cover h2{
+		font-size: 16px;
+	}
+	.square{
+		width: 50%;
+		padding-bottom: 50%;
+	}
+	.group{
+			width: 100%
+	}
+	.group .story, .group h2{
+		width: 80%;
+	}
+	.group h2{
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 400px) {
+	#cover .content{
+		padding: 0 10%;
+	}
+	#cover h2{
+		font-size: 14px;
+	}
+	.square {
+		width: 100%;
+		padding-bottom: 100%;
+	}
 }
 
 .photo{
