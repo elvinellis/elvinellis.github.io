@@ -25,13 +25,13 @@ header
 					h5 {{ c.excerpt }}
 					.date {{ c.date | date: "%B %Y" }}
 {% endfor %}
-	//+square("wedding","Our Wedding","We got married","June 2015")(style="background-image:url(http://4.bp.blogspot.com/-pUQO47Q3ymk/Veb7cWuxQ-I/AAAAAAABEA8/l8gylBtUPj8/s400/0053.jpg)")
 .clear
 
 .panel
 	h2 Travel
 	.story Pack your bags and go on a journey of fun.
-{% for c in site.travel %}
+{% assign items = site.travel | sort: 'date' %}
+{% for c in items %}
 	.square
 		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s800" }})")
 			a(href="{{ c.permalink }}")
