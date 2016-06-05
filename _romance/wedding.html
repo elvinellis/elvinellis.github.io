@@ -1,16 +1,24 @@
+---
+cover: http://4.bp.blogspot.com/-pUQO47Q3ymk/Veb7cWuxQ-I/AAAAAAABEA8/l8gylBtUPj8/s1600/0053.jpg
+title: Our Wedding
+excerpt: We got married
+author: Elvin
+date: June 2015
+permalink: /wedding
+---
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta content='width=device-width, initial-scale=1,user-scalable=no' name='viewport'/>
-		<meta content='http://4.bp.blogspot.com/-pUQO47Q3ymk/Veb7cWuxQ-I/AAAAAAABEA8/l8gylBtUPj8/s1600/0053.jpg' property='og:image'/>
-		<meta content='We got married' property='og:description'/>
+		<meta content='{{ page.cover }}' property='og:image'/>
+		<meta content='{{ page.excerpt }}' property='og:description'/>
 		<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic' rel='stylesheet' type='text/css'/>
 		<link href='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css' rel='stylesheet' type='text/css'/>
 		<link href='http://3.bp.blogspot.com/-eeJdpVYtoCg/VTM3Z8KDY4I/AAAAAAAA7BI/0pJkQtu7QmE/s1600/h8.jpg' rel='image_src'/>
-		<title>Elvin &amp; Ellis: Our Wedding</title>
+		<title>Elvin &amp; Ellis: {{ page.title }}</title>
 		<style>
 #b1{
-	background-image: url(http://4.bp.blogspot.com/-pUQO47Q3ymk/Veb7cWuxQ-I/AAAAAAABEA8/l8gylBtUPj8/s1600/0053.jpg);
+	background-image: url({{ page.cover }});
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

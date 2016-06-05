@@ -1,33 +1,43 @@
 ---
 layout: exposure
+cover: https://4.bp.blogspot.com/-IrxKXsw6Br4/V0Y5vg1zCoI/AAAAAAABVpY/Hw6xP7cQALMp2i_m-BZUZCTQH4lYPFlAgCLcB/s1600/P1060748.jpg
 title: Elvin & Ellis
+excerpt: Merry Adventures
 permalink: /index
 ---
 header
 	#cover(style="background-image:url(https://4.bp.blogspot.com/-IrxKXsw6Br4/V0Y5vg1zCoI/AAAAAAABVpY/Hw6xP7cQALMp2i_m-BZUZCTQH4lYPFlAgCLcB/s1600/P1060748.jpg)")
-		.content
-			h1 Elvin &amp; Ellis
-			h2 Merry Adventures
+		#title
+			h1 {{ page.title }}
+			h2 {{ page.excerpt }}
+		#narrated
 			.date Est. 2013
 
-mixin square(link, title, description, date)
-	.square
-		.bg&attributes(attributes)
-			a(href=link)
-				.description
-					h4 #{title}
-					h5 #{description}
-					.date #{date}	
 .panel
 	h2 Romance
 	.story A feeling of excitement and mystery associated with love.
-	+square("wedding","Our Wedding","We got married","June 2015")(style="background-image:url(http://4.bp.blogspot.com/-pUQO47Q3ymk/Veb7cWuxQ-I/AAAAAAABEA8/l8gylBtUPj8/s400/0053.jpg)")
+{% for c in site.romance %}
+	.square
+		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s500" }})")
+			a(href="{{ c.permalink }}")
+				.description
+					h4 {{ c.title }}
+					h5 {{ c.excerpt }}
+					.date {{ c.date | date: "%B %Y" }}
+{% endfor %}
+	//+square("wedding","Our Wedding","We got married","June 2015")(style="background-image:url(http://4.bp.blogspot.com/-pUQO47Q3ymk/Veb7cWuxQ-I/AAAAAAABEA8/l8gylBtUPj8/s400/0053.jpg)")
 .clear
+
 .panel
 	h2 Travel
 	.story Pack your bags and go on a journey of fun.
-	//+square( "penang", "Penang", "Hot Summer", "May 2016")(style="background-image:url(https://4.bp.blogspot.com/-IrxKXsw6Br4/V0Y5vg1zCoI/AAAAAAABVpY/Hw6xP7cQALMp2i_m-BZUZCTQH4lYPFlAgCLcB/s400/P1060748.jpg)")
-	+square("nellim","Winter in Nellim","Snow and Auroras","Jan 2016")(style="background-image:url(https://4.bp.blogspot.com/-SQgWkCpuEqE/V0WdYyUhNpI/AAAAAAABVmI/zvBWH07IhegNgDKn56ynTiD-tckor0HWACLcB/s400/)")
-	+square("finland","Finland Honeymooon","Helsinki, Suomenlinna and Porvoo","Jan 2016")(style="background-image:url(https://1.bp.blogspot.com/-GaS8DH1uwTE/V07WGAVoSOI/AAAAAAABVv8/LPOnWs2wRXEIK-CsGvM5ymlfTUcylgbjQCLcB/s1600/P1300505.jpg)")
-	//+square("","","","")(style="background-image:url()")
+{% for c in site.travel %}
+	.square
+		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s800" }})")
+			a(href="{{ c.permalink }}")
+				.description
+					h4 {{ c.title }}
+					h5 {{ c.excerpt }}
+					.date {{ c.date | date: "%B %Y" }}
+{% endfor %}
 .clear

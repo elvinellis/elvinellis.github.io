@@ -1,14 +1,21 @@
 ---
 layout: exposure
+label: travel
+cover: https://1.bp.blogspot.com/-GaS8DH1uwTE/V07WGAVoSOI/AAAAAAABVv8/LPOnWs2wRXEIK-CsGvM5ymlfTUcylgbjQCLcB/s1600/P1300505.jpg
 title: Finland Honeymoon
+excerpt: Helsinki Capital
+author: Ellis
+date: January 2016
 permalink: /finland
 ---
 header
-	#cover(style="background-image:url(https://1.bp.blogspot.com/-GaS8DH1uwTE/V07WGAVoSOI/AAAAAAABVv8/LPOnWs2wRXEIK-CsGvM5ymlfTUcylgbjQCLcB/s1600/P1300505.jpg)")
-		.content
-			h1 Finland Honeymoon
-			h2 Helsinki, Suomenlinna and Porvoo
-			.date January 2016
+	#cover(style="background-image:url({{ page.cover }})")
+		#title
+			h1 {{ page.title }}
+			h2 {{ page.excerpt }}
+		#narrated Narrated by 
+			span.author {{ page.author }}
+			.date {{ page.date | date: "%B %Y" }}
 .group
 	h2 Aleksanterinkatu
 	.story A metropolitan city filled with Art Nouveau, Neo-classicism, and Functionalism  architectures truly reflects its long history. It is no wonder that Helsinki hails for its design and high technology! Look at that pretty street on a random day! We got up early before the sun rose. The color of the sky and the lit buildings exude such romance. I could fall in love anytime!

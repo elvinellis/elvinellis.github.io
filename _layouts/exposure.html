@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="theme-color" content="#727272">
+		<meta name="theme-color" content="#000000">
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<meta content='{{ page.cover }}' property='og:image'/>
+		<meta content='{{ page.excerpt | escape }}' property='og:description'/>
 		<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Roboto+Condensed:700'>
 		<link rel="stylesheet" href="/css/colorbox.css" />
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script src="/js/photoset.min.js"></script>
 		<script src="/js/jquery.colorbox.js"></script>
@@ -91,7 +91,7 @@ header{
 	-o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
 	/* transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1); */
 }
-#cover .content{
+#cover #title{
 	position: absolute;
 	z-index: 6;
 	text-align: center;
@@ -103,7 +103,7 @@ header{
 	box-sizing: border-box;
 }
 
-#cover h1{
+#title h1{
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size: 5.2vw;
@@ -111,7 +111,7 @@ header{
 	margin: 0 0 1% 0;
 	text-align: center;
 }
-#cover h2{
+#title h2{
 	font-family: Lora, serif;
 	font-style: italic;
 	font-size: 18px;
@@ -119,6 +119,26 @@ header{
 	line-height: normal;
 	margin-bottom: 1%;
 	margin-top: 1%
+}
+
+#cover #narrated{
+	font-style: italic;
+	font-size: 20px;
+	margin-bottom: 5px;
+	position: absolute;
+	width: 100%;
+	bottom: 3%;
+	text-align: center;
+	z-index: 3;
+}
+
+#narrated .author{
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 19px;
+	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-left: 2px;
 }
 .date{
 	font-size: 12px;
@@ -213,7 +233,7 @@ header{
 	text-transform: uppercase;
 	margin-bottom: 0;
 	text-decoration: none;
-		font-style: normal;
+	font-style: normal;
 }
 
 .square h5 {
@@ -222,8 +242,11 @@ header{
 	font-style: italic;
 	font-size: 15px;
 	font-weight: 400;
-	margin-top: 0;
-	margin-bottom: 5%;
+	margin: 0 auto 5%;
+	width: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .group{
 	position: relative;
@@ -265,46 +288,6 @@ header{
 	margin-bottom: 6%;
 }
 
-@media (max-width: 1200px) {
-	.square {
-		width: 33%;
-		padding-bottom: 33%;
-	}
-	.group .story, .group h2{
-		width: 75%;
-	}
-}
-@media (max-width: 750px) {
-	#cover h2{
-		font-size: 16px;
-	}
-	.square{
-		width: 50%;
-		padding-bottom: 50%;
-	}
-	.group{
-			width: 100%
-	}
-	.group .story, .group h2{
-		width: 80%;
-	}
-	.group h2{
-		font-size: 30px;
-	}
-}
-
-@media (max-width: 400px) {
-	#cover .content{
-		padding: 0 10%;
-	}
-	#cover h2{
-		font-size: 14px;
-	}
-	.square {
-		width: 100%;
-		padding-bottom: 100%;
-	}
-}
 
 .photo{
 	position: relative;
@@ -329,7 +312,7 @@ footer ul li{
 
 #copyright{
 	text-align: center;
-	padding: 1.5% 0;
+	padding: 20px 0;
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -339,13 +322,53 @@ footer ul li{
 	text-decoration: none;
 	color: #000;
 }
+		@media (max-width: 1200px) {
+			.square {
+				width: 33%;
+				padding-bottom: 33%;
+			}
+			.group .story, .group h2{
+				width: 75%;
+			}
+		}
+		@media (max-width: 750px) {
+			#cover h2{
+				font-size: 16px;
+			}
+			.square{
+				width: 50%;
+				padding-bottom: 50%;
+			}
+			.group{
+				width: 100%
+			}
+			.group .story, .group h2{
+				width: 80%;
+			}
+			.group h2{
+				font-size: 30px;
+			}
+		}
+
+		@media (max-width: 400px) {
+			#cover .content{
+				padding: 0 10%;
+			}
+			#cover h2{
+				font-size: 14px;
+			}
+			.square {
+				width: 100%;
+				padding-bottom: 100%;
+			}
+		}
 	</style>
 	<body>
 		<div class="wrapper">
 			{{ content }}
 		</div>
 		<footer>
-			<div id="copyright"><a href="http://elvinellis.com">&copy; Elvin &amp; Ellis 2013 to 2016</a></div>
+			<div id="copyright"><a href="http://elvinellis.com">&copy; Elvin &amp; Ellis </a>2013 to 2016</div>
 		</footer>
 	</body>
 	<script>

@@ -1,14 +1,20 @@
 ---
 layout: exposure
+cover: https://3.bp.blogspot.com/-g5ByWmjflFI/V0WdbO02AhI/AAAAAAABVmk/6-Cx85a54dEQe2pnxUcYr_6ZHv-_VmARwCLcB/s1600/P1050433.jpg
 title: Winter in Nellim
+excerpt: In the remote north of Finland, we caught auroras and snow.
+author: Elvin
+date: January 2016
 permalink: /nellim
 ---
 header
-	#cover(style="background-image:url(https://3.bp.blogspot.com/-g5ByWmjflFI/V0WdbO02AhI/AAAAAAABVmk/6-Cx85a54dEQe2pnxUcYr_6ZHv-_VmARwCLcB/s1600/P1050433.jpg)")
-		.content
-			h1 Winter in Nellim
-			h2 In the remote north of Ivalo, Finland, we spent our honeymoon in snow and catching auroras.
-			.date January 2016
+	#cover(style="background-image:url({{ page.cover }})")
+		#title
+			h1 {{ page.title }}
+			h2 {{ page.excerpt }}
+		#narrated Narrated by 
+			span.author {{ page.author }}
+			.date {{ page.date | date: "%B %Y" }}
 .group
 	h2 Ivalo, Nellim
 	.story Touching down at the airport of Ivalo, we were picked up by the hotel driver along with another couple. The van embarked on the hour-long journey to Nellim. It was an endless road flanked by trees and covered in snow. The other cars were few and far apart in between on the drive. Under the snow blanket, there were no distinct landmarks to differentiate one area from the next. The arrival at the hotel was marked by the gentle deceleration and a large wooden board that read "EraHotelli Nellim". That translates to Wilderness Hotel.

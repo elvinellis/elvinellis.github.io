@@ -18,5 +18,12 @@ twitter_username: jekyllrb
 github_username:  jekyll
 host: 0.0.0.0
 
+# collections
+collections:
+    romance:
+            output: true
+    travel:
+            output: true
+
 # Build settings
 markdown: kramdown
