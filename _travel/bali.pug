@@ -1,0 +1,27 @@
+---
+layout: exposure
+label: travel
+cover: https://1.bp.blogspot.com/ZjiNyXTliYMvYjLQvur5V_NyL4U-C1n_eUUtysbmEi2VsBQgnWI49ey7GIPLmcMCo8nJrA=s1600
+title: Bali
+excerpt: Beach getaway
+author: Elvin
+date: 2015-9-28
+permalink: /bali
+---
+header
+	#cover(style="background-image:url({{ page.cover }})")
+		#title
+			h1 {{ page.title }}
+			h2 {{ page.excerpt }}
+		#narrated Narrated by 
+			span.author {{ page.author }}
+			.date {{ page.date | date: "%B %Y" }}
+.group
+	h2 Hard Rock Hotel
+	.story 
+	.photoset(data-layout="3213232323232")
+		img(src="")
+		img(src="")
+		img(src="")
+		img(src="")
+		img(src="")
