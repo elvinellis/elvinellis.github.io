@@ -37,6 +37,15 @@ body{
 h1, h2, h3, h4, h5{
 	font-family: 'Roboto Condensed', sans-serif;
 }
+
+a {
+	text-decoration: none;
+	color: #336699;
+}
+a:hover{
+	text-decoration: underline;
+}
+
 header{
 	height: 1000px;
 	height: 100vh;
@@ -370,6 +379,29 @@ footer ul li{
 	<body>
 		<div class="wrapper">
 			{{ content }}
+
+{% if page.collection == "travel" %}
+	{% assign items = site.travel | sort: 'date' %}
+	{% assign prev = 0 %}
+	{% assign next = 0 %}
+	{% for c in items %}
+		{% if next == 1 %}
+			{% assign next = c %}
+			{% break %}
+		{% endif %}
+		{% if c.url == page.url %}
+			{% if c != forloop.last %}
+				{% assign next = 1 %}
+			{% endif %}
+		{% else %}
+			{% assign prev = c %}
+		{% endif %}
+	{% endfor %}
+	<div style="text-align: center">
+		<p style="margin-bottom: 25px">&#8251;</p>
+		<a href="{{ prev.url }}">{{ prev.title }}</a> &nbsp; &lt; &nbsp; <a href="/">Home</a> &nbsp; &gt; &nbsp; <a href="{{ next.url }}">{{ next.title }}</a>
+	</div>
+{% endif %}
 		</div>
 		<footer>
 			<div id="copyright"><a href="http://elvinellis.com">&copy; Elvin &amp; Ellis </a>2013</div>
