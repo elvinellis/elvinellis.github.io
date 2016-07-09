@@ -25,6 +25,8 @@ collections:
             output: true
     travel:
             output: true
+    family:
+            output: true
 
 # Build settings
 markdown: kramdown
