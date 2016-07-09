@@ -308,8 +308,22 @@ header{
 	border: 5px solid #fff;
 }
 
-.video {
-	height: 45vw; width:100%; 
+.video{
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	margin: 5px 0 3% 0;
+}
+.video iframe {
+	/*
+	   height: 45vw; width:100%; 
+	 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 footer {
@@ -335,58 +349,69 @@ footer ul li{
 	text-decoration: none;
 	color: #000;
 }
-		@media (max-width: 1200px) {
-			.square {
-				width: 33%;
-				padding-bottom: 33%;
+			@media (max-width: 1200px) {
+				.square {
+					width: 33%;
+					padding-bottom: 33%;
+				}
+				.group .story, .group h2{
+					width: 75%;
+				}
 			}
-			.group .story, .group h2{
-				width: 75%;
+			@media (max-width: 750px) {
+				#cover h2{
+					font-size: 16px;
+				}
+				.square{
+					width: 50%;
+					padding-bottom: 50%;
+				}
+				.group{
+					width: 100%
+				}
+				.group .story, .group h2{
+					width: 80%;
+				}
+				.group h2{
+					font-size: 30px;
+				}
 			}
-		}
-		@media (max-width: 750px) {
-			#cover h2{
-				font-size: 16px;
-			}
-			.square{
-				width: 50%;
-				padding-bottom: 50%;
-			}
-			.group{
-				width: 100%
-			}
-			.group .story, .group h2{
-				width: 80%;
-			}
-			.group h2{
-				font-size: 30px;
-			}
-		}
 
-		@media (max-width: 400px) {
-			#cover .content{
-				padding: 0 10%;
+			@media (max-width: 400px) {
+				#cover .content{
+					padding: 0 10%;
+				}
+				#cover h2{
+					font-size: 14px;
+				}
+				.square {
+					width: 100%;
+					padding-bottom: 100%;
+				}
 			}
-			#cover h2{
-				font-size: 14px;
-			}
-			.square {
-				width: 100%;
-				padding-bottom: 100%;
-			}
-		}
 	</style>
 	<body>
 		<div class="wrapper">
-			<header><div id="cover" style="background-image:url(https://4.bp.blogspot.com/-aKdhT1jRACw/V37pMJkpmnI/AAAAAAABWvY/8_Av3OZOUlMxylu22mVmOth-jEY3OmDmQCLcB/s1600/IMG_0798.jpg)"><div id="title"><h1>2015</h1><h2>NDP, Istana</h2></div><div id="narrated">Narrated by <span class="author">Elvin</span><div class="date">January 2015</div></div></div></header><div class="group"><h2>National Day Parade</h2><div class="story"></div><div class="photoset" data-layout="232323232323"><img src="https://4.bp.blogspot.com/-aKdhT1jRACw/V37pMJkpmnI/AAAAAAABWvY/8_Av3OZOUlMxylu22mVmOth-jEY3OmDmQCLcB/s1600/IMG_0798.jpg"/><img src="https://2.bp.blogspot.com/-9bjzoO3i9W0/V37pMGDKjBI/AAAAAAABWvU/V3N1t5Owsn0hxSedrcq69VxTZXSoKEyPwCLcB/s1600/IMG_0800.jpg"/><img src="https://1.bp.blogspot.com/-enmXseLQIbk/V37pL2yDIPI/AAAAAAABWvQ/PJBMhqgawlkOsxSzEu-ljlS0I6XHGINhQCLcB/s1600/IMG_0802.jpg"/><img src="https://4.bp.blogspot.com/-lY5NPe_Dl8g/V37pNEIS7fI/AAAAAAABWvg/GSx5DDbbnbQhUBDFr7msfz7GyS2dDq7GQCLcB/s1600/IMG_0804.jpg"/><img src="https://2.bp.blogspot.com/-CKH6z-cv-4k/V37pMzOzwhI/AAAAAAABWvc/uwaR6D3CB30op2buOVbziaPeGnQWPefZwCLcB/s1600/IMG_0807.jpg"/><img src="https://1.bp.blogspot.com/-ngzOQJki_tw/V37pM_NmFoI/AAAAAAABWvk/KyQwYJLfIGomsDyPbVpfhjaByz4CblypwCLcB/s1600/IMG_0812.jpg"/><img src="https://1.bp.blogspot.com/-LOU56Dfpgec/V37pNl3bk7I/AAAAAAABWvo/YVeCyBG0rNYsRpWEK7FJZEuOEMKNPz5nACLcB/s1600/IMG_0815.jpg"/><img src="https://1.bp.blogspot.com/-taSP-2xT9tU/V37pN__PBSI/AAAAAAABWvs/bxQH-FNGPl0g4d_QXv1AK_eyG95hdSFcgCLcB/s1600/IMG_0819.jpg"/><img src="https://3.bp.blogspot.com/-qKaDbSzLOpU/V37piHSC2VI/AAAAAAABWv0/r-7EBnCJN4U5cVNS6rogzguKE0MrrKb0ACLcB/s1600/IMG_0816.jpg"/><img src="https://3.bp.blogspot.com/-8uVeRqsGosY/V37piFkb1sI/AAAAAAABWvw/R1HxBGbdZrQmB1rilBbC3osJ6FFoWVssACLcB/s1600/IMG_0827.jpg"/><img src="https://4.bp.blogspot.com/-O1PHetMo0DM/V37piBIB2QI/AAAAAAABWv4/4NGR2MnWlowRSul8iCWz2loLUHHajn19QCLcB/s1600/IMG_0830.jpg"/><img src="https://2.bp.blogspot.com/-Xy6RibQxF0c/V37p2RPoheI/AAAAAAABWwA/iMl-LNXzn1Ag4lwIBKqay6aPR5RhkB3hwCLcB/s1600/IMG_0843.jpg"/><img src="https://3.bp.blogspot.com/-h3FUBRNa1ic/V37p2f1floI/AAAAAAABWv8/f9JL4XYTNP0MLX8D6rsQR1w66-SuWHmwwCLcB/s1600/IMG_0849.jpg"/><img src="https://3.bp.blogspot.com/-zEeO3TxUXAc/V37p2a-b_MI/AAAAAAABWwE/ra14mIAEMBIxRmbeI9nXUOFJKYQ-_u0SgCLcB/s1600/IMG_0851.jpg"/><img src="https://1.bp.blogspot.com/-l6JvJT7qZKc/V37p3Dv1gTI/AAAAAAABWwQ/3TR2rdbfqYIsyMEYQQXA9qe1ijMGusUsgCLcB/s1600/IMG_0853.jpg"/><img src="https://3.bp.blogspot.com/-mECN2AV4p6c/V37p3GlK5aI/AAAAAAABWwM/2MJIpU5TNPgM70Rt8IwBfMmcyLW1BcAngCLcB/s1600/IMG_0854.jpg"/><img src="https://3.bp.blogspot.com/-2UT120y8u8g/V37p3ZX5f6I/AAAAAAABWwU/uZ5FdZU67hYWIzVnyam5mJ3FCKDbfFSAACLcB/s1600/IMG_0857.jpg"/></div></div>
+			<header><div id="cover" style="background-image:url(https://4.bp.blogspot.com/-aKdhT1jRACw/V37pMJkpmnI/AAAAAAABWvY/8_Av3OZOUlMxylu22mVmOth-jEY3OmDmQCLcB/s1600/IMG_0798.jpg)"><div id="title"><h1>2015</h1><h2>NDP, Istana</h2></div><div id="narrated">Narrated by <span class="author">Elvin</span><div class="date">January 2015</div></div></div></header><div class="group"><h2>National Day Parade</h2><div class="story"></div><div class="photoset" data-layout="232323232323"><img src="https://4.bp.blogspot.com/-aKdhT1jRACw/V37pMJkpmnI/AAAAAAABWvY/8_Av3OZOUlMxylu22mVmOth-jEY3OmDmQCLcB/s1600/IMG_0798.jpg"/><img src="https://2.bp.blogspot.com/-9bjzoO3i9W0/V37pMGDKjBI/AAAAAAABWvU/V3N1t5Owsn0hxSedrcq69VxTZXSoKEyPwCLcB/s1600/IMG_0800.jpg"/><img src="https://1.bp.blogspot.com/-enmXseLQIbk/V37pL2yDIPI/AAAAAAABWvQ/PJBMhqgawlkOsxSzEu-ljlS0I6XHGINhQCLcB/s1600/IMG_0802.jpg"/><img src="https://4.bp.blogspot.com/-lY5NPe_Dl8g/V37pNEIS7fI/AAAAAAABWvg/GSx5DDbbnbQhUBDFr7msfz7GyS2dDq7GQCLcB/s1600/IMG_0804.jpg"/><img src="https://2.bp.blogspot.com/-CKH6z-cv-4k/V37pMzOzwhI/AAAAAAABWvc/uwaR6D3CB30op2buOVbziaPeGnQWPefZwCLcB/s1600/IMG_0807.jpg"/><img src="https://1.bp.blogspot.com/-ngzOQJki_tw/V37pM_NmFoI/AAAAAAABWvk/KyQwYJLfIGomsDyPbVpfhjaByz4CblypwCLcB/s1600/IMG_0812.jpg"/><img src="https://1.bp.blogspot.com/-LOU56Dfpgec/V37pNl3bk7I/AAAAAAABWvo/YVeCyBG0rNYsRpWEK7FJZEuOEMKNPz5nACLcB/s1600/IMG_0815.jpg"/><img src="https://1.bp.blogspot.com/-taSP-2xT9tU/V37pN__PBSI/AAAAAAABWvs/bxQH-FNGPl0g4d_QXv1AK_eyG95hdSFcgCLcB/s1600/IMG_0819.jpg"/><img src="https://3.bp.blogspot.com/-qKaDbSzLOpU/V37piHSC2VI/AAAAAAABWv0/r-7EBnCJN4U5cVNS6rogzguKE0MrrKb0ACLcB/s1600/IMG_0816.jpg"/><img src="https://3.bp.blogspot.com/-8uVeRqsGosY/V37piFkb1sI/AAAAAAABWvw/R1HxBGbdZrQmB1rilBbC3osJ6FFoWVssACLcB/s1600/IMG_0827.jpg"/><img src="https://4.bp.blogspot.com/-O1PHetMo0DM/V37piBIB2QI/AAAAAAABWv4/4NGR2MnWlowRSul8iCWz2loLUHHajn19QCLcB/s1600/IMG_0830.jpg"/><img src="https://2.bp.blogspot.com/-Xy6RibQxF0c/V37p2RPoheI/AAAAAAABWwA/iMl-LNXzn1Ag4lwIBKqay6aPR5RhkB3hwCLcB/s1600/IMG_0843.jpg"/><img src="https://3.bp.blogspot.com/-h3FUBRNa1ic/V37p2f1floI/AAAAAAABWv8/f9JL4XYTNP0MLX8D6rsQR1w66-SuWHmwwCLcB/s1600/IMG_0849.jpg"/><img src="https://3.bp.blogspot.com/-zEeO3TxUXAc/V37p2a-b_MI/AAAAAAABWwE/ra14mIAEMBIxRmbeI9nXUOFJKYQ-_u0SgCLcB/s1600/IMG_0851.jpg"/><img src="https://1.bp.blogspot.com/-l6JvJT7qZKc/V37p3Dv1gTI/AAAAAAABWwQ/3TR2rdbfqYIsyMEYQQXA9qe1ijMGusUsgCLcB/s1600/IMG_0853.jpg"/><img src="https://3.bp.blogspot.com/-mECN2AV4p6c/V37p3GlK5aI/AAAAAAABWwM/2MJIpU5TNPgM70Rt8IwBfMmcyLW1BcAngCLcB/s1600/IMG_0854.jpg"/><img src="https://3.bp.blogspot.com/-2UT120y8u8g/V37p3ZX5f6I/AAAAAAABWwU/uZ5FdZU67hYWIzVnyam5mJ3FCKDbfFSAACLcB/s1600/IMG_0857.jpg"/></div><div class="videoset" data="jtKip0kTG60,pg7vaT6a1XQ,f8JR0l8jtIs,SCHQvQAjRe4,divr3cStpCQ"></div></div><div class="group"><h2>Istana Open House - 25 Sep</h2><div class="story"></div><div class="photoset" data-layout="23231213232323"><!--img(src="https://4.bp.blogspot.com/-3I53TaB_80E/V4A52RBmxdI/AAAAAAABWxA/lfXB0BOX8VwNZvOyrh0Va-mHHGJuG50bACLcB/s1600/IMG_0867.JPG")--><!--img(src="https://2.bp.blogspot.com/-ZWwa8tNt7hE/V4A55H_VqDI/AAAAAAABWxc/kZFETvP1FXgIpLNvOFMUGIHE8tK7e4IbgCLcB/s1600/IMG_0896.JPG")--><img src="https://4.bp.blogspot.com/-Mq3jbLFWHd4/V4A52qLtK-I/AAAAAAABWxE/434fmu80nMYUy0ux_Kha2348tuweIDk1wCLcB/s1600/IMG_0861.JPG"/><img src="https://2.bp.blogspot.com/-wkp_8Qe5mVU/V4A53wLqwpI/AAAAAAABWxQ/aoHmvwQM4foEK_Cqd9CmMkt3fzfJjXVHACLcB/s1600/IMG_0871.JPG"/><img src="https://4.bp.blogspot.com/-75ixrRXcGo4/V4A53h3jrnI/AAAAAAABWxI/9uhah10OBr0i7ZIhXlsLurxfxzA7uLqLACLcB/s1600/IMG_0882.JPG"/><img src="https://4.bp.blogspot.com/--WhpeoinnyA/V4A53mSXGBI/AAAAAAABWxM/stgmqNWLKY0KCDyq-xV_JX5WR7aS9GeBACLcB/s1600/IMG_0886.JPG"/><img src="https://3.bp.blogspot.com/-2fewIl07sNM/V4A54f2LbVI/AAAAAAABWxU/KiuUugCgq80FgVuMB-yqVdWdeeKA2_VOACLcB/s1600/IMG_0890.JPG"/><img src="https://2.bp.blogspot.com/-7ZPkz73yoAY/V4A55C9BICI/AAAAAAABWxY/xcXmvr1aCekHPNGtH6d6hrRoH9UUwns-gCLcB/s1600/IMG_0897.JPG"/><img src="https://4.bp.blogspot.com/-rVeJi0vbWIo/V4A55UBDWDI/AAAAAAABWxg/QTsAtfXQR_Uv7wJU1DMrfvGGuKFOHgi5ACLcB/s1600/IMG_0904.JPG"/><img src="https://1.bp.blogspot.com/-BG79gnJVh1k/V4A56HeTlCI/AAAAAAABWxk/3QGyypHwoZISv6qdKA27bTpzL9bIKqB0ACLcB/s1600/IMG_0905.JPG"/><img src="https://3.bp.blogspot.com/-kpNIuCmIKGs/V4A56Wi8XaI/AAAAAAABWxo/ffBjKReP2n8SktOLydjqWADfeV1wBmecQCLcB/s1600/IMG_0910.JPG"/><img src="https://1.bp.blogspot.com/-e532C-Ehuyk/V4A57KbC39I/AAAAAAABWxw/F-fdYKC0q0g11BC7xMz3xRBl-80dYdf9gCLcB/s1600/IMG_0932.JPG"/><!--img(src="https://1.bp.blogspot.com/-bcdUjodX1Ng/V4A52apIBSI/AAAAAAABWw8/sROVv-9wyfM-1AhlLoo_8gX3jbZah4WkQCLcB/s1600/IMG_0869.JPG")--><img src="https://2.bp.blogspot.com/-dJCFkCOEC1k/V4A56rhzvnI/AAAAAAABWxs/gCzzjcg78b4_ZRuMld4AjastMk5wRPmfgCLcB/s1600/IMG_0914.JPG"/><img src="https://2.bp.blogspot.com/-Uh2D6N5e3yk/V4A57UIRbdI/AAAAAAABWx0/3KlRnEf-ZD0pI3CdSp9IHZTgRi9JvswzgCLcB/s1600/IMG_0935.JPG"/><img src="https://4.bp.blogspot.com/-qsoOFRrZMhw/V4A5781uWXI/AAAAAAABWx4/IttVXCf5zTMTgx3Yzwf9-BNy8qcPo18PQCLcB/s1600/IMG_0936.JPG"/><img src="https://4.bp.blogspot.com/-5t2rr_ZabZQ/V4C0drGUkXI/AAAAAAABWyw/lTHLq0xAbHcEOFGXmlLPB9x8IqK5IacLgCLcB/s1600/Istana.jpg"/><img src="https://3.bp.blogspot.com/-6BdpnRoN4mc/V4A575I_sZI/AAAAAAABWx8/reG_ldElgro76kwfoxUCYHn8yHLT0VT5ACLcB/s1600/IMG_0939.JPG"/><img src="https://3.bp.blogspot.com/-OjGZwLesTXs/V4A58oOsPtI/AAAAAAABWyA/aaNRbhSyfFQiQPH5q_GTJ3Z3B2Gdw1TnwCLcB/s1600/IMG_0944.JPG"/><img src="https://2.bp.blogspot.com/-NQHcNsftXUg/V4A58yDuRPI/AAAAAAABWyE/fUQqqglc70U4aGpksHFV6Na-RTG4GlH0QCLcB/s1600/IMG_0950.JPG"/></div></div>
 
-
+			
 		</div>
 		<footer>
 			<div id="copyright"><a href="http://elvinellis.com">&copy; Elvin &amp; Ellis </a>2013</div>
 		</footer>
 	</body>
 	<script>
+function loadVideo(el, youtube_id){
+	$('#' + el).empty();
+	$('#' + el).show();
+	$('#' + el).append("<iframe allowfullscreen='allowfullscreen' class='video' frameborder='0' src='https://www.youtube.com/embed/"+youtube_id+"?modestbranding=1'/>");
+	/*
+	   $.get("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + youtube_id + "&key=" + ytApiKey, function(data) {
+	   alert(data.items[0].snippet.title);
+	   });
+	 */
+}
+
 $(document).ready(function(){
 	$('.photoset img').each(function(i){
 		var highres = $(this).attr('src').substr(0,101) + 's1600/';
@@ -406,11 +431,26 @@ $(document).ready(function(){
 			});
 		}
 	});
+	$('.videoset').each(function(i){
+		data = $(this).attr('data');
+		list = data.split(',');
+		if(list.length > 0){
+			layer = list[0];
+			$(this).attr('data-layout', list.length);
+			for(l in list){
+				$(this).append('<img src="https://img.youtube.com/vi/' + list[l] + '/0.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
+			}
+			$(this).after('<div class="video" id="'+ layer +'" style="display:none"></div>');
+		}
+	});
+	$('.videoset').photosetGrid({
+		gutter: '10px'
+	});
 });
 var sc_project=10403974; 
 var sc_invisible=1; 
 var sc_security="5451128"; 
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
 document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter_xhtml.js'></"+"script>");
-		</script>
+	</script>
 </html>
