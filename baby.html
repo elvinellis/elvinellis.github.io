@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="theme-color" content="#000000">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content='https://1.bp.blogspot.com/-GZfqMMgq40M/V4DH9_1098I/AAAAAAABWzY/Nf5yFXQeYqIndzCOJmb96Vr14euVkNtjACLcB/s1600/Baby-20160709-2.jpg' property='og:image'/>
+		<meta content='Our family' property='og:description'/>
+		<title>Baby</title>
+		<meta name="description" content="Our family">
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Roboto+Condensed:700'>
+		<link rel="stylesheet" href="/css/colorbox.css" />
+		<link rel="canonical" href="http://elvinellis.com/baby">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/photoset-grid/1.0.1/jquery.photoset-grid.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js"></script>
+	</head>
+	<style>
+body{
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern=1";
+	-webkit-font-smoothing: antialiased;
+	height: 100%;
+	height: 100%;
+	background: #ffffff;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	font-size: 100%;
+	font-family: Lora, serif;
+}
+
+h1, h2, h3, h4, h5{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #336699;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+header{
+	height: 1000px;
+	height: 100vh;
+	background: #1a1a1a;
+	position: relative;
+	color: #fff;
+	margin-bottom: 4%;
+	overflow: hidden;
+}
+#cover{
+	background: #565656;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	z-index: 0;
+}
+#cover:before{
+	content:" ";
+	display: block;
+	height: 351px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.05) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	-webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+#cover:after{
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	-webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	/* transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1); */
+}
+#cover #title{
+	position: absolute;
+	z-index: 6;
+	text-align: center;
+	color: #fff;
+	top: 54%;
+	width: 100%;
+	margin-top: -122px;
+	padding: 0 15%;
+	box-sizing: border-box;
+}
+
+#title h1{
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 5.2vw;
+	line-height: 6vw;
+	margin: 0 0 1% 0;
+	text-align: center;
+}
+#title h2{
+	font-family: Lora, serif;
+	font-style: italic;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: normal;
+	margin-bottom: 1%;
+	margin-top: 1%
+}
+
+#cover #narrated{
+	font-style: italic;
+	font-size: 20px;
+	margin-bottom: 25px;
+	position: absolute;
+	width: 100%;
+	bottom: 3%;
+	text-align: center;
+	z-index: 3;
+}
+
+#narrated .author{
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 19px;
+	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-left: 2px;
+}
+.date{
+	font-size: 12px;
+	letter-spacing: 2px;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.half{
+	width: 50%;
+	float: left;
+}
+
+.clear{
+	clear: both;
+}
+
+.panel h2{
+	line-height: normal;
+	font-size: 35px;
+	max-width: 900px;
+	margin-left: 2%;
+	margin-right: auto;
+	margin-bottom: 1%;
+	text-transform: uppercase;
+	color: #000;
+	letter-spacing: 3px;
+}
+
+.panel h3{
+	margin-left: 2%;
+	margin-bottom: 1%;
+}
+.panel .story{
+	margin-left: 2%;
+	margin-right: auto;
+	margin-bottom: 2%;
+	font-style: italic;
+}
+
+.square{
+	width: 25%;
+	padding-bottom: 25%;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	box-sizing: border-box;
+	background-color: #292525;
+	background-position: center center;
+}
+
+.square .bg{
+	position: absolute;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #303030;
+	background-size: cover !important;
+	background-position: center center;
+}
+.square a{
+	text-decoration: none;
+}
+
+.square .description{
+	top: initial;
+	bottom: 0;
+	height: 100%;
+	padding: 50% 0 0 0;
+	color: #fff;
+	text-align: center;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.05) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.square .description:hover{
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,1.0) 100%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+}
+
+.square h4{
+	color: #FFF;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	text-decoration: none;
+	font-style: normal;
+}
+
+.square h5 {
+	color: #FFF;
+	font-family: Lora, serif;
+	font-style: italic;
+	font-size: 15px;
+	font-weight: 400;
+	margin: 0 auto 5%;
+	width: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.group{
+	position: relative;
+	text-align: left;
+	width: 80%;
+	margin: 0px auto;
+	margin-bottom: 6%;
+}
+.group h2{
+	line-height: normal;
+	font-size: 39px;
+	word-wrap: break-word;
+	max-width: 900px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2%;
+	text-transform: uppercase;
+	color: #000;
+	letter-spacing: 3px;
+}
+.group .story{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2%;
+	text-align: justify;
+}
+.group .photoset{
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	margin-bottom: 3%;
+}
+
+.photoset.wide{
+	margin-top: -4%;
+	margin-bottom: 6%;
+}
+
+
+.photo{
+	position: relative;
+	float: left;
+	overflow: hidden;
+	cursor: pointer;
+}
+.photo .img {
+	border: 5px solid #fff;
+}
+
+.video{
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	margin: 5px 0 3% 0;
+}
+.video iframe {
+	/*
+	   height: 45vw; width:100%; 
+	 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+footer {
+	margin-top: 6%
+}
+footer ul {
+	list-style: none outside none;
+}
+footer ul li{
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: 400;
+}
+
+#copyright{
+	text-align: center;
+	padding: 20px 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	border-top: 1px solid #DDD;
+}
+#copyright a{
+	text-decoration: none;
+	color: #000;
+}
+			@media (max-width: 1200px) {
+				.square {
+					width: 33%;
+					padding-bottom: 33%;
+				}
+				.group .story, .group h2{
+					width: 75%;
+				}
+			}
+			@media (max-width: 750px) {
+				#cover h2{
+					font-size: 16px;
+				}
+				.square{
+					width: 50%;
+					padding-bottom: 50%;
+				}
+				.group{
+					width: 100%
+				}
+				.group .story, .group h2{
+					width: 80%;
+				}
+				.group h2{
+					font-size: 30px;
+				}
+			}
+
+			@media (max-width: 400px) {
+				#cover .content{
+					padding: 0 10%;
+				}
+				#cover h2{
+					font-size: 14px;
+				}
+				.square {
+					width: 100%;
+					padding-bottom: 100%;
+				}
+			}
+	</style>
+	<body>
+		<div class="wrapper">
+			<header><div id="cover" style="background-image:url(https://1.bp.blogspot.com/-GZfqMMgq40M/V4DH9_1098I/AAAAAAABWzY/Nf5yFXQeYqIndzCOJmb96Vr14euVkNtjACLcB/s1600/Baby-20160709-2.jpg)"><div id="title"><h1>Baby</h1><h2>Our family</h2></div><div id="narrated">Narrated by <span class="author">Elvin</span><div class="date">June 2015</div></div></div></header><div class="group"><h2>A New Beginning</h2><div class="story"></div><div class="photoset" data-layout="231323232323"><img src="https://1.bp.blogspot.com/-1qUH5AnxKes/V4DH9L8-EBI/AAAAAAABWzM/deEbqpA5L1YwzIHX479aRgldJHZlk2tAACLcB/s1600/Baby-20160610-1.jpg"/><img src="https://4.bp.blogspot.com/-DrEPiuSMf7M/V4DH9MG-SPI/AAAAAAABWzI/UXtsnBb8zEYpB2Eb6rokRJKAKivgcJTCgCLcB/s1600/Baby-20160615-1.jpg"/><img src="https://2.bp.blogspot.com/-XyBuPQtcaTc/V4DH9AmbIBI/AAAAAAABWzE/LpQEn-AOX4QaRwcrsPsnILyyoXw49n5IwCLcB/s1600/Baby-20160625-1.jpg"/><img src="https://2.bp.blogspot.com/-9QwB36nqpkk/V4DH9mkAozI/AAAAAAABWzQ/XFIwXOKCuRMSM7Yn2wsEub4en2jFmLngQCLcB/s1600/Baby-20160625-2.jpg"/><img src="https://2.bp.blogspot.com/-Jt8lTgBDzbE/V4DH9nPAOlI/AAAAAAABWzU/TebcMLPVWk8TN3-0_TY3lMnmMX6MKtCIwCLcB/s1600/Baby-20160709-1.jpg"/><img src="https://1.bp.blogspot.com/-GZfqMMgq40M/V4DH9_1098I/AAAAAAABWzY/Nf5yFXQeYqIndzCOJmb96Vr14euVkNtjACLcB/s1600/Baby-20160709-2.jpg"/></div></div>
+
+			
+		</div>
+		<footer>
+			<div id="copyright"><a href="http://elvinellis.com">&copy; Elvin &amp; Ellis </a>2013</div>
+		</footer>
+	</body>
+	<script>
+function loadVideo(el, youtube_id){
+	$('#' + el).empty();
+	$('#' + el).show();
+	$('#' + el).append("<iframe allowfullscreen='allowfullscreen' class='video' frameborder='0' src='https://www.youtube.com/embed/"+youtube_id+"?modestbranding=1'/>");
+	/*
+	   $.get("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + youtube_id + "&key=" + ytApiKey, function(data) {
+	   alert(data.items[0].snippet.title);
+	   });
+	 */
+}
+
+$(document).ready(function(){
+	$('.photoset img').each(function(i){
+		var highres = $(this).attr('src').substr(0,101) + 's1600/';
+		$(this).attr('data-highres', highres);
+	});
+	$('.photoset').photosetGrid({
+		highresLinks: true,
+		rel: 'gallery',
+		gutter: '10px',
+
+		onComplete: function(){
+			$('.photoset a').colorbox({
+				photo: true,
+				scalePhotos: true,
+				maxHeight: '100%',
+				maxWidth: '100%'
+			});
+		}
+	});
+	$('.videoset').each(function(i){
+		data = $(this).attr('data');
+		list = data.split(',');
+		if(list.length > 0){
+			layer = list[0];
+			$(this).attr('data-layout', list.length);
+			for(l in list){
+				$(this).append('<img src="https://img.youtube.com/vi/' + list[l] + '/0.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
+			}
+			$(this).after('<div class="video" id="'+ layer +'" style="display:none"></div>');
+		}
+	});
+	$('.videoset').photosetGrid({
+		gutter: '10px'
+	});
+});
+var sc_project=10403974; 
+var sc_invisible=1; 
+var sc_security="5451128"; 
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter_xhtml.js'></"+"script>");
+	</script>
+</html>
