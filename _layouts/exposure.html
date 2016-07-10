@@ -431,15 +431,16 @@ footer ul li{
 		</footer>
 	</body>
 	<script>
+function replaceVideo(id){
+	console.log($('#' + id));
+	$('#' + id).hide();
+	$('#' + id).after("<div class='video'><iframe allowfullscreen='allowfullscreen' frameborder='0' src='https://www.youtube.com/embed/"+id+"?modestbranding=1&rel=0'/></div>");
+}
+
 function loadVideo(el, youtube_id){
 	$('#' + el).empty();
 	$('#' + el).show();
 	$('#' + el).append("<iframe allowfullscreen='allowfullscreen' class='video' frameborder='0' src='https://www.youtube.com/embed/"+youtube_id+"?modestbranding=1&rel=0'/>");
-	/*
-	   $.get("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + youtube_id + "&key=" + ytApiKey, function(data) {
-	   alert(data.items[0].snippet.title);
-	   });
-	 */
 }
 
 $(document).ready(function(){
@@ -468,7 +469,8 @@ $(document).ready(function(){
 			layer = list[0];
 			$(this).attr('data-layout', list.length);
 			for(l in list){
-				$(this).append('<img src="https://img.youtube.com/vi/' + list[l] + '/0.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
+				//$(this).append('<img src="https://img.youtube.com/vi/' + list[l] + '/0.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
+				$(this).append('<img src="http://i.ytimg.com/vi/' + list[l] + '/maxresdefault.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
 			}
 			$(this).after('<div class="video" id="'+ layer +'" style="display:none"></div>');
 		}

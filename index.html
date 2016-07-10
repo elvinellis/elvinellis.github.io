@@ -11,9 +11,11 @@
 		<meta name="description" content="Merry Adventures">
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Roboto+Condensed:700'>
 		<link rel="stylesheet" href="/css/colorbox.css" />
-		<link rel="canonical" href="http://elvinellis.com/index">
+		<link rel="canonical" href="http://elvinellis.com/index		" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/photoset-grid/1.0.1/jquery.photoset-grid.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/photoset-grid/1.0.1/jquery.photoset-grid.min.js"></script>-->
+		<script src="/js/photoset.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js"></script>
 	</head>
 	<style>
@@ -308,22 +310,21 @@ header{
 	border: 5px solid #fff;
 }
 
+.group .videoset{
+	margin-bottom: 3%;
+}
+
+.videoset img{
+	cursor: pointer;
+}
+
 .video{
-	position: relative;
 	width: 100%;
-	height: 0;
-	padding-bottom: 56.25%;
 	margin: 5px 0 3% 0;
 }
+
 .video iframe {
-	/*
-	   height: 45vw; width:100%; 
-	 */
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	height: 45vw; width:100%; 
 }
 
 footer {
@@ -401,15 +402,16 @@ footer ul li{
 		</footer>
 	</body>
 	<script>
+function replaceVideo(id){
+	console.log($('#' + id));
+	$('#' + id).hide();
+	$('#' + id).after("<div class='video'><iframe allowfullscreen='allowfullscreen' frameborder='0' src='https://www.youtube.com/embed/"+id+"?modestbranding=1&rel=0'/></div>");
+}
+
 function loadVideo(el, youtube_id){
 	$('#' + el).empty();
 	$('#' + el).show();
-	$('#' + el).append("<iframe allowfullscreen='allowfullscreen' class='video' frameborder='0' src='https://www.youtube.com/embed/"+youtube_id+"?modestbranding=1'/>");
-	/*
-	   $.get("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + youtube_id + "&key=" + ytApiKey, function(data) {
-	   alert(data.items[0].snippet.title);
-	   });
-	 */
+	$('#' + el).append("<iframe allowfullscreen='allowfullscreen' class='video' frameborder='0' src='https://www.youtube.com/embed/"+youtube_id+"?modestbranding=1&rel=0'/>");
 }
 
 $(document).ready(function(){
@@ -438,13 +440,26 @@ $(document).ready(function(){
 			layer = list[0];
 			$(this).attr('data-layout', list.length);
 			for(l in list){
-				$(this).append('<img src="https://img.youtube.com/vi/' + list[l] + '/0.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
+				//$(this).append('<img src="https://img.youtube.com/vi/' + list[l] + '/0.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
+				$(this).append('<img src="http://i.ytimg.com/vi/' + list[l] + '/maxresdefault.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
 			}
 			$(this).after('<div class="video" id="'+ layer +'" style="display:none"></div>');
 		}
 	});
 	$('.videoset').photosetGrid({
 		gutter: '10px'
+	});
+
+	jQuery("#colorbox").swipe( {
+		//Generic swipe handler for all directions
+		swipeLeft:function(event, direction, distance, duration, fingerCount) {
+			jQuery.colorbox.prev();
+		},
+		swipeRight:function(event, direction, distance, duration, fingerCount) {
+			jQuery.colorbox.next();
+		},
+		//Default is 75px, set to 0 for demo so any distance triggers swipe
+		threshold:0
 	});
 });
 var sc_project=10403974; 
