@@ -615,7 +615,7 @@ function switchImage(that, img){
 
 			function loadVideo(num){
 				$('#video').empty();
-				$('#video').append("<iframe id='vv"+num+"' allowfullscreen='allowfullscreen' class='montage-video' frameborder='0' src='https://www.youtube.com/embed/"+videoMap[num]+"?modestbranding=1&amp;showinfo=0'/>");
+				$('#video').append("<iframe id='vv"+num+"' allowfullscreen='allowfullscreen' class='montage-video' frameborder='0' src='https://www.youtube.com/embed/"+videoMap[num]+"?modestbranding=1&amp;showinfo=0&amp;rel=0'/>");
 				$('#videoDescription').empty();
 				$('#videoDescription').append('<span>'+videoDescription[num]+'</span>');
 			}
