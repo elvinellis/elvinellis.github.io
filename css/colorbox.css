@@ -24,7 +24,7 @@
 
 #cboxOverlay{background:#000000;}
 #colorbox{outline:0;}
-#cboxContent{margin-top:32px; overflow:visible;}
+#cboxContent{margin-top:18px; overflow:visible;}
 #cboxError{padding:50px; border:1px solid #ccc;}
 #cboxLoadedContent{background:#000000; padding:1px;}
 #cboxLoadingGraphic{background:url(http://static.tumblr.com/fftf9xi/rkklqu1ni/loading.gif) no-repeat center center;}

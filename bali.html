@@ -168,15 +168,16 @@ header{
 }
 
 .panel h2{
-	line-height: normal;
-	font-size: 35px;
-	max-width: 900px;
+	font-family: Lora, serif;
+	font-style: italic;
+	font-size: 34px;
 	margin-left: 2%;
 	margin-right: auto;
 	margin-bottom: 1%;
 	text-transform: uppercase;
 	color: #000;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
+	text-align: center;
 }
 
 .panel h3{
@@ -184,6 +185,14 @@ header{
 	margin-bottom: 1%;
 }
 .panel .story{
+	margin-left: 2%;
+	margin-right: auto;
+	margin-bottom: 2%;
+	font-style: italic;
+}
+.panel .haiku{
+	text-align: center;
+	white-space: pre-wrap;
 	margin-left: 2%;
 	margin-right: auto;
 	margin-bottom: 2%;
@@ -445,7 +454,8 @@ function loadVideo(el, youtube_id){
 
 $(document).ready(function(){
 	$('.photoset img').each(function(i){
-		var highres = $(this).attr('src').substr(0,101) + 's1600/';
+		//var highres = $(this).attr('src').substr(0,101) + 's1600/';
+		var highres = $(this).attr('src').replace(/\/s([\d]*)\//,"/s1600/");
 		$(this).attr('data-highres', highres);
 	});
 	$('.photoset').photosetGrid({
@@ -481,10 +491,10 @@ $(document).ready(function(){
 
 	jQuery("#colorbox").swipe( {
 		//Generic swipe handler for all directions
-		swipeLeft:function(event, direction, distance, duration, fingerCount) {
+		swipeRight:function(event, direction, distance, duration, fingerCount) {
 			jQuery.colorbox.prev();
 		},
-		swipeRight:function(event, direction, distance, duration, fingerCount) {
+		swipeLeft:function(event, direction, distance, duration, fingerCount) {
 			jQuery.colorbox.next();
 		},
 		//Default is 75px, set to 0 for demo so any distance triggers swipe

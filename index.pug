@@ -11,14 +11,15 @@ header
 			h1 Elvin 
 				span(style="font: italic normal 4vw Lora;") & 
 				span Ellis
-			h2 {{ page.excerpt }}
 		#narrated
 			.date Est. 2013
 
-
 .panel
-	h2 Romance
-	.story A feeling of excitement and mystery associated with love.
+	//h2 Romance
+	.haiku
+		| Love's only weakness
+		| Is also it's greatest strength:
+		| It defies reason
 {% for c in site.romance %}
 	.square
 		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s500" }})")
@@ -28,10 +29,14 @@ header
 					h5 {{ c.excerpt }}
 					.date {{ c.date | date: "%B %Y" }}
 {% endfor %}
-.clear
+.clear(style="margin-bottom: 40px;")
+
 .panel
-	h2 Travel
-	.story Pack your bags and go on a journey of fun.
+	//h2 Travel
+	.haiku
+		| Here, under the stars
+		| and there too, under the clouds,
+		| everywhere with you.
 {% assign items = site.travel | sort: 'date' %}
 {% for c in items reversed %}
 	.square
