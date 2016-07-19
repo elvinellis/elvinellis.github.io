@@ -241,20 +241,20 @@
 				});
 
 				// A-style has 1:3 ratio that requires a different set of padding
+				$(elem).find('.cols-A .photoset-cell:nth-child(1)').css({
+					'padding-right': gutterVal + 'px',
+				});
 				$(elem).find('.cols-A .photoset-cell:nth-child(4n+2)').css({
-					'padding-bottom': (gutterVal / 2) + 'px',
-					'padding-left': (gutterVal / 2) + 'px',
+					'margin-bottom': (gutterVal / 2) + 'px',
 					'padding-right': 0
 				});
 				$(elem).find('.cols-A .photoset-cell:nth-child(4n+3)').css({
-					'padding-top': (gutterVal / 2) + 'px',
-					'padding-bottom': (gutterVal / 2) + 'px',
-					'padding-left': (gutterVal / 2) + 'px',
+					'margin-top': (gutterVal / 2) + 'px',
+					'margin-bottom': (gutterVal / 2) + 'px',
 					'padding-right': 0
 				});
 				$(elem).find('.cols-A .photoset-cell:nth-child(4n+4)').css({
-					'padding-top': (gutterVal / 2) + 'px',
-					'padding-left': (gutterVal / 2) + 'px',
+					'margin-top': (gutterVal / 2) + 'px',
 					'padding-right': 0
 				});
 
@@ -275,8 +275,22 @@
 								var $tallestImg = $(this).find('img:eq(0)');
 								var actualHeight = w / 2 / $tallestImg.attr('width')  * $tallestImg.attr('height') - (gutterVal * 3);
 								var perHeight = Math.ceil(actualHeight) / 3;
-								$(this).find('img:gt(0)').css('height', perHeight);
-								$(this).find('img:gt(0)').css('width', 'auto');
+								$(this).find('.photoset-cell:gt(0)').css({
+									'height': perHeight,
+									'overflow': 'hidden',
+									'position': 'relative'
+								});
+								$(this).find('img:gt(0)').css({
+									'max-width': w/2,
+									'width': 'auto',
+									'height': 'auto',
+									'margin': 'auto',
+									'position': 'absolute',
+									'top': '-9999px',
+									    'bottom': '-9999px',
+										    'left': '-9999px',
+											    'right': '-9999px'
+								});
 								return;
 							}
 							var $shortestImg = $(this).find('img:eq(0)');
