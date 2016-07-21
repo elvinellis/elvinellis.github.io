@@ -274,7 +274,7 @@
 							if($(this).hasClass('cols-A')){
 								var $tallestImg = $(this).find('img:eq(0)');
 								var actualHeight = w / 2 / $tallestImg.attr('width')  * $tallestImg.attr('height') - (gutterVal * 3);
-								var perHeight = Math.ceil(actualHeight) / 3;
+								var perHeight = Math.ceil(actualHeight) / 3 - 3;
 								$(this).find('.photoset-cell:gt(0)').css({
 									'height': perHeight,
 									'overflow': 'hidden',
@@ -287,9 +287,9 @@
 									'margin': 'auto',
 									'position': 'absolute',
 									'top': '-9999px',
-									    'bottom': '-9999px',
-										    'left': '-9999px',
-											    'right': '-9999px'
+									'bottom': '-9999px',
+									'left': '-9999px',
+									'right': '-9999px'
 								});
 								return;
 							}
