@@ -105,7 +105,8 @@
 
 			$.each(this.rows, function(i, val){
 				var col = 3;
-				if(val == 'A') col = 4;
+				if(val == 'A' || val == 'D') col = 4;
+				else if (val == 'B' || val == 'C') col = 3;
 				else col = parseInt(val, 10);
 
 				var rowStart = imageIndex;
@@ -178,6 +179,9 @@
 				var $cols4 = $(elem).find('.cols-4 .photoset-cell');
 				var $cols5 = $(elem).find('.cols-5 .photoset-cell');
 				var $colsA = $(elem).find('.cols-A .photoset-cell');
+				var $colsB = $(elem).find('.cols-B .photoset-cell');
+				var $colsC = $(elem).find('.cols-C .photoset-cell');
+				var $colsD = $(elem).find('.cols-D .photoset-cell');
 				var $cellBorder = $(elem).find('.photoset-content-border');
 
 				// Apply styles initial structure styles to the grid
@@ -228,6 +232,9 @@
 				$cols4.css({ 'width': '25%' });
 				$cols5.css({ 'width': '20%' });
 				$colsA.css({ 'width': '50%' });
+				$colsB.css({ 'width': '50%' });
+				$colsC.css({ 'width': '50%' });
+				$colsD.css({ 'width': '50%' });
 
 
 				var gutterVal = parseInt(options.gutter, 10);
@@ -241,9 +248,11 @@
 				});
 
 				// A-style has 1:3 ratio that requires a different set of padding
-				$(elem).find('.cols-A .photoset-cell:nth-child(1)').css({
-					'padding-right': gutterVal + 'px',
-				});
+				$(elem).find('.cols-A .photoset-cell:nth-child(1)').css({'padding-right': gutterVal + 'px',});
+				$(elem).find('.cols-B .photoset-cell:nth-child(1)').css({'padding-right': gutterVal + 'px',});
+				$(elem).find('.cols-C .photoset-cell:nth-child(3)').css({'padding-left': gutterVal + 'px',});
+				$(elem).find('.cols-D .photoset-cell:nth-child(4)').css({'padding-left': gutterVal + 'px',});
+
 				$(elem).find('.cols-A .photoset-cell:nth-child(4n+2)').css({
 					'margin-bottom': (gutterVal / 2) + 'px',
 					'padding-right': 0
@@ -254,6 +263,15 @@
 					'padding-right': 0
 				});
 				$(elem).find('.cols-A .photoset-cell:nth-child(4n+4)').css({
+					'margin-top': (gutterVal / 2) + 'px',
+					'padding-right': 0
+				});
+
+				$(elem).find('.cols-B .photoset-cell:nth-child(3n+2)').css({
+					'margin-bottom': (gutterVal / 2) + 'px',
+					'padding-left': 0
+				});
+				$(elem).find('.cols-B .photoset-cell:nth-child(3n+3)').css({
 					'margin-top': (gutterVal / 2) + 'px',
 					'padding-right': 0
 				});
@@ -274,7 +292,7 @@
 							if($(this).hasClass('cols-A')){
 								var $tallestImg = $(this).find('img:eq(0)');
 								var actualHeight = w / 2 / $tallestImg.attr('width')  * $tallestImg.attr('height') - (gutterVal * 3);
-								var perHeight = Math.ceil(actualHeight) / 3 - 3;
+								var perHeight = Math.ceil(actualHeight / 3) - 2;
 								$(this).find('.photoset-cell:gt(0)').css({
 									'height': perHeight,
 									'overflow': 'hidden',
@@ -282,6 +300,28 @@
 								});
 								$(this).find('img:gt(0)').css({
 									'max-width': w/2,
+									'width': 'auto',
+									'height': 'auto',
+									'margin': 'auto',
+									'position': 'absolute',
+									'top': '-9999px',
+									'bottom': '-9999px',
+									'left': '-9999px',
+									'right': '-9999px'
+								});
+								return;
+							}
+							else if($(this).hasClass('cols-B')){
+								var $tallestImg = $(this).find('img:eq(0)');
+								var actualHeight = w / 2 / $tallestImg.attr('width')  * $tallestImg.attr('height') - (gutterVal * 3);
+								var perHeight = Math.ceil(actualHeight / 2) + 1;
+								$(this).find('.photoset-cell:gt(0)').css({
+									'height': perHeight,
+									'overflow': 'hidden',
+									'position': 'relative'
+								});
+								$(this).find('img:gt(0)').css({
+									'max-width': w/2 + 70,
 									'width': 'auto',
 									'height': 'auto',
 									'margin': 'auto',
