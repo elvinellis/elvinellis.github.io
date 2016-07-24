@@ -349,7 +349,7 @@
 							// Get the row height from the calculated/real height/width of the shortest image
 							var rowHeight = ( $shortestImg.attr('height') * parseInt($shortestImg.css('width'), 10) ) / $shortestImg.attr('width');
 							// Adding a buffer to shave off a few pixels in height
-							var bufferHeight = Math.floor(rowHeight * 0.025);
+							var bufferHeight = Math.floor(rowHeight * 0.0025);
 							$(this).height( rowHeight - bufferHeight );
 
 							// If border is set to true, then add the parent row height to each .photoset-content-border
