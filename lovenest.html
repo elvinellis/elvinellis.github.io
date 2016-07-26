@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="theme-color" content="#000000">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content='https://1.bp.blogspot.com/-a1jKXIFYyEM/V5adCOps03I/AAAAAAABXdk/5MX2KqmGNrIATPUw8pi4dt97ARFrYv1lQCLcB/s1600/Sea-Horizon-EC-Sea-View.jpg' property='og:image'/>
+		<meta content='Our Love Nest' property='og:description'/>
+		<title>Sea Horizon</title>
+		<meta name="description" content="Our Love Nest">
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Roboto+Condensed:700'>
+		<link rel="stylesheet" href="/css/colorbox.css" />
+		<link rel="canonical" href="http://elvinellis.com/lovenest		" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/photoset-grid/1.0.1/jquery.photoset-grid.min.js"></script>-->
+		<script src="/js/photoset.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js"></script>
+	</head>
+	<style>
+body{
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern=1";
+	-webkit-font-smoothing: antialiased;
+	height: 100%;
+	height: 100%;
+	background: #ffffff;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	font-size: 100%;
+	font-family: Lora, serif;
+}
+
+h1, h2, h3, h4, h5{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #336699;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+header{
+	height: 1000px;
+	height: 100vh;
+	background: #1a1a1a;
+	position: relative;
+	color: #fff;
+	margin-bottom: 4%;
+	overflow: hidden;
+}
+#cover{
+	background: #565656;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	z-index: 0;
+}
+#cover:before{
+	content:" ";
+	display: block;
+	height: 351px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.05) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	-webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+#cover:after{
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	-webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	/* transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1); */
+}
+#cover #title{
+	position: absolute;
+	z-index: 6;
+	text-align: center;
+	color: #fff;
+	top: 54%;
+	width: 100%;
+	margin-top: -122px;
+	padding: 0 15%;
+	box-sizing: border-box;
+}
+
+#title h1{
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 5.2vw;
+	line-height: 6vw;
+	margin: 0 0 1% 0;
+	text-align: center;
+}
+#title h2{
+	font-family: Lora, serif;
+	font-style: italic;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: normal;
+	margin-bottom: 1%;
+	margin-top: 1%
+}
+
+#cover #narrated{
+	font-style: italic;
+	font-size: 20px;
+	margin-bottom: 25px;
+	position: absolute;
+	width: 100%;
+	bottom: 3%;
+	text-align: center;
+	z-index: 3;
+}
+
+#narrated .author{
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 19px;
+	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-left: 2px;
+}
+.date{
+	font-size: 12px;
+	letter-spacing: 2px;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.half{
+	width: 50%;
+	float: left;
+}
+
+.clear{
+	clear: both;
+}
+
+.panel h2{
+	font-family: Lora, serif;
+	font-style: italic;
+	font-size: 34px;
+	margin-left: 2%;
+	margin-right: auto;
+	margin-bottom: 1%;
+	text-transform: uppercase;
+	color: #000;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.panel h3{
+	margin-left: 2%;
+	margin-bottom: 1%;
+}
+.panel .story{
+	margin-left: 2%;
+	margin-right: auto;
+	margin-bottom: 2%;
+	font-style: italic;
+}
+.panel .haiku{
+	text-align: center;
+	white-space: pre-wrap;
+	margin-left: 2%;
+	margin-right: auto;
+	margin-bottom: 2%;
+	font-style: italic;
+}
+
+.square{
+	width: 25%;
+	padding-bottom: 25%;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	box-sizing: border-box;
+	background-color: #292525;
+	background-position: center center;
+}
+
+.square .bg{
+	position: absolute;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #303030;
+	background-size: cover !important;
+	background-position: center center;
+}
+.square a{
+	text-decoration: none;
+}
+
+.square .description{
+	top: initial;
+	bottom: 0;
+	height: 100%;
+	padding: 50% 0 0 0;
+	color: #fff;
+	text-align: center;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.05) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.square .description:hover{
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,1.0) 100%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+}
+
+.square h4{
+	color: #FFF;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	text-decoration: none;
+	font-style: normal;
+}
+
+.square h5 {
+	color: #FFF;
+	font-family: Lora, serif;
+	font-style: italic;
+	font-size: 15px;
+	font-weight: 400;
+	margin: 0 auto 5%;
+	width: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.group{
+	position: relative;
+	text-align: left;
+	width: 80%;
+	margin: 0px auto;
+	margin-bottom: 6%;
+}
+.group h2{
+	line-height: normal;
+	font-size: 39px;
+	word-wrap: break-word;
+	max-width: 900px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2%;
+	text-transform: uppercase;
+	color: #000;
+	letter-spacing: 3px;
+}
+.group .story{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2%;
+	text-align: justify;
+}
+.group .photoset{
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	margin-bottom: 3%;
+}
+
+.photoset.wide{
+	margin-top: -4%;
+	margin-bottom: 6%;
+}
+
+
+.photo{
+	position: relative;
+	float: left;
+	overflow: hidden;
+	cursor: pointer;
+}
+.photo .img {
+	border: 5px solid #fff;
+}
+
+.group .videoset{
+	margin-bottom: 3%;
+}
+
+.videoset img{
+	cursor: pointer;
+}
+
+.video{
+	width: 100%;
+	margin: 5px 0 3% 0;
+}
+
+.video iframe {
+	height: 45vw; width:100%; 
+}
+
+footer {
+	margin-top: 6%
+}
+footer ul {
+	list-style: none outside none;
+}
+footer ul li{
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: 400;
+}
+
+#copyright{
+	text-align: center;
+	padding: 20px 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	border-top: 1px solid #DDD;
+}
+#copyright a{
+	text-decoration: none;
+	color: #000;
+}
+			@media (max-width: 1200px) {
+				.square {
+					width: 33%;
+					padding-bottom: 33%;
+				}
+				.group .story, .group h2{
+					width: 75%;
+				}
+			}
+			@media (max-width: 750px) {
+				#cover h2{
+					font-size: 16px;
+				}
+				.square{
+					width: 50%;
+					padding-bottom: 50%;
+				}
+				.group{
+					width: 100%
+				}
+				.group .story, .group h2{
+					width: 80%;
+				}
+				.group h2{
+					font-size: 30px;
+				}
+			}
+
+			@media (max-width: 400px) {
+				#cover .content{
+					padding: 0 10%;
+				}
+				#cover h2{
+					font-size: 14px;
+				}
+				.square {
+					width: 100%;
+					padding-bottom: 100%;
+				}
+			}
+	</style>
+	<body>
+		<div class="wrapper">
+			<header><div id="cover" style="background-image:url(https://1.bp.blogspot.com/-a1jKXIFYyEM/V5adCOps03I/AAAAAAABXdk/5MX2KqmGNrIATPUw8pi4dt97ARFrYv1lQCLcB/s1600/Sea-Horizon-EC-Sea-View.jpg)"><div id="title"><h1>Sea Horizon</h1><h2>Our Love Nest</h2></div><div id="narrated"> <div class="date">January 2016</div></div></div></header><div class="group"><h2>Floor Plan</h2><div class="story"></div><div class="photoset" data-layout="1B132313231323132313231323132"><img src="https://1.bp.blogspot.com/-sr6EKyBmPzA/V5adCZSHivI/AAAAAAABXdo/9zc7k5JsXRcBWNHXqhQsxYvyNjNTYrT3gCLcB/s1600/SH-NEW-Siteplan-Revised.jpg"/><img src="https://1.bp.blogspot.com/-myX_y4cap6o/V5adCXVRgaI/AAAAAAABXds/WaqyOPUqOtIaEGJ_ltet3DnG9I4e7jisACLcB/s800/Sea-Horizon-Site-Plan-Unit-Type-Distribution.jpg"/><!--img(src="https://1.bp.blogspot.com/-a1jKXIFYyEM/V5adCOps03I/AAAAAAABXdk/5MX2KqmGNrIATPUw8pi4dt97ARFrYv1lQCLcB/s800/Sea-Horizon-EC-Sea-View.jpg")--><img src="https://2.bp.blogspot.com/-Fp0jELKUXbs/V5adC5KqtJI/AAAAAAABXdw/Qi8zSLmZCaUq1rbABwy8aK1NUBGQBRFvwCLcB/s800/Sea-Horizon-floor-plan-C7.jpg"/><img src="https://4.bp.blogspot.com/-nU4mcC7EIyA/V5adC2pjEiI/AAAAAAABXd0/Dhkzrj_aQRg8uw50bIDiZm5FCKnDiKRYwCLcB/s800/Sea-Horizon-floor-plan-C7p.jpg"/><img src="http://4.bp.blogspot.com/-yR9W7jDt5Eo/V5abvTrytsI/AAAAAAABXdc/-BGmbgt93dc2Y2eqvO2-ekZWtyPRiJjTQCK4B/s1600/Floor_Measurement.png"/></div></div><div class="group"><h2>Living Room</h2><div class="story"></div><div class="photoset" data-layout="3332313231323132313231323132"><img src="https://1.bp.blogspot.com/-IggGAJ4DHJk/V5anpR5oe9I/AAAAAAABXeg/HdLR_rUtaH8d3jaOiqE_rlQ4zHlM-ouPgCLcB/s500/FB_IMG_1428927464068.jpg"/><img src="https://2.bp.blogspot.com/-qlSYw7UWtBc/V5anpQzSwgI/AAAAAAABXek/GRwQxPSfhjEYfCqywAFsM9QY0H5l9S9LgCLcB/s500/FB_IMG_1429157823537.jpg"/><img src="https://1.bp.blogspot.com/-bPtjOHhZlZc/V5anpLp_vhI/AAAAAAABXec/p7aJv8zazokJuID1tYpZu0EDjxuOdTu7QCLcB/s500/FB_IMG_1429967298742.jpg"/><img src="https://3.bp.blogspot.com/-Gmbz4VsgKCU/V5anplwj8OI/AAAAAAABXeo/nvzuNYNFAQYlvUIcs0qcXUIn8LoTN76qwCLcB/s500/FB_IMG_1430229085678.jpg"/><img src="https://1.bp.blogspot.com/-XU0kbf-gHv4/V5anppMUSwI/AAAAAAABXes/cioFm6OxHIMWTyt7lJhQ4HlyIQC0fbwCQCLcB/s500/FB_IMG_1433772178778.jpg"/><img src="https://2.bp.blogspot.com/-ch_V7_qDppk/V5anpxDrwzI/AAAAAAABXew/72KpXPHgtEoFT6NzqU-jVAQCT3IpmT8HACLcB/s500/FB_IMG_1433828415809.jpg"/><img src="https://2.bp.blogspot.com/-flE5GCgj7xE/V5anqLXScyI/AAAAAAABXe0/jGxoNWq0AlU8m8dmiUe7SRdlV7SVxlvAwCLcB/s500/FB_IMG_1435736717393.jpg"/><img src="https://4.bp.blogspot.com/-sjlGbZErCm0/V5anqTInMvI/AAAAAAABXe4/gm66YRTtQiIdmCZFw9WwqZ8m50A9_ZQzwCLcB/s500/FB_IMG_1436926600697.jpg"/><img src="https://4.bp.blogspot.com/-bHaQ_D_4YRM/V5anqaF_BuI/AAAAAAABXe8/nDtZrqw-IgYTEjNurt8PJZyp9fmntrjHgCLcB/s500/FB_IMG_1437234920103.jpg"/><img src="https://2.bp.blogspot.com/--Z4Fv4a3wWA/V5anqpHPyWI/AAAAAAABXfA/iKs29IIXkykd9VY5ds1VLyRlNyz3v-PagCLcB/s500/FB_IMG_1437441106010.jpg"/><img src="https://4.bp.blogspot.com/-5E2muPkrJ6Q/V5anq60DiBI/AAAAAAABXfE/LwsL3kkZBx4Dz8S1hC12doF1C0hYfb_dQCLcB/s500/FB_IMG_1445523010038.jpg"/></div></div><div class="group"><h2>Balcony</h2><div class="story"></div><div class="photoset" data-layout="1B132313231323132313231323132"></div></div><div class="group"><h2>Kitchen</h2><div class="story"></div><div class="photoset" data-layout="1B132313231323132313231323132"></div></div><div class="group"><h2>Laundry</h2><div class="story"></div><div class="photoset" data-layout="3332313231323132313231323132"><img src="https://1.bp.blogspot.com/-Bsu9g9ePh4E/V5ak1uUjBSI/AAAAAAABXeQ/ajiYVTgAco8Ghh4P9QTqXBkFjDptBYzngCLcB/s500/Screenshot_2015-05-29-08-42-59.png"/><img src="https://3.bp.blogspot.com/-qhZlndt1Sng/V5ak08jd2GI/AAAAAAABXeE/ddJq5GNWmkQdWwWGru2JzyCIt-8klv60wCLcB/s500/FB_IMG_1430700787527.jpg"/><img src="https://3.bp.blogspot.com/-kw2LDfnhSrY/V5ak1EYWn-I/AAAAAAABXeM/cXi_gJ_Ht48ha7eAMUy9eVXR0tVRH95zwCLcB/s500/Screenshot_2015-02-18-22-32-27.png"/><img src="https://3.bp.blogspot.com/-RXPPVS0h-rQ/V5ak01XujaI/AAAAAAABXeI/Ty9PP5iAoNY19C2OwQLb0kODi97JRaayQCLcB/s500/Screenshot_2015-04-15-09-10-10.png"/></div></div><div class="group"> <h2>Store</h2><div class="story"></div><div class="photoset" data-layout="1B132313231323132313231323132"></div></div><div class="group"><h2>Master Bedroom</h2><div class="story"></div><div class="photoset" data-layout="1B132313231323132313231323132"></div></div><div class="group"><h2>Child Room</h2><div class="story"></div><div class="photoset" data-layout="1B132313231323132313231323132"></div></div><div class="group"><h2>Study Room</h2><div class="story"></div><div class="photoset" data-layout="1B132313231323132313231323132"></div></div>
+
+			
+		</div>
+		<footer>
+			<div id="copyright"><a href="http://elvinellis.com">&copy; Elvin &amp; Ellis </a>2013</div>
+		</footer>
+	</body>
+	<script>
+function replaceVideo(id){
+	console.log($('#' + id));
+	$('#' + id).hide();
+	$('#' + id).after("<div class='video'><iframe allowfullscreen='allowfullscreen' frameborder='0' src='https://www.youtube.com/embed/"+id+"?modestbranding=1&rel=0'/></div>");
+}
+
+function loadVideo(el, youtube_id){
+	$('#' + el).empty();
+	$('#' + el).show();
+	$('#' + el).append("<iframe allowfullscreen='allowfullscreen' class='video' frameborder='0' src='https://www.youtube.com/embed/"+youtube_id+"?modestbranding=1&rel=0'/>");
+}
+
+$(document).ready(function(){
+	$('.photoset img').each(function(i){
+		//var highres = $(this).attr('src').substr(0,101) + 's1600/';
+		var highres = $(this).attr('src').replace(/\/s([\d]*)\//,"/s1600/");
+		$(this).attr('data-highres', highres);
+	});
+	$('.photoset').photosetGrid({
+		highresLinks: true,
+		rel: 'gallery',
+		gutter: '10px',
+
+		onComplete: function(){
+			$('.photoset a').colorbox({
+				photo: true,
+				scalePhotos: true,
+				maxHeight: '100%',
+				maxWidth: '100%'
+			});
+		}
+	});
+	$('.videoset').each(function(i){
+		data = $(this).attr('data');
+		list = data.split(',');
+		if(list.length > 0){
+			layer = list[0];
+			$(this).attr('data-layout', list.length);
+			for(l in list){
+				//$(this).append('<img src="https://img.youtube.com/vi/' + list[l] + '/0.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
+				$(this).append('<img src="http://i.ytimg.com/vi/' + list[l] + '/maxresdefault.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
+			}
+			$(this).after('<div class="video" id="'+ layer +'" style="display:none"></div>');
+		}
+	});
+	$('.videoset').photosetGrid({
+		gutter: '10px'
+	});
+
+	jQuery("#colorbox").swipe( {
+		//Generic swipe handler for all directions
+		swipeRight:function(event, direction, distance, duration, fingerCount) {
+			jQuery.colorbox.prev();
+		},
+		swipeLeft:function(event, direction, distance, duration, fingerCount) {
+			jQuery.colorbox.next();
+		},
+		//Default is 75px, set to 0 for demo so any distance triggers swipe
+		threshold:0
+	});
+});
+var sc_project=10403974; 
+var sc_invisible=1; 
+var sc_security="5451128"; 
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter_xhtml.js'></"+"script>");
+	</script>
+</html>
