@@ -444,6 +444,12 @@ $(document).ready(function(){
 			});
 		}
 	});
+	$('.video').each(function(i){
+		data = $(this).attr('data');
+		$(this).append('<iframe src="https://www.youtube.com/embed/' + data + '?color=white&showinfo=0&rel=0" frameborder="0" allowfullscreen/>');
+
+	});
+
 	$('.videoset').each(function(i){
 		data = $(this).attr('data');
 		list = data.split(',');
