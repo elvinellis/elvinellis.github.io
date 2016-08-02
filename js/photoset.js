@@ -107,6 +107,7 @@
 				var col = 3;
 				if(val == 'A' || val == 'D') col = 4;
 				else if (val == 'B' || val == 'C') col = 3;
+				else if (val == 'W') col = 1;
 				else col = parseInt(val, 10);
 
 				var rowStart = imageIndex;
@@ -182,6 +183,7 @@
 				var $colsB = $(elem).find('.cols-B .photoset-cell');
 				var $colsC = $(elem).find('.cols-C .photoset-cell');
 				var $colsD = $(elem).find('.cols-D .photoset-cell');
+				var $colsW = $(elem).find('.cols-W .photoset-cell');
 				var $cellBorder = $(elem).find('.photoset-content-border');
 
 				// Apply styles initial structure styles to the grid
@@ -226,6 +228,7 @@
 				}
 
 				// Set the width of the cells based on the number of columns in the row
+				$colsW.css({ 'width': '100%' });
 				$cols1.css({ 'width': '100%' });
 				$cols2.css({ 'width': '50%' });
 				$cols3.css({ 'width': '33.3%' });
@@ -246,6 +249,7 @@
 				$(elem).find('.photoset-cell:not(:first-child)').css({
 					'padding-left': (gutterVal / 2) + 'px'
 				});
+
 
 				// A-style has 1:3 ratio that requires a different set of padding
 				$(elem).find('.cols-A .photoset-cell:nth-child(1)').css({'padding-right': gutterVal + 'px',});
@@ -333,6 +337,13 @@
 								});
 								return;
 							}
+							else if($(this).hasClass('cols-W')){
+								var breakoutMargin = -w / 8;
+								// Wide-style to break out of parent div
+								$(this).css({'margin-left' : breakoutMargin + 'px', 'margin-right': breakoutMargin + 'px'});
+								return;
+							}
+
 							var $shortestImg = $(this).find('img:eq(0)');
 
 							$(this).find('img').each(function(){
@@ -349,7 +360,7 @@
 							// Get the row height from the calculated/real height/width of the shortest image
 							var rowHeight = ( $shortestImg.attr('height') * parseInt($shortestImg.css('width'), 10) ) / $shortestImg.attr('width');
 							// Adding a buffer to shave off a few pixels in height
-							var bufferHeight = Math.floor(rowHeight * 0.0025);
+							var bufferHeight = Math.floor(rowHeight * 0.025);
 							$(this).height( rowHeight - bufferHeight );
 
 							// If border is set to true, then add the parent row height to each .photoset-content-border
