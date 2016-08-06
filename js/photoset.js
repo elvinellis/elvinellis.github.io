@@ -338,10 +338,14 @@
 								return;
 							}
 							else if($(this).hasClass('cols-W')){
+								console.log(w)
+								if (w >= 600){
+								
 								var breakoutMargin = -w / 8;
 								// Wide-style to break out of parent div
 								$(this).css({'margin-left' : breakoutMargin + 'px', 'margin-right': breakoutMargin + 'px'});
 								return;
+								}
 							}
 
 							var $shortestImg = $(this).find('img:eq(0)');
