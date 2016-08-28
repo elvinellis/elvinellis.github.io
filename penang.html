@@ -56,6 +56,15 @@ header{
 	margin-bottom: 4%;
 	overflow: hidden;
 }
+
+table td {
+	vertical-align: top;
+	padding-right: 15px;
+}
+table tr:nth-child(even){
+	background-color: #EEE;
+}
+
 #cover{
 	background: #565656;
 	position: absolute;
@@ -372,7 +381,7 @@ footer ul li{
 					width: 33%;
 					padding-bottom: 33%;
 				}
-				.group .story, .group h2{
+				.group .story, .group h2, .group h3{
 					width: 75%;
 				}
 			}
@@ -387,7 +396,7 @@ footer ul li{
 				.group{
 					width: 100%
 				}
-				.group .story, .group h2{
+				.group .story, .group h2, .group h3{
 					width: 80%;
 				}
 				.group h2{
@@ -492,6 +501,33 @@ $(document).ready(function(){
 			});
 		}
 	});
+
+	$('.markdown').each(function(i){
+		var url = $(this).attr('data');
+		var el = $(this);
+		$.ajax({url: url}).done(function(data){
+			var arr = data.split("\n");
+			console.log(arr);
+			var listContent = "";
+			for(a in arr){
+				ll = arr[a];
+				if(ll.length>1  && ll.indexOf("- ") == 0){
+					if(listContent == "") listContent = "<ul>"
+					listContent += "<li>" + ll.substr(2,ll.length) + "</li>";
+					continue;
+				}
+				else if(listContent != ""){
+					listContent += "</ul>";
+					el.append(listContent);
+					listContent = "";
+				}
+
+
+				el.append(ll + "<br />");
+			}
+		});
+	});
+
 	$('.video').each(function(i){
 		data = $(this).attr('data');
 		$(this).append('<iframe src="https://www.youtube.com/embed/' + data + '?color=white&showinfo=0&rel=0" frameborder="0" allowfullscreen/>');
@@ -506,7 +542,7 @@ $(document).ready(function(){
 			$(this).attr('data-layout', list.length);
 			for(l in list){
 				//$(this).append('<img src="https://img.youtube.com/vi/' + list[l] + '/0.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
-				$(this).append('<img src="http://i.ytimg.com/vi/' + list[l] + '/maxresdefault.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
+				$(this).append('<img src="http://i.ytimg.com/vi/' + list[l] + '/sddefault.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
 			}
 			$(this).after('<div class="video" id="'+ layer +'" style="display:none"></div>');
 		}

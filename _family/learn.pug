@@ -1,0 +1,47 @@
+---
+layout: exposure
+label: family
+cover: http://3.bp.blogspot.com/-X1uu9_nzIDo/V8FauqJxw-I/AAAAAAABYlc/HqOyDXtapoMVXy9Aht3eOyJ6muNK7dARwCK4B/s1600/3.jpg
+title: Learn
+excerpt: Passing on values, knowledge and wisdom
+author: Elvin and Ellis
+date: 2016-08-01
+permalink: /learn
+---
+
+header
+	#cover(style="background-image:url({{ page.cover }})")
+		#title
+			h1 {{ page.title }}
+			h2 {{ page.excerpt }}
+		#narrated Narrated by 
+			span.author {{ page.author }}
+			.date {{ page.date | date: "%B %Y" }}
+.group
+	h2 Weekly Schedule
+	.story Monday, Wednesday, Friday - 9pm
+		ul
+			li Read three pages from Knowledge series
+			li Read one story from Value series
+
+	.story Saturday, Sunday - 2pm
+		ul
+			li Read one unit from English Series
+
+	.story Daily
+		ul
+			li Read Parenting book
+			li Play English / Audio CD
+
+	.story Records
+		.markdown(data="https://gist.githubusercontent.com/elvinellis/ae9412446637df75dd926fe044748980/raw/")
+
+.group
+	h2 Values
+	iframe(width="100%" height="660" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/252730366%3Fsecret_token%3Ds-ppMwn&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false")
+
+.group
+	h2 English
+	.videoset(data="VzqKrnai_lE,C3Xf8OFg3wI,_cZrgQBibss,mTNhQWZSul0,4SZ17E0LFbk")
+	.videoset(data="2GeEE8YOK3Q,lzAJDTB4xm8,-ecHfnutWfk,gueopN_3tNs,mEo0pzrVRUs")
+

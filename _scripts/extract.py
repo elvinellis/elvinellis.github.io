@@ -1,6 +1,7 @@
+#! /usr/bin/python
 import re
 
-pattern = 'href="(.*?\.png)"'
+pattern = 'href="(.*?\.jpg)"'
 f = open('bali')
 string = f.read()
 pattern = re.compile(pattern, re.IGNORECASE)
