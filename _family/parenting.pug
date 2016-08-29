@@ -112,15 +112,66 @@ header
 						li Neatness
 						li Creativity
 
-
 	h3 Giving Attention by Describing Behavior
-	.story A behavior is reinforced when we pay attention to it.
+	.story A behavior is reinforced when we pay attention to it. By describing a kid's behavior aloud, we let kids know we notice their actions and encourage them to repeat the same action.
+		ul Some examples of descriptive remarks
+			li "You handed me the hammer I needed."
+			li "You made me a gift at school."
+			li "You put away all your crayons."
+			li "Hey, you put on your cloehtes all by yourself."
+	.story As you become better at this, you can add a more elaborate description and more interesting words.
+		ul
+			li "You made a plaster plague for me at school."
+			li "You picked ou your own clothes all by yourself and you have on your lovely blue slacks and that neat green blouse, and you did all this while I was getting ready for work."
 
 	h3 Adding Praise to Descriptive Remarks
-	.story Both attention and praise are discipline techniques that strengthen and increase desired and appropriate behaviors.
+	.story Both attention and praise are discipline techniques that strengthen and increase desired and appropriate behaviors. Adding praise is quite simple: Just add a compliment or an encouraging comment to the descriptive remark.
+		ul Some examples:
+			li "I really appreciate your kindness in reading to those younger children."
+			li "Thank you so much for your thoughtfulness in remembering to put your dirty clothes in the laundry basket."
+			li "Zach, it's so pleasant when you play a board game with us. I enjoy your humour."
+			li "I don't know how you can be so clever. This is a very imaginative story you wrote for your English class. This deserves a high mark."
+	
+	h3 More guidelines on giving praise and attention
+	.story
+		ul
+			li Praise works best when it closely follows behaviours and actions you would like to see encouraged and strengthened. The sooner it follows the desired behavior, the better.
+			li Give praise only when children are behaving.
+			li Praise is best given when it is both descriptive and specific.
+			li Praise as many different aspect of your child's behavior as you can. Try to compliment such things as cooperativeness, compliance, use of intelligence and judgment, social skills, expressiveness, and willingness to help.
+			li Praise not only accomplishment but also efforts.
+			li Don't underestimate the power of adding some physical affection like a big cuddle or a kiss.
+			li Feel free to praise your child in writing. A note of appreciation is a permanent record of your approval that can mean a lot to a child. Kids particularly enjoy notes that are a surprise and often keep and treasure them.
+	.story Effective praise does not include any criticism or negative remarks. Don't dilute your praise with criticism. Keep praise and attention pure. Save your criticism and your need to point out where a child has fallen short for some other occasion.
 
 
 
 .group
-	h2 Discipline
+	h2 Using Rewards and Privileges to Strengthen Behavior
+	.story Think of the way we teach children as shaping their behavior. In any endeavor, children's behavior is inevitably less than perfect and usually not up to our standards at first. But with encouragement of the lesser-than-perfect efforts, the behavior can improve and gradually approach what we would like. The effort a child initially makes is more significant than the outcome. It doesn't matter so much that the two-and-a-half-year-old didn't pick up all the blocks and toy cards. That the child tried deserves praise and encouragement: "All right! You're so helpful. I like it when you help me by picking up toys."
+	.story This is the way shaping wokrs: You use reinforcements like Praise and Rewards to shape your child's behavior until it is very close to what you desire. Don't negate the effectiveness of the praise you are using by slipping back into criticism when children don't achieve the ultimate result you're looking for.
 
+	h3 The Technique for Giving Rewards and Privileges
+	.story The general principle is very straightforward: When you follow a desired behavior with a positive consequence, the desired behavior will usually become stronger. There are three rules to keep in mind in order to give Rewards and Privileges effectively:
+		ol
+			li Be clear about what you expect and the behavior you want strengthened.
+			li Choose a payoff in the form of a reward, privilege, opportunity, or activity that your child deems highly desirable.
+			li Give that payoff only after the child has earned it through good and appropriate behavior.
+
+	.story Rewards and privileges should be given only after a desired or appropriate behavior occurs. They should not be given ahead of time.
+
+	.story Bribes are rewards or treats you give to stop misbehavior. They give your kid the idea that this is a way to extort money or rewards from you.
+
+	.story Rewards and privileges don't have to be promised ahead of time. They can be given on the spur of the moment because you are pleased with your child's behavior.
+
+	.story Rewards don't have to be tangible. Spending money isn't all that important to the effective use of this discipline technique. What is important is that you understand and utilize the key principle, which says that any behavior that is reinforced is likely to occur again, not that any behavior that is expensively or tangibly reinforced will occur again.
+
+script.
+	$(document).ready(function(){
+		$('.group').each(function(i){
+			console.log($(this).find('h2').text());
+			$(this).find('h3').each(function(){
+				console.log($(this).text())
+			});
+		});
+	});
