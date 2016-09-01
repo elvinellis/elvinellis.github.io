@@ -402,11 +402,11 @@ footer ul li{
 				.group{
 					width: 100%
 				}
+				.group story{
+					line-height: 28px;
+				}
 				.group .story, .group h2, .group h3{
 					width: 80%;
-				}
-				.group story{
-					line-height: 24px;
 				}
 				.group h2{
 					font-size: 30px;
@@ -449,15 +449,16 @@ footer ul li{
 			{% endfor %}
 			<div class="group">
 				<p style="margin-bottom: 25px; text-align: center">&#8251;</p>
-				<div style="width: 33%; float: left">
+				<div style="width: 31%; margin-left: 2%; float: left;">
 					<a href="{{ prev.url }}">{{ prev.title }} &nbsp;</a> 
 				</div>
-				<div style="width: 33%; float: left; text-align: center">
+				<div style="width: 34%; float: left; text-align: center">
 					<a href="/">Home</a> 
 				</div>
-				<div style="width: 33%; float: left; text-align: right">
+				<div style="width: 31%; float: left; text-align: right">
 					<a href="{{ next.url }}">{{ next.title }} &nbsp;</a>
 				</div>
+				<div style="clear: both" />
 			</div>
 			{% endif %}
 		</div>
