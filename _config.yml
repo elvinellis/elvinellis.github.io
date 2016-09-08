@@ -27,6 +27,8 @@ collections:
             output: true
     family:
             output: true
+    analytics:
+            output: true
 
 # Build settings
 markdown: kramdown

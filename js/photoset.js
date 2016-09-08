@@ -338,7 +338,7 @@
 								return;
 							}
 							else if($(this).hasClass('cols-W')){
-								console.log(w)
+								//console.log(w)
 								if (w >= 600){
 								
 								var breakoutMargin = -w / 8;
