@@ -27,7 +27,7 @@ collections:
             output: true
     family:
             output: true
-    analytics:
+    timeline:
             output: true
 
 # Build settings
