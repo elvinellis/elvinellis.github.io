@@ -18,7 +18,15 @@ module Jekyll
 
     def convert(content)
       begin
-        o, e, s = Open3.capture3("pug", :stdin_data => content)
+        o, e, s = Open3.capture3("python _plugins/preprocessor.py", :stdin_data => content)
+        puts(<<-eos
+Pug Error >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#{e}
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Pug Error
+        eos
+        ) if e.length > 0
+
+        o, e, s = Open3.capture3("pug", :stdin_data => o)
         puts(<<-eos
 Pug Error >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #{e}

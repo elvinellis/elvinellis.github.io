@@ -15,7 +15,6 @@ header
 			.date Est. 2013
 
 .panel
-	//h2 Romance
 	.haiku
 		| Love's only weakness
 		| Is also it's greatest strength:
@@ -29,11 +28,10 @@ header
 					h5 {{ c.excerpt }}
 					.date {{ c.date | date: "%B %Y" }}
 {% endfor %}
-.clear(style="margin-bottom: 40px;")
+.clear
 
 .panel
-	//h2 Travel
-	.story(style="text-align: center; font-style: normal") &#8251;
+	.fleuron
 	.haiku 
 		| Here, under the stars
 		| and there too, under the clouds,
@@ -48,10 +46,10 @@ header
 					h5 {{ c.excerpt }}
 					.date {{ c.date | date: "%B %Y" }}
 {% endfor %}
-.clear(style="margin-bottom: 40px;")
+.clear
 
 .panel
-	.story(style="text-align: center; font-style: normal") &#8251;
+	.fleuron
 	.haiku 
 		| You can't keep waiting
 		| for a better time than this,
@@ -68,6 +66,10 @@ header
 {% endfor %}
 .clear
 .panel
-	.story(style="text-align: center; font-style: normal") &#8251;
-	.haiku What's left unsaid, says it all.
+	.fleuron
+	.haiku 
+		| To see the world, things dangerous to come to, 
+		| to see behind walls, draw closer, 
+		| to find each other, and to feel. <br>
+		| That is the purpose of life. 
 
