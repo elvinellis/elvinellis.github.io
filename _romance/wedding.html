@@ -708,16 +708,12 @@ function SaveToDisk(fileURL, fileName) {
 		};
 
 		this.doTransition = function(index) {
-			var preIndex = index - 1
+			var preIndex = index - 1;
 				if(index == that.slides.length) index = 0;
-			console.log(index);
 			var indexId = that.slides[index].id;
 			var attr = $('#'+indexId).attr('style');
-			console.log(indexId);
-			console.log(attr);
 			if (typeof attr === typeof undefined) {
 				$('#'+indexId).css('background-image', 'url(http://'+setBg[indexId]+')');
-						console.log($('#'+indexId).attr('style'));
 						}
 						$(that.slides[preIndex]).fadeOut(that.transitionTime);
 						$(that.slides[index]).fadeIn(that.transitionTime);

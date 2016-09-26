@@ -7,9 +7,13 @@ emdash = re.compile(r'([a-zA-Z0-9]*) \- ([a-zA-Z0-9]*)', re.MULTILINE)
 ellipsis = re.compile(r'([a-zA-Z0-9^.]*)\.\.\.([\s+|"])', re.MULTILINE)
 multiply = re.compile(r'([0-9]+) x ([0-9]+)', re.MULTILINE)
 fraction = re.compile(r'([0-9]+)/([0-9]+)', re.MULTILINE)
+ordinalFirst = re.compile(r'1st', re.MULTILINE)
+ordinalSecond = re.compile(r'2nd', re.MULTILINE)
+ordinalThirs = re.compile(r'3rd', re.MULTILINE)
+
 #&frasl;
 for c in fileinput.input():
-    if ".story" in c or c.strip().startswith('|'):
+    if ".story" in c or c.strip().startswith('|') or c.strip().startswith('h2'):
         #print c
         t = ellipsis.sub(r"\1&hellip;\2", c)
         t = doublequote.sub(r"\1&ldquo;\2&rdquo;\3", t)
@@ -17,6 +21,10 @@ for c in fileinput.input():
         t = emdash.sub(r"\1 &mdash; \2", t)
         t = multiply.sub(r"\1&times;\2", t)
         t = fraction.sub(r"\1&frasl;\2", t)
+        t = ordinalFirst.sub(r"1#[sup st]", t)
+        t = ordinalSecond.sub(r"2#[sup nd]", t)
+        t = ordinalThirs.sub(r"3#[sup rd]", t)
+
         print t
     else:
         print c

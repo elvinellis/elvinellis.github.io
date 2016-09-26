@@ -61,12 +61,54 @@ header{
 	overflow: hidden;
 }
 
+h2 sup{
+	font-size: 20px;
+}
+
 table td {
 	vertical-align: top;
 	padding: 15px;
 }
 table tr:nth-child(even){
 	background-color: #EEE;
+}
+
+#coverList{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+
+#coverList li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+#coverList:after{
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.35);
+}
+
+#coverList-overlay{
+	position: absolute;
+	top: 80vh;
+	left: 0;
+	width: 100%;
 }
 
 #cover{
@@ -410,6 +452,9 @@ footer ul li{
 				}
 			}
 			@media (max-width: 750px) {
+				#cover title{
+					margin-top: -100px;
+				}
 				#cover h2{
 					font-size: 16px;
 				}
@@ -429,9 +474,16 @@ footer ul li{
 				.group h2{
 					font-size: 30px;
 				}
+				h2 sup{
+					font-size: 16px;
+				}
+
 			}
 
 			@media (max-width: 400px) {
+				#cover title{
+					margin-top: -80px;
+				}
 				#cover .content{
 					padding: 0 10%;
 				}
