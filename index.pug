@@ -20,59 +20,15 @@ script.
 		'https://4.bp.blogspot.com/-jEcZU7P-8xk/V5_fE64IbEI/AAAAAAABX9o/xwnrokcwWpk6m8vnBD77cr_TN6dKKggAACLcB/s1600/IMG_20140704_093731.jpg',
 		'https://2.bp.blogspot.com/-9OCeYMVdQRk/V2T6mKaaNZI/AAAAAAABWdU/hPk6UKyCKVI5ON4a0g9EBy6HtvcewxGFACLcB/s1600/IMG_0755-2674880731-O.jpg',
 		'https://4.bp.blogspot.com/-EE4uehNOMMs/V2T0nbBlGzI/AAAAAAABWOg/MlvCoiq84MwkR0e6XVLy3F4GknVuf2P0gCLcB/s1600/IMG_0252-2674936223-O.jpg',
-		'https://4.bp.blogspot.com/-lswdbi2e_qk/V2T5Dlmg5YI/AAAAAAABWZo/A5An5vEW1ykzTHbG6OzR_0OX8pyF1qH_QCLcB/s1600/IMG_1012-2674899276-O.jpg',
 		'https://3.bp.blogspot.com/-GMQf91VEpuc/V2T5Fh7FMeI/AAAAAAABWaE/6RYjOWzyYB4j5MXh6tQ771jJZHdZnQ7VQCLcB/s1600/IMG_1037-2674909132-O.jpg',
 		'https://2.bp.blogspot.com/-mwA0DcjTA74/V2T6jI3JEQI/AAAAAAABWc4/2CJlxXPySi4pseaHTomlGrpLMqGQiGSHwCLcB/s1600/IMG_0714-2674860359-O.jpg',
 		'https://1.bp.blogspot.com/-rcGWWZGrl_A/V1DHkRpky3I/AAAAAAABVzI/g_ZJonGZF5U7i4gg4-FBW1hOGSahsJ8nACLcB/s1600/P1300497.jpg',
-		'https://4.bp.blogspot.com/-SwLzu1YRxqw/V0WiLfW5AjI/AAAAAAABVnU/5CIOK_hNl-kcAAZVXEDZBYKe1uP5n4G4QCLcB/s1600/P2030195.jpg',
-		'https://2.bp.blogspot.com/-GnBNtmIF5ks/V2CM6HR3fBI/AAAAAAABWHs/Vkeg7cj90ukik5iEpzaDXu25Io0EsyHugCLcB/s1600/IMG_1240.jpg',
+		'https://2.bp.blogspot.com/-Ao1CLTlgvQw/V0kNeFKpAKI/AAAAAAABVss/XuTRQghIvbYWB05wO_pPzvoQE5JZ8dmTACLcB/s1600/P2030187.jpg',
 		'https://2.bp.blogspot.com/-CZJnv-t3c4E/V2CM_BZ2Q1I/AAAAAAABWJI/xp64rah0wnsTVijHzdP0iWqhp9qBzsIkQCLcB/s1600/IMG_1348.jpg',
+		'http://4.bp.blogspot.com/-TQayKh9oG9k/Vd-YOXaYGYI/AAAAAAABDhU/1PjP8iEkOsw/s1600/540.jpg',
 	];
-	(function($) {
-		$.fn.bannerSlides = function (options) {
-			if (this.length > 1) {
-				this.each(function () { $(this).bannerSlides(options) });
-				return this;
-			}
+	$('#coverList').bannerSlides();
 
-			var that = this;
-			this.slideContainer = $(this),
-			this.slides = 0, 
-			this.transitionTime = 1300,
-			this.delay = 7000,
-			this.index = 1,
-
-			this.initialize = function () {
-				var len = coverList.length;
-				for(i=0; i< len; i++){
-					$('#coverList').append("<li id='b"+i+"'></li>");
-				}
-
-				this.index = Math.floor((Math.random() * len));
-				that.slides = that.slideContainer.find('li');
-
-				that.doTransition(this.index);
-			};
-
-			this.doTransition = function(index) {
-				var preIndex = index - 1;
-				if(index == that.slides.length) index = 0;
-				var attr = $('#b'+index).attr('style');
-				if (typeof attr === typeof undefined) {
-					$('#b'+index).css('background-image', 'url('+coverList[index]+')');
-				}
-				$(that.slides[preIndex]).fadeOut(that.transitionTime);
-				$(that.slides[index]).fadeIn(that.transitionTime);
-				index++;
-				setTimeout(function() { that.doTransition(index); }, that.delay);
-			}
-
-			return this.initialize();
-		}
-
-		$('#coverList').bannerSlides();
-
-	})(jQuery);
 
 .panel
 	.haiku

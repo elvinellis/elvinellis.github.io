@@ -25,8 +25,8 @@ for c in fileinput.input():
         t = ordinalSecond.sub(r"2#[sup nd]", t)
         t = ordinalThirs.sub(r"3#[sup rd]", t)
 
-        print t
+        print t.rstrip()
     else:
-        print c
+        print c.rstrip()
     
 
