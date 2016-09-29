@@ -10,13 +10,11 @@ permalink: /phuket
 ---
 
 header
-	#cover(style="background-image:url({{ page.cover }})")
-		#title
-			h1 {{ page.title }}
-			h2 {{ page.excerpt }}
-		#narrated Narrated by 
-			span.author {{ page.author }}
-			.date {{ page.date | date: "%B %Y" }}
+	ul#coverList
+	#overlay
+		h1 {{ page.title }}
+		.excerpt {{ page.excerpt }}
+		.byline Narrated by {{ page.author }} &middot; {{ page.date | date: "%B %Y" }}
 
 .group
 	//h2 Phuket
@@ -30,7 +28,7 @@ header
 		img(src="https://3.bp.blogspot.com/-qxBFbxkiuQs/V5_en8PpirI/AAAAAAABX3g/l_9GBWeSLWYHKNVzu9XTuEhnD3mc_egjQCLcB/s500/IMG_0419.jpg")
 		img(src="https://4.bp.blogspot.com/-jhe1o__IZUo/V5_e0fJ9FII/AAAAAAABX6M/yKQKrF7RwF8QxxpQ7jMzTs0I2ETW2Ef_wCLcB/s500/IMG_0550.jpg")
 		img(src="https://4.bp.blogspot.com/-GCbRzKAjuIw/V5_eoszbGOI/AAAAAAABX3s/Ox68DAfOxhwAqAq9g0oFxaq-jv8xXKNRwCLcB/s500/IMG_0430.jpg")
-		img(src="https://3.bp.blogspot.com/-NWV2dSaTlsU/V5_eoJNKVvI/AAAAAAABX3k/vddO6RXQb-kSVkoJMWr9rG4a10Tus8xCgCLcB/s1600/IMG_0427.jpg")
+		img._(src="https://3.bp.blogspot.com/-NWV2dSaTlsU/V5_eoJNKVvI/AAAAAAABX3k/vddO6RXQb-kSVkoJMWr9rG4a10Tus8xCgCLcB/s1600/IMG_0427.jpg")
 		//img(src="https://3.bp.blogspot.com/-Eh-IUfLSdxY/V5_emw_gtII/AAAAAAABX3Q/idLvOBX0y6wHKpPEJ3xTz-J8YA3t7FDywCLcB/s1600/IMG_0408.jpg")
 		//img(src="https://1.bp.blogspot.com/-cs-RbA3iNq0/V5_enuq8SRI/AAAAAAABX3c/NNZN1XYrl10rEuM0H3UiMorNn45G76pAwCLcB/s1600/IMG_0418.jpg")
 		//img(src="https://1.bp.blogspot.com/-Dzmz2o2JUZE/V5_eoQVMDHI/AAAAAAABX3o/9jPVzS_inbYFppET0mXk58pujxnT-bI2wCLcB/s1600/IMG_0429.jpg")
@@ -84,7 +82,7 @@ header
 		img(src="https://2.bp.blogspot.com/-z3p4JEJ1u9E/V5_exB1r8vI/AAAAAAABX5g/ILEe5rT8wgU7M81DOUiiZfGTyx34-SNlACLcB/s1600/IMG_0517.jpg")
 		img(src="https://2.bp.blogspot.com/-YgQKRmZBKFQ/V5_exQEwuSI/AAAAAAABX5o/iFXXGj3CQ4Uns7oy6eUD78zw5V0E6Q4pwCLcB/s1600/IMG_0523.jpg")
 
-		img(src="https://1.bp.blogspot.com/-3c0Owce6Hws/V5_eyTmtybI/AAAAAAABX5w/eHqk7wwVcvcLko1BrvAdHamF2RJM5aXiQCLcB/s1600/IMG_0524.jpg")
+		img._(src="https://1.bp.blogspot.com/-3c0Owce6Hws/V5_eyTmtybI/AAAAAAABX5w/eHqk7wwVcvcLko1BrvAdHamF2RJM5aXiQCLcB/s1600/IMG_0524.jpg")
 
 		img(src="https://3.bp.blogspot.com/-LvkqFyFZL74/V5_eyBwXXEI/AAAAAAABX5s/dxSc12zrJuYuCvGMCqpCJaIdHUVTSty1gCLcB/s1600/IMG_0528.jpg")
 		img(src="https://3.bp.blogspot.com/-EFk7k1HhW60/V5_eyUKbijI/AAAAAAABX50/N8bAVhBpwBcVFsAaHWlQuoZ8EU4s0JeOwCLcB/s1600/IMG_0529.jpg")
@@ -102,7 +100,7 @@ header
 	h2 Swimming
 	.story What is the best thing about a double-decked boat? Jumping off into the sea for a swim. There is an adrenaline rush from the fall and then the cold water hits me. There's nothing like cooling off in cold water on a hot day.
 	.photoset(data-layout="121")
-		img(src="https://4.bp.blogspot.com/-wbgIaIPegAI/V5_e2YVWwnI/AAAAAAABX6s/jN2Uo3Z3UPsx4e7mrjLwqnca4DFmFXy4wCLcB/s1600/IMG_0573.jpg")
+		img._(src="https://4.bp.blogspot.com/-wbgIaIPegAI/V5_e2YVWwnI/AAAAAAABX6s/jN2Uo3Z3UPsx4e7mrjLwqnca4DFmFXy4wCLcB/s1600/IMG_0573.jpg")
 
 		img(src="https://3.bp.blogspot.com/-9LU2NJDYJgA/V5_e2rfwolI/AAAAAAABX6w/B-c25DUxkcM7g__ILllzhUbDnylhooNLgCLcB/s800/IMG_0574.jpg")
 		img(src="https://3.bp.blogspot.com/-UBgem9UogkQ/V5_e1BBoyGI/AAAAAAABX6Y/4mUbE6se_sorQkzaZwC-I5V7K1stpyFVwCLcB/s800/IMG_0558.jpg")
@@ -123,7 +121,7 @@ header
 	h2 James Bond Island
 	.story On the Kho Phing Kan island, there is a famous limestone tower karst sticking out in the sea called Ko Tapu. It is the result of years of sea water erosion. It is also called James Bond Island because some scene of the movies were shot here.
 	.photoset(data-layout="W2W")
-		img(src="https://1.bp.blogspot.com/-FCAC1Ze1fN8/V6YHRtRm3NI/AAAAAAABYCk/zQsAV5mC2eYr_n_tf2Oo5DR9zTo8MY0QACLcB/s1600/IMG_20140703_132948.jpg")
+		img._(src="https://1.bp.blogspot.com/-FCAC1Ze1fN8/V6YHRtRm3NI/AAAAAAABYCk/zQsAV5mC2eYr_n_tf2Oo5DR9zTo8MY0QACLcB/s1600/IMG_20140703_132948.jpg")
 		img(src="https://2.bp.blogspot.com/-F7Q0i_CL-GA/V5_fC1YPTpI/AAAAAAABX9Q/CC_z7_91Bhkj5n0ws3j0duRV3-K7atFLgCLcB/s800/IMG_20140703_133048.jpg")
 		img(src="https://2.bp.blogspot.com/-IaYAbtfk2HE/V5_fBraymsI/AAAAAAABX88/R0xyEDKIhxIg4RIOigSsn6yccyY7eDPnwCLcB/s800/IMG_20140703_132258.jpg")
 		//img(src="https://2.bp.blogspot.com/-5ptmULBLAUE/V5_fBGpbgDI/AAAAAAABX84/3wX3plhipdstiSpbTwgZQxAy4miqieS5ACLcB/s1600/IMG_20140703_132230.jpg")
@@ -147,7 +145,7 @@ header
 		img(src="https://2.bp.blogspot.com/-XpvoiclwzUk/V5_e98lpnlI/AAAAAAABX8Q/eJeWVS35loQH7SOJa-U5qmbPt3X6hYKEACLcB/s800/IMG_20140702_094116.jpg")
 		img(src="https://2.bp.blogspot.com/-jpmzOQFYzSw/V5_fAOfqEcI/AAAAAAABX8s/cvAN4u1mxIMxxoY7EJrOkzG2Q7_ISc7_QCLcB/s800/IMG_20140702_102224.jpg")
 
-		img(src="https://4.bp.blogspot.com/-Av_42BM5DrE/V5_e93YgQtI/AAAAAAABX8U/q4R-o3a46-gL4tm4BZHUV2RW55RK_31eQCLcB/s1600/IMG_20140702_094621.jpg")
+		img._(src="https://4.bp.blogspot.com/-Av_42BM5DrE/V5_e93YgQtI/AAAAAAABX8U/q4R-o3a46-gL4tm4BZHUV2RW55RK_31eQCLcB/s1600/IMG_20140702_094621.jpg")
 
 		img(src="https://4.bp.blogspot.com/-ZcCw6hgOM04/V5_e-AJhplI/AAAAAAABX8Y/3P8fN4prSKoWUeZAZGFc6nB0z6z3zSJBQCLcB/s500/IMG_20140702_095339.jpg")
 		img(src="https://2.bp.blogspot.com/-Cpaiy9PNoMc/V5_e-8ykDdI/AAAAAAABX8c/rXxhHAmWs_gUxORxDM2O7OzqRbg0a6LmQCLcB/s500/IMG_20140702_095415.jpg")
@@ -169,7 +167,7 @@ header
 		img(src="https://4.bp.blogspot.com/-5LbQkohS7Mw/V5_e3v1EZKI/AAAAAAABX7A/J4h8HY-_WRwFU1bEdquTy75w-YP4K8NKgCLcB/s500/IMG_0614.jpg")
 		img(src="https://3.bp.blogspot.com/-Xei0yiTs2XQ/V5_e4FrRyzI/AAAAAAABX7E/naNkV1xTVvIUu1fcKnmOXst3NLBkbDuFQCLcB/s500/IMG_0615.jpg")
 		img(src="https://3.bp.blogspot.com/-spRFz-Mdb18/V5_e4KcZBPI/AAAAAAABX7I/LyqsAaGshwMydGoGw8SiUlvMbRoJTreQQCLcB/s500/IMG_0618.jpg")
-		img(src="https://4.bp.blogspot.com/-jEcZU7P-8xk/V5_fE64IbEI/AAAAAAABX9o/xwnrokcwWpk6m8vnBD77cr_TN6dKKggAACLcB/s1600/IMG_20140704_093731.jpg")
+		img._(src="https://4.bp.blogspot.com/-jEcZU7P-8xk/V5_fE64IbEI/AAAAAAABX9o/xwnrokcwWpk6m8vnBD77cr_TN6dKKggAACLcB/s1600/IMG_20140704_093731.jpg")
 		img(src="https://3.bp.blogspot.com/-4kpNgA9kK_c/V5_fFvGblLI/AAAAAAABX90/vnXfr2X7Y0cBtDSzcJSj52Njd-nU9oteQCLcB/s1600/PANO_20140704_093629.jpg")
 	.story The sun sets in front of Patong beach. Everyone love a sunset. Strangers stand, sit and hang around the beach for the spectacular view. When the evening comes, dinner is just right around the corner. Hawker's food and restaurants lined the roads that snake in behind the beach.
 	.photoset(data-layout="121")
@@ -177,7 +175,7 @@ header
 		img(src="https://4.bp.blogspot.com/-gqu6katWcSc/V5_e5CPVxiI/AAAAAAABX7U/44YX94uOyooZUsE025706NDKSEhZd83CwCLcB/s800/IMG_0640.jpg")
 		img(src="https://1.bp.blogspot.com/-qc1-idSa7wc/V5_e5YF_HBI/AAAAAAABX7Y/993Hb2CFzNUvIVSHLTUdcCsBJW0pXhkiACLcB/s800/IMG_0643.jpg")
 		//img(src="https://2.bp.blogspot.com/-fRTGbWBv5ig/V5_e5sPh2jI/AAAAAAABX7c/-iwIJOJbd6gyP_gUlBtztYXJmQIAaLt6wCLcB/s1600/IMG_0644.jpg")
-		img(src="https://1.bp.blogspot.com/-FleAUE-dpws/V5_e6DedG8I/AAAAAAABX7k/dIhHUOntfUol4cOmLcaLCoXK6czzpeGDACLcB/s1600/IMG_0650.jpg")
+		img._(src="https://1.bp.blogspot.com/-FleAUE-dpws/V5_e6DedG8I/AAAAAAABX7k/dIhHUOntfUol4cOmLcaLCoXK6czzpeGDACLcB/s1600/IMG_0650.jpg")
 
 .group
 	h2 Ban Thai

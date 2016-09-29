@@ -12,7 +12,6 @@ function shuffle(array) {
 
 	return array;
 }
-(function($) {
 	$.fn.bannerSlides = function (options) {
 		if (this.length > 1) {
 			this.each(function () { $(this).bannerSlides(options) });
@@ -20,45 +19,54 @@ function shuffle(array) {
 		}
 
 		var that = this;
+		this.coverList = [],
 		this.slideContainer = $(this),
 		this.slides = 0, 
+		this.slidesLen = 0,
 		this.transitionTime = 1300,
 		this.delay = 7000,
 		this.index = 1,
 
 		this.initialize = function () {
-			var len = coverList.length;
-			for(i=0; i< len; i++){
+			if(that.slideContainer.attr('data')){
+				that.coverList = that.slideContainer.attr('data').split(',');
+			}
+			if(that.coverList.length == 0){
+				$('img._').map(function(){that.coverList.push($(this).attr('src').replace(/\/s[0-9]+\//, "/s1600/"));});
+			}
+			that.slidesLen = that.coverList.length;
+			for(i=0; i< that.slidesLen; i++){
 				$('#coverList').append("<li id='b"+i+"'></li>");
 			}
 
-			this.index = Math.floor((Math.random() * len));
+			this.index = Math.floor((Math.random() * that.slidesLen));
 			that.slides = that.slideContainer.find('li');
-			coverList = shuffle(coverList);
+			that.coverList = shuffle(that.coverList);
 
 			that.doTransition(this.index);
 		};
 
 		this.doTransition = function(index) {
 			var preIndex = index - 1;
-			if(index == that.slides.length) index = 0;
+			if(index == that.slidesLen) index = 0;
 			var attr = $('#b'+index).attr('style');
 			if (typeof attr === typeof undefined) {
-				$('#b'+index).css('background-image', 'url('+coverList[index]+')');
+				$('#b'+index).css('background-image', 'url('+that.coverList[index]+')');
 			}
 			$(that.slides[preIndex]).fadeOut(that.transitionTime);
 			$(that.slides[index]).fadeIn(that.transitionTime);
 			index++;
+
+			if(that.slidesLen == 1) return;
+
 			setTimeout(function() { that.doTransition(index); }, that.delay);
 		}
 
 		return this.initialize();
 	}
 
-})(jQuery);
 
 function replaceVideo(id){
-	console.log($('#' + id));
 	$('#' + id).hide();
 	$('#' + id).after("<div class='video'><iframe allowfullscreen='allowfullscreen' frameborder='0' src='https://www.youtube.com/embed/"+id+"?modestbranding=1&rel=0'/></div>");
 }
@@ -70,6 +78,10 @@ function loadVideo(el, youtube_id){
 }
 
 $(document).ready(function(){
+	if($('#coverList').length){
+		$('#coverList').bannerSlides();
+	}
+
 	$('.photoset img').each(function(i){
 		//var highres = $(this).attr('src').substr(0,101) + 's1600/';
 		var highres = $(this).attr('src').replace(/\/s([\d]*)\//,"/s1600/");
@@ -95,7 +107,6 @@ $(document).ready(function(){
 		var el = $(this);
 		$.ajax({url: url}).done(function(data){
 			var arr = data.split("\n");
-			console.log(arr);
 			var listContent = "";
 			for(a in arr){
 				ll = arr[a];

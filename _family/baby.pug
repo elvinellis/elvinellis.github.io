@@ -10,13 +10,11 @@ permalink: /baby
 ---
 
 header
-	#cover(style="background-image:url({{ page.cover }})")
-		#title
-			h1 {{ page.title }}
-			h2 {{ page.excerpt }}
-		#narrated Narrated by 
-			span.author {{ page.author }}
-			.date {{ page.date | date: "%B %Y" }}
+	ul#coverList
+	#overlay
+		h1 {{ page.title }}
+		.excerpt {{ page.excerpt }}
+		.byline Narrated by {{ page.author }} &middot; {{ page.date | date: "%B %Y" }}
 
 .group
 	.story #[img(src="https://4.bp.blogspot.com/-moLtu8cp36w/V9yP6jvL7PI/AAAAAAABZow/II2GqeallSATLF_trTTraFCB0ZrdCN8zQCLcB/s90/I-10.jpg" align="left" alt="I")]t is amazing to watch how life begins and unfolds before your eyes. Starting from a small dot, the cells multiply rapidly, then slow, then increase in pace again, and sometimes it pauses. Growth of a foetus is like making many small sprints on a long journey. The only record of our baby's progress is in the ultrasound snapshots from each doctor's visit. Every minute, we draw closer to the big day where we invite baby to the world and become parents.
@@ -51,7 +49,7 @@ header
 		| Something is forming inside me! Nice to meet you, little baby! We heard your heartbeat once again! I'm so grateful ! Stay strong and keep growing, baby!!
 	.photoset(data-layout="2")
 		img(src="https://2.bp.blogspot.com/-Jt8lTgBDzbE/V4DH9nPAOlI/AAAAAAABWzU/TebcMLPVWk8TN3-0_TY3lMnmMX6MKtCIwCLcB/s1600/Baby-20160709-1.jpg")
-		img(src="https://1.bp.blogspot.com/-GZfqMMgq40M/V4DH9_1098I/AAAAAAABWzY/Nf5yFXQeYqIndzCOJmb96Vr14euVkNtjACLcB/s1600/Baby-20160709-2.jpg")
+		img._(src="https://1.bp.blogspot.com/-GZfqMMgq40M/V4DH9_1098I/AAAAAAABWzY/Nf5yFXQeYqIndzCOJmb96Vr14euVkNtjACLcB/s1600/Baby-20160709-2.jpg")
 
 	.fleuron
 	h3 22 July, Friday (Week 11)
@@ -78,19 +76,19 @@ header
 		| FHR: 166 bpm. Nuchal Translucency (NT): 2.40 mm. Nasal Bone: 2.0 mm.
 		| We did the OSCAR test today. The baby barrel-rolled to show her backbone when the sonologist did the scan. Each bone was so distinct on the screen. We saw the brain, tiny fingers and toes. At one point, it looked like the baby was crossing legs and raising its hands. It was touching to watch.
 	.photoset(data-layout="1232123")
-		img(src="https://1.bp.blogspot.com/-O0KLolHhG54/V682IzfEMlI/AAAAAAABYFE/UyNDsNmp-lYmnbXonxrKtkJCksfObqVfQCLcB/s1600/00013.png")
+		img._(src="https://1.bp.blogspot.com/-O0KLolHhG54/V682IzfEMlI/AAAAAAABYFE/UyNDsNmp-lYmnbXonxrKtkJCksfObqVfQCLcB/s1600/00013.png")
 		
 		img(src="https://2.bp.blogspot.com/-MyzKzT3q1DE/V682J2ZEULI/AAAAAAABYFY/RsDNxbzsi8cCFkO4_wQ4zakoEcG-4uTwgCLcB/s1600/00035.png")
-		img(src="https://1.bp.blogspot.com/-jQU6X1AhWZc/V682KQPv48I/AAAAAAABYFc/lZlmfB2LMacgNSh4m4_ESsbQXHV_BvcGACLcB/s1600/00039.png")
+		img._(src="https://1.bp.blogspot.com/-jQU6X1AhWZc/V682KQPv48I/AAAAAAABYFc/lZlmfB2LMacgNSh4m4_ESsbQXHV_BvcGACLcB/s1600/00039.png")
 
 		img(src="https://2.bp.blogspot.com/-UZdRP7nR7qU/V682_SgNipI/AAAAAAABYFg/U8HaLOypsn0cH7tsC2TdSnYzROlLzqphQCLcB/s1600/00002.png")
 		img(src="https://1.bp.blogspot.com/-k_SQWSUO5XQ/V682IMl1D5I/AAAAAAABYFA/Tm5uWapDVaQmjHfWgUVzDeT4zIcbpzJPQCLcB/s1600/00007.png")
 		img(src="https://4.bp.blogspot.com/-LKptjnVopbU/V682ILhw-uI/AAAAAAABYE8/xc_bRqzZw0Y8xF-ocGqXacKfSBWsl7GWwCLcB/s1600/00011.png")
-		img(src="https://1.bp.blogspot.com/-b_hbZjmcPN8/V682IHko_hI/AAAAAAABYE4/rbN04H5j_zQ_mE1H9oSliLwQZU6EP_61wCLcB/s1600/00012.png")
+		img._(src="https://1.bp.blogspot.com/-b_hbZjmcPN8/V682IHko_hI/AAAAAAABYE4/rbN04H5j_zQ_mE1H9oSliLwQZU6EP_61wCLcB/s1600/00012.png")
 		img(src="https://2.bp.blogspot.com/-AUQifHTG-gg/V682I51ugPI/AAAAAAABYFM/59OoSMuEUAISFb82Tf1Owg4xpbzdSUfvACLcB/s1600/00014.png")
 		img(src="https://3.bp.blogspot.com/-LPmaaO0210U/V682JFcsLGI/AAAAAAABYFI/LyuOtnObHakKleD4IEsIY_oD9hDFv15OwCLcB/s1600/00021.png")
 		img(src="https://1.bp.blogspot.com/-bgAkrr2ZiMc/V682Jkt4xzI/AAAAAAABYFQ/qkOsrtjbDKcVCOYwwzOJ8mpXs7IkoJZtwCLcB/s1600/00022.png")
-		img(src="https://2.bp.blogspot.com/-y6xc0wnmQ_Y/V682Jjx6RXI/AAAAAAABYFU/J3XfLkReAWY9ubO6BjQjJs9WJezFEClbgCLcB/s1600/00023.png")
+		img._(src="https://2.bp.blogspot.com/-y6xc0wnmQ_Y/V682Jjx6RXI/AAAAAAABYFU/J3XfLkReAWY9ubO6BjQjJs9WJezFEClbgCLcB/s1600/00023.png")
 
 	.fleuron
 	h3 13 August, Saturday (Week 14)
@@ -113,7 +111,7 @@ header
 	.photoset(data-layout="B31")
 		img(src="https://3.bp.blogspot.com/-iANC22j6pUc/V9vjM3i3bOI/AAAAAAABZnI/aS_PjCg7Ccw9MjCt-DxGDSbEvs69QDMKACLcB/s800/P1070196.jpg")
 		img(src="https://2.bp.blogspot.com/-OcYplExAXwk/V9vjMJjzxbI/AAAAAAABZnA/jo2NP8NAmik7uGP5JwCv31Z4w63Gw7tTACLcB/s800/P1070190.jpg")
-		img(src="https://2.bp.blogspot.com/-xZoKgodu-Ns/V9vop6JB_WI/AAAAAAABZoA/dxU6WgJNQiszjgdqzkmXztMIOb6wSK6egCLcB/s800/P1070194.jpg")
+		img._(src="https://2.bp.blogspot.com/-xZoKgodu-Ns/V9vop6JB_WI/AAAAAAABZoA/dxU6WgJNQiszjgdqzkmXztMIOb6wSK6egCLcB/s800/P1070194.jpg")
 		img(src="https://3.bp.blogspot.com/-XS6PJf4d2Lo/V9vjNksQvqI/AAAAAAABZnQ/AiBqD4VgS14x8TZd32RcfjVf-KX3WLOIQCLcB/s500/P1070203.jpg")
 		img(src="https://3.bp.blogspot.com/-vvzzvH4gExo/V9vjRRmz1EI/AAAAAAABZnw/sdDBvNAQ_scGztYo2_x_JdG-ui4nl9VqQCLcB/s500/P1070233.jpg")
 		img(src="https://3.bp.blogspot.com/-dsCs2XavvZI/V9vjQRzMtGI/AAAAAAABZno/HLAhduWpx3k9M-hDzryhGIsZAyJbz523wCLcB/s500/P1070225.jpg")
@@ -140,15 +138,15 @@ header
 		| Yipee! Today is baby's Fetal Assessment scan. We've been counting down to this. She was comfortably sleeping head-down when we caught glimpse of her. In that position, the sonographer had a difficult measuring her heart. She told us to go take a five-minute walk to try and get baby to shift her position. As Ellis was pacing around, she encouraged baby in a motherly voice, "Baby, it's time to wake up..." 
 	.photoset(data-layout="23213")
 		img(src="https://2.bp.blogspot.com/-erfn4OHOfB0/V-Zqe_7TGhI/AAAAAAABZ6w/8i5qSwyYeXMfiDzGsQPSv6NXmpQ5o3nxwCLcB/s1600/FA00.jpg")
-		img(src="https://4.bp.blogspot.com/-hpEtNgDr6wY/V-Zqe8XQ52I/AAAAAAABZ64/tUe94v9kAYgzsnKmfseYI9VI99GTRbtSQCLcB/s1600/FA01.jpg")
+		img._(src="https://4.bp.blogspot.com/-hpEtNgDr6wY/V-Zqe8XQ52I/AAAAAAABZ64/tUe94v9kAYgzsnKmfseYI9VI99GTRbtSQCLcB/s1600/FA01.jpg")
 		img(src="https://3.bp.blogspot.com/-rnUnT9Rmiok/V-Zqe0GzeXI/AAAAAAABZ60/zFjHepnJRXArCQi-Y-4ez00763YHhU0vgCLcB/s1600/FA02.jpg")
 		img(src="https://4.bp.blogspot.com/-ej1moa6wXBE/V-Zqfv501jI/AAAAAAABZ7A/8FOMsKiXHMAsfxdHbVP4KRDa1DwFWfKmgCLcB/s1600/FA03.jpg")
-		img(src="https://4.bp.blogspot.com/-S58GteI5twg/V-ZqfoOKE5I/AAAAAAABZ68/LbLIvbZqBe4_rQb8HdhEK8wMgz3eILnuwCLcB/s1600/FA04.jpg")
-		img(src="https://3.bp.blogspot.com/-lrpatPXO4kk/V-ZqfvId0NI/AAAAAAABZ7E/6hSvdPXMwzcCmC_qwzB1w3cgscW-mjgUACLcB/s1600/FA05.jpg")
+		img._(src="https://4.bp.blogspot.com/-S58GteI5twg/V-ZqfoOKE5I/AAAAAAABZ68/LbLIvbZqBe4_rQb8HdhEK8wMgz3eILnuwCLcB/s1600/FA04.jpg")
+		img._(src="https://3.bp.blogspot.com/-lrpatPXO4kk/V-ZqfvId0NI/AAAAAAABZ7E/6hSvdPXMwzcCmC_qwzB1w3cgscW-mjgUACLcB/s1600/FA05.jpg")
 		img(src="https://1.bp.blogspot.com/-C8zv94aMJww/V-ZqgJNvSRI/AAAAAAABZ7I/MNyUvbbv2Rs-sbX8BUGMQS7aDadJE-sOwCLcB/s1600/FA06.jpg")
 	.story We got back into the roo again and baby has turned. We got a good look at her hands, feets and head. In one of the photos, we saw baby making a "chiak!" gesture with her hand. Another shot has her clenching her fist to make a &#x1F44D; sign. Finally, the sonographer measured the ventricles in her rapidly pumping heart. When it was over, we received a report stating that there are no anomalies. That's all that we wished for baby. &#x1F468;&zwj;&#x1F469;&zwj;&#x1F467;
 	.photoset(data-layout="13")
-		img(src="https://3.bp.blogspot.com/-RdT1-Fgbji8/V-ZqgZEoqrI/AAAAAAABZ7M/rSyXMoU7UQM-Dnr_IWuPyPBSV0Atn6BiACLcB/s1600/FA08.jpg")
+		img._(src="https://3.bp.blogspot.com/-RdT1-Fgbji8/V-ZqgZEoqrI/AAAAAAABZ7M/rSyXMoU7UQM-Dnr_IWuPyPBSV0Atn6BiACLcB/s1600/FA08.jpg")
 		img(src="https://4.bp.blogspot.com/-b-msih3Vof4/V-ZqgH9GkCI/AAAAAAABZ7Q/CGQFmJvVOEox1AFOFf1jiagIFaRjJt7jACLcB/s1600/FA07.jpg")
 		img(src="https://3.bp.blogspot.com/-FjEHzipudTU/V-ZqgmfcdqI/AAAAAAABZ7U/GaSIvJOQJxwDif1G0bzqDs69a9io7lnswCLcB/s1600/FA09.jpg")
 		img(src="https://2.bp.blogspot.com/-Lu6C2pbDKsY/V-Zqg_kgAFI/AAAAAAABZ7Y/3-RciVFU7HAP0ET4kN9gxU7oQ4gM5lskACLcB/s1600/FA10.jpg")

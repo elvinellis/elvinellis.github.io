@@ -3,20 +3,18 @@ layout: exposure
 label: travel
 cover: https://4.bp.blogspot.com/-EE4uehNOMMs/V2T0nbBlGzI/AAAAAAABWOg/MlvCoiq84MwkR0e6XVLy3F4GknVuf2P0gCLcB/s1600/IMG_0252-2674936223-O.jpg
 title: South Korea
-excerpt: Watching the Cherry Blossoms
+excerpt: In the Cherry Blossoms
 author: Elvin
 date: 2013-04-07
 permalink: /korea
 ---
 
 header
-	#cover(style="background-image:url({{ page.cover }})")
-		#title
-			h1 {{ page.title }}
-			h2 {{ page.excerpt }}
-		#narrated Narrated by 
-			span.author {{ page.author }}
-			.date {{ page.date | date: "%B %Y" }}
+	ul#coverList
+	#overlay
+		h1 {{ page.title }}
+		.excerpt {{ page.excerpt }}
+		.byline Narrated by {{ page.author }} &middot; {{ page.date | date: "%B %Y" }}
 .group
 	//h2 Seoul
 	.story #[img(src="https://4.bp.blogspot.com/-0cSSCKGeqTI/V8i-ZyZbJ9I/AAAAAAABYz0/tLSytIrJ5I0kn5zrr-gIZ5SyRjmX9RoUACLcB/s120/S-1.jpg" align="left" alt="S")]outh Korea and #[a(href="/jeju") Jeju] was our first overseas trip together.  We started in Dohwa-dong, Seoul where we put up at Best Western Hotel for the night. We hit the streets of Myeong-dong for some shopping fun. It was crowded with some jostling here and there. It reminded me of Bugis street with its weekend crowd. Push-carts along the roads sold women accessories, caps, scarves, gloves, bags, and shoes. Lots of shops sold facial products which South Korea is famous for.
@@ -67,10 +65,10 @@ header
 		img(src="https://2.bp.blogspot.com/-uHGpYPRvLSk/V2T4aoEtP7I/AAAAAAABWTE/7COQZQdI6yE4i87ofswmz9BcsMIL2KkOgCLcB/s500/IMG_0304-2674849328-O.jpg")
 		img(src="https://1.bp.blogspot.com/-2BDYb0pxIdQ/V2T4atEoQ-I/AAAAAAABWTM/6HJsGp5Fd4k25xcdK0xrzVpMo3b9l-nfQCLcB/s800/IMG_0309-2674852439-O.jpg")
 		img(src="https://4.bp.blogspot.com/-KVnb9OPMUfc/V2T4bbY975I/AAAAAAABWTQ/jgvznhtUheQoMRt_OIYgaXinDQmDwI7ogCLcB/s800/IMG_0312-2674854127-O.jpg")
-		img(src="https://2.bp.blogspot.com/-zBgatZ6rc24/V2T4bicKMMI/AAAAAAABWTY/pkOdKQliuMQ6xz7ga523ePYi5SBUCOUVQCLcB/s1600/IMG_0324-2674861156-O.jpg")
+		img._(src="https://2.bp.blogspot.com/-zBgatZ6rc24/V2T4bicKMMI/AAAAAAABWTY/pkOdKQliuMQ6xz7ga523ePYi5SBUCOUVQCLcB/s1600/IMG_0324-2674861156-O.jpg")
 		img(src="https://4.bp.blogspot.com/-xm0XWh9tswk/V2T4cZg7DdI/AAAAAAABWTg/IVq-SwRkNGoaZIYz69auhVmB0SXrqaSwACLcB/s500/IMG_0327-2674863248-O.jpg")
 		img(src="https://2.bp.blogspot.com/-WRQ84QMdVr0/V2T4cpC8_wI/AAAAAAABWTo/tVoLHTsSdUYsycPATVQt-F5XD5FZN-mzACLcB/s500/IMG_0329-2674864159-O.jpg")
-		img(src="https://4.bp.blogspot.com/-EE4uehNOMMs/V2T0nbBlGzI/AAAAAAABWOg/MlvCoiq84MwkR0e6XVLy3F4GknVuf2P0gCLcB/s500/IMG_0252-2674936223-O.jpg")
+		img._(src="https://4.bp.blogspot.com/-EE4uehNOMMs/V2T0nbBlGzI/AAAAAAABWOg/MlvCoiq84MwkR0e6XVLy3F4GknVuf2P0gCLcB/s500/IMG_0252-2674936223-O.jpg")
 		//img(src="https://1.bp.blogspot.com/-OSfhFOhy07k/V2T4bt-kY-I/AAAAAAABWTU/yQ8tApn9lW8uoLVJFHc5pBbT-Lmh4fD5ACLcB/s1600/IMG_0325-2674861037-O.jpg")
 		//img(src="https://1.bp.blogspot.com/-SU5Tuobepr0/V2T4Ys3xLjI/AAAAAAABWSk/hgm0kbryrswKChf-Nob7yF47UfKVGcndQCLcB/s1600/IMG_0263-2674835674-O.jpg")
 		//img(src="https://4.bp.blogspot.com/-ItpXx_pJT5w/V2T4YlLILbI/AAAAAAABWSs/AV20Cnpa-CYajg8P7auYj1Uod3ng2ykAgCLcB/s1600/IMG_0266-2674836301-O.jpg")
@@ -84,12 +82,12 @@ header
 	h2 Cherry Blossom
 	.story Cherry blossom was the highlight of the trip. The abnormal weather in the recent decade meant the start of spring was more unpredictable than the past. We were lucky to be here at the time where the cherry trees felt it was a comfortable temperature to bloom. Once the bloom started, an unstoppable waves of white and pink flowers washed over the forest, parks and road side. The trees do not have any fresh leaves during the bloom. Man have been mesmerised by cherry blossoms since time immemorial. The display calms you and charms you. There is an indescribable beauty and universal appeal. The branches rustle and flowers sway in breeze. The flowers fall to the ground to form a colorful carpet that welcome you to enjoy this fleeting moment.
 	.photoset(data-layout="W232")
-		img(src="https://2.bp.blogspot.com/-ceZJF4oNeH4/V2T1K3p-raI/AAAAAAABWQo/l1P2rfDn-VQq7dQeFLUbsVODRxE-6wkSQCLcB/s1600/IMG_0608-2674771013-O.jpg")
+		img._(src="https://2.bp.blogspot.com/-ceZJF4oNeH4/V2T1K3p-raI/AAAAAAABWQo/l1P2rfDn-VQq7dQeFLUbsVODRxE-6wkSQCLcB/s1600/IMG_0608-2674771013-O.jpg")
 		img(src="https://4.bp.blogspot.com/-cQTs7XrF2HU/V2T1PQLPG1I/AAAAAAABWRU/1DLJAxmlB0g1TXvwri_IsflwRLWbAYH0QCLcB/s800/IMG_0626-2674777334-O.jpg")
 		img(src="https://3.bp.blogspot.com/-f-rcIu_KrwU/V2T1Lj6LewI/AAAAAAABWQw/GnaUx-OcCaAFgEXJ0FBulIz_jCXkGf-BwCLcB/s800/IMG_0621-2674775159-O.jpg")
 		img(src="https://1.bp.blogspot.com/-QBwMRi56E6s/V2T1Ppp-kBI/AAAAAAABWRQ/eZ_F1WEpvIk8lX7cYMPW3EWEkK70TOv4ACLcB/s500/IMG_0633-2674778780-O.jpg")
 		img(src="https://2.bp.blogspot.com/-RSnCWrvtOoE/V2T1Px9iMTI/AAAAAAABWRY/jOkfFnNrBl0LWM56rWboWwFvkhNeX-icwCLcB/s500/IMG_0636-2674779761-O.jpg")
-		img(src="https://1.bp.blogspot.com/-ps8mQ53K7wI/V2T1SdNjkgI/AAAAAAABWRs/MF53zQ3n_80kQLo4XVN75e2EDvVCL8VHwCLcB/s500/IMG_0638-2674780590-O.jpg")
+		img._(src="https://1.bp.blogspot.com/-ps8mQ53K7wI/V2T1SdNjkgI/AAAAAAABWRs/MF53zQ3n_80kQLo4XVN75e2EDvVCL8VHwCLcB/s500/IMG_0638-2674780590-O.jpg")
 	.story The moment is short indeed. The bloom lasts fourteen days. Soon, the flowers will all be gone battered by the wind and rain. The fallen flowers on the roads meant that this period is also the busiest for the road cleaner in the year too. We also played in the field of canola flowers. The numerous plants grew to waist level and spread out neverending into the horizon. In the background, there were cherry blossoms and old houses. It feels like a dream to stand in the field of gold.
 	.photoset(data-layout="2322")
 		img(src="https://2.bp.blogspot.com/-dnivgwLW0E4/V2T0_QI69dI/AAAAAAABWP0/WMSZYZ7SmpAqjDNVqHy5Fbo8OYLh9z9ygCLcB/s800/IMG_0556-2674758457-O.jpg")
@@ -131,7 +129,7 @@ header
 		img(src="https://4.bp.blogspot.com/-KJBZ_ia-4HQ/V2T4nM3b-lI/AAAAAAABWUU/pwMGRJh8bu0QaaGGtqUwHFfgHf2R1iBSgCLcB/s800/IMG_0367-2674855628-O.jpg")
 	.story In a courtyard stands several ceramic jars and a large round stone. My guess is that it was a milling stone that was decommissioned and is now displayed as an artifact. I wondered if the jars contained kimchi fermenting away.
 	.photoset(data-layout="W3")
-		img(src="https://2.bp.blogspot.com/-Hig1xV-u6cw/V2T4oEd5grI/AAAAAAABWUk/WRmIGlGcdLchfKw6zqRH23_msuU_buziACLcB/s1600/IMG_0393-2674872993-O.jpg")
+		img._(src="https://2.bp.blogspot.com/-Hig1xV-u6cw/V2T4oEd5grI/AAAAAAABWUk/WRmIGlGcdLchfKw6zqRH23_msuU_buziACLcB/s1600/IMG_0393-2674872993-O.jpg")
 		img(src="https://4.bp.blogspot.com/-0PkpyFcLZaQ/V2T4nr4y-pI/AAAAAAABWUc/h_x_EqdITokOV74gxRkOOJ9DoTi1GTV_ACLcB/s500/IMG_0378-2674862993-O.jpg")
 		img(src="https://3.bp.blogspot.com/-pM7fCXz0o4o/V2T4oI4NLHI/AAAAAAABWUg/XoT99v_D5MMMmuAzsBjzS188Iy9-x7QBwCLcB/s500/IMG_0382-2674866110-O.jpg")
 		img(src="https://4.bp.blogspot.com/-t_MENqXFnd0/V2T4pw21wsI/AAAAAAABWVA/q4kiN-7H8VULKtv8MfHMBtC5pUoIpxkugCLcB/s500/IMG_0411-2674883357-O.jpg")
@@ -153,7 +151,7 @@ header
 		img(src="https://1.bp.blogspot.com/-cX4kxmwJknc/V2T4wYDdwZI/AAAAAAABWWU/lpWfqyDaMcEZSFRKkVdeYsHDhGraW4SgwCLcB/s500/IMG_0459-2674904556-O.jpg")
 		img(src="https://4.bp.blogspot.com/-tn2x2O-aH4c/V2T4s4cbYfI/AAAAAAABWVo/h-2bEdlMLwQgZ2AOG5rxZwvHq19i9t99QCLcB/s800/IMG_0444-2674898101-O.jpg")
 		img(src="https://2.bp.blogspot.com/-aiYPVCuzbgI/V2T4uNy6nzI/AAAAAAABWV4/40GnaAsvcRoNLalcKOcbqaaw97GXZcuFQCLcB/s800/IMG_0450-2674900349-O.jpg")
-		img(src="https://3.bp.blogspot.com/-XrHtZkDQS1Q/V2T4uxZHA0I/AAAAAAABWWA/xQWdyuJe_QEgQbjM7uXR3lep3W8nfbE3ACLcB/s1600/IMG_0453-2674901897-O.jpg")
+		img._(src="https://3.bp.blogspot.com/-XrHtZkDQS1Q/V2T4uxZHA0I/AAAAAAABWWA/xQWdyuJe_QEgQbjM7uXR3lep3W8nfbE3ACLcB/s1600/IMG_0453-2674901897-O.jpg")
 		img(src="https://1.bp.blogspot.com/-BhFSmG6Fd1A/V2T4vJScGfI/AAAAAAABWWE/5vOszZoAtgAF10SNIt7TPKZb86Y6K90OACLcB/s500/IMG_0454-2674902004-O.jpg")
 		img(src="https://1.bp.blogspot.com/-DP3GCpDuiec/V2T4wF_vmtI/AAAAAAABWWQ/Xayw6vRn_Lk4igGcp8XHN-RSS1jfjTFuwCLcB/s500/IMG_0457-2674903590-O.jpg")
 		img(src="https://2.bp.blogspot.com/-sKtAXU6z25o/V2T4tj_duNI/AAAAAAABWVw/yCjUab8lElAi7szNFlkCn7RDTCfNJ8_EgCLcB/s500/IMG_0448-2674899232-O.jpg")
@@ -169,7 +167,7 @@ header
 	h2 Strawberry Farm
 	.story The visit to the strawberry farm was my favourite part of the trip. The strawberries were grown using the plasticulture method, further protected under an overhead shelter. This double protection eliminates the need for pesticides and the strawberries can mature in its best form. On this farm, we were free to eat the ripe fruits as we walk down the aisles. The cool air, golden sun ray, bright red fruits stuffed in mouth and sugar rush to the head was a potent mixture for happiness. We were smiling and squealing with joy as we eat our way through strawberry heaven.
 	.photoset(data-layout="W324")
-		img(src="https://2.bp.blogspot.com/-0nnnrXPERZ8/V2T40THsqCI/AAAAAAABWXQ/GcHy-AgIr0IjnUDktpFLg-DceKlqVD0bwCLcB/s1600/IMG_0488-2674916118-O.jpg")
+		img._(src="https://2.bp.blogspot.com/-0nnnrXPERZ8/V2T40THsqCI/AAAAAAABWXQ/GcHy-AgIr0IjnUDktpFLg-DceKlqVD0bwCLcB/s1600/IMG_0488-2674916118-O.jpg")
 		img(src="https://4.bp.blogspot.com/-a58ft9wjjzE/V2T4xvD57UI/AAAAAAABWWk/11hlSZwM9mwnzERifi7PCie9gnzJVljEgCLcB/s500/IMG_0466-2674907711-O.jpg")
 		img(src="https://4.bp.blogspot.com/-FJckwCNqEmw/V2T4yaLC0LI/AAAAAAABWWs/gHXNPm4-ZlU3PoTGBFpUcA4RwsV9RaQOwCLcB/s500/IMG_0467-2674908068-O.jpg")
 		img(src="https://2.bp.blogspot.com/-pNNQ2RKm334/V2T4yhz9nBI/AAAAAAABWWw/GQE3_xv0YsQPx97H9Z07YL-MvMT-BsHPQCLcB/s500/IMG_0471-2674909712-O.jpg")
@@ -223,7 +221,7 @@ header
 		img(src="https://1.bp.blogspot.com/-8BhnxVKHvxE/V2T5EnrAVbI/AAAAAAABWZ8/u-l9WL0Tla0tnNpNBy2yFyn_9VMd8kAKACLcB/s500/IMG_1029-2674906011-O.jpg")
 		img(src="https://3.bp.blogspot.com/-jZDp6Nbn2RE/V2T5F7v1SAI/AAAAAAABWaI/PA0PmNFpz-ka_yLYbXAao7Il68R72q9VgCLcB/s500/IMG_1038-2674909576-O.jpg")
 		img(src="https://3.bp.blogspot.com/-GMQf91VEpuc/V2T5Fh7FMeI/AAAAAAABWaE/6RYjOWzyYB4j5MXh6tQ771jJZHdZnQ7VQCLcB/s500/IMG_1037-2674909132-O.jpg")
-		img(src="https://3.bp.blogspot.com/-JPuyFg8G_Kg/V2YCQ52EnJI/AAAAAAABWgY/QIPEg49FQhYIB_YZ_0kAmzFpboHsL38wwCLcB/s1600/IMG_1042-2674911642-O.jpg")
+		img._(src="https://3.bp.blogspot.com/-JPuyFg8G_Kg/V2YCQ52EnJI/AAAAAAABWgY/QIPEg49FQhYIB_YZ_0kAmzFpboHsL38wwCLcB/s1600/IMG_1042-2674911642-O.jpg")
 		img(src="https://1.bp.blogspot.com/-xcAgd_KGQpY/V2T5Gka9MgI/AAAAAAABWaM/9cg40eEBtpshUtpA-mVBqIUcA-RNfb6TwCLcB/s500/IMG_1041-2674911046-O.jpg")
 		img(src="https://3.bp.blogspot.com/-Yp5T31OqBrc/V2T5HkGMYGI/AAAAAAABWag/0Fpg28HNSfMc7c77zq60ri75UTbqUXVzgCLcB/s500/IMG_1046-2674912632-O.jpg")
 		img(src="https://3.bp.blogspot.com/-1am1w--21LU/V2T5GsSxCrI/AAAAAAABWaQ/mXvKpNcBNsIMGyAe_Iybq8AHHy7jBe00wCLcB/s500/IMG_1040-2674910409-O.jpg")

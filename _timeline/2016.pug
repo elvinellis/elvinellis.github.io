@@ -10,13 +10,11 @@ permalink: /2016
 ---
 
 header
-	#cover(style="background-image:url({{ page.cover }})")
-		#title
-			h1 {{ page.title }}
-			h2 {{ page.excerpt }}
-		#narrated Narrated by 
-			span.author {{ page.author }}
-			.date {{ page.date | date: "%B %Y" }}
+	ul#coverList
+	#overlay
+		h1 {{ page.title }}
+		.excerpt {{ page.excerpt }}
+		.byline Narrated by {{ page.author }} &middot; {{ page.date | date: "%B %Y" }}
 
 .group
 	.story #[img(src="https://1.bp.blogspot.com/-rYVKRmqGt_g/V8oRNJLfpVI/AAAAAAABY_4/O8JqxWY1vVsYH3nVkvkSKSQJA7MUMEIbwCLcB/s90/E-8.jpg" align="left" alt="E")]ventful. That's 2016 for us. First, we had an incredible honeymoon at Nellim. The place was like a scene out of a movie. Everywhere was covered with snow as we huddled in a glass igloo to catch the aurora borealis. In the middle of the year, Mom and Dad went to Penang with us. It was a relaxing and happy trip. On the job front, I switched company and joined a superb team. There are always much laughter in the office. Just when I thought things couldn't get any better, Ellis announced the good newsthat she is expecting.
@@ -35,7 +33,7 @@ header
 		//img(src="https://3.bp.blogspot.com/-QsXYU8yEiX4/V5xt0BVhwqI/AAAAAAABXwc/znqeA3QKZGAM956LqqR_UpDkNPKcG0ZhACLcB/s800/P1030796.jpg")
 
 	.photoset(data-layout="1232")
-		img(src="http://4.bp.blogspot.com/-wtP2Nx502OE/V5VU6gziSFI/AAAAAAABXWs/4hm1oAaz86URym5vbYzt7mA8y-9tF3pQwCK4B/s1600/P1030762.jpg")
+		img._(src="http://4.bp.blogspot.com/-wtP2Nx502OE/V5VU6gziSFI/AAAAAAABXWs/4hm1oAaz86URym5vbYzt7mA8y-9tF3pQwCK4B/s1600/P1030762.jpg")
 
 		img(src="https://4.bp.blogspot.com/-JZF7Q5NkpC8/V5xtxkdPfUI/AAAAAAABXv8/9jzMMdiEiUANymlEu2bW1bpL1ynQlOBQgCLcB/s800/P1030744.jpg")
 		img(src="https://1.bp.blogspot.com/-LZtp_ELld5s/V5xtx3rF6_I/AAAAAAABXwA/LDS2EnyevPQIVrJ5SdlqDSzF4mzLPu7zgCLcB/s800/P1030746.jpg")
@@ -52,7 +50,7 @@ header
 
 	.photoset(data-layout="3B")
 		img(src="https://3.bp.blogspot.com/-udwlZ-Jei9w/V5xt4SVbWMI/AAAAAAABXxI/Em2KMb_e2tErFSZuhIilMT3tRnU7MLT1ACLcB/s800/P1030923.jpg")
-		img(src="https://2.bp.blogspot.com/-Ds2TXEHWNQo/V5xt6MoRPcI/AAAAAAABXxg/BPPVRsP3GBsfI0MMuHjLtzVja-n-2nrHgCLcB/s800/P1030964.jpg")
+		img._(src="https://2.bp.blogspot.com/-Ds2TXEHWNQo/V5xt6MoRPcI/AAAAAAABXxg/BPPVRsP3GBsfI0MMuHjLtzVja-n-2nrHgCLcB/s800/P1030964.jpg")
 		img(src="https://1.bp.blogspot.com/-kifhoyoDuf0/V5xt3dQagPI/AAAAAAABXw8/R9MW_sm4i9Auk3k_l8tyoMkM0_ohDjaOgCLcB/s1600/P1030891.jpg")
 
 		img(src="https://2.bp.blogspot.com/-K_BRED-CytA/V5xt5Qoel4I/AAAAAAABXxU/o9-3_-UB73gOUafmOedOa-MzBKx34WyzwCLcB/s800/P1030942.jpg")
@@ -85,8 +83,8 @@ header
 		.date 8 February
 	.story Ellis and I made it back in time from our honeymoon for CNY celebration. This year, we had our photos "professionally" taken as I have a tripod, a camera and a remote trigger. It also means I didn't have to hold up the video recording - goodbye shaky footages. I think both Ellis's family and mine look good in the photos. Ellis' side has so many family members that we can have soccer teams each aside.
 	.photoset(data-layout="2")
-		img(src="https://1.bp.blogspot.com/-f1ldVD3X_Is/V9nUvBbj_uI/AAAAAAABZjs/UFHPqMwbd-I6I9AN6CZzkLSAqLUj85gBwCLcB/s1600/Family.jpg")
-		img(src="https://1.bp.blogspot.com/-wt7eyuEMlFk/V9qdX36YItI/AAAAAAABZlU/PL8TRFaZdvkNuJS-vt5BdmosPueXvPKTACLcB/s1600/P2090302-2.jpg")
+		img._(src="https://1.bp.blogspot.com/-f1ldVD3X_Is/V9nUvBbj_uI/AAAAAAABZjs/UFHPqMwbd-I6I9AN6CZzkLSAqLUj85gBwCLcB/s1600/Family.jpg")
+		img._(src="https://1.bp.blogspot.com/-wt7eyuEMlFk/V9qdX36YItI/AAAAAAABZlU/PL8TRFaZdvkNuJS-vt5BdmosPueXvPKTACLcB/s1600/P2090302-2.jpg")
 		//img(src="https://2.bp.blogspot.com/-A1G94lh7y8I/V9nUxABIeaI/AAAAAAABZjw/3Zgcv3alYwQ84oeKehrx1cTglQKL1J4uQCLcB/s1600/P2080218.jpg")
 	.video.cont(data="cHcUuu7F56s")
 
@@ -95,7 +93,7 @@ header
 		.date 9 February
 	.story This is my Dad's Mercedes which we use it like a family car. I've grown to embrace its quirks over the past three years. When you step on the foot brake after parking, it rocks back and forth. In full reverse and full steering lock, the engine power drops like ninety percent. At the end of its ten-years life, it is still looking good.
 	.photoset(data-layout="132323232")
-		img(src="https://4.bp.blogspot.com/-wLpN_nUVAUw/V9nVQf-qsYI/AAAAAAABZj0/hqPU6uTnsgYkU4jc_6AkMdP2-Q6QRY_yACLcB/s1600/P2090248.jpg")
+		img._(src="https://4.bp.blogspot.com/-wLpN_nUVAUw/V9nVQf-qsYI/AAAAAAABZj0/hqPU6uTnsgYkU4jc_6AkMdP2-Q6QRY_yACLcB/s1600/P2090248.jpg")
 		img(src="https://1.bp.blogspot.com/-qkyHtrwuqEI/V9nVRGPkssI/AAAAAAABZkA/P0DfG-eJ_1AO-FdyaIZCzPJ8nurOjKqtgCLcB/s500/P2090249.jpg")
 		img(src="https://2.bp.blogspot.com/-gdOh0cRm-yo/V9nVRsMezEI/AAAAAAABZkI/zhi6k1uTD-0vKqJjm_on13fG5Uc3gb7dgCLcB/s500/P2090251.jpg")
 		img(src="https://3.bp.blogspot.com/-I-2EP91HEiM/V9nVTbDsWbI/AAAAAAABZkY/uLY8PyWwqTU8cKCsorm_fFaxpDdvskYQQCLcB/s500/P2090259.jpg")
@@ -140,7 +138,7 @@ header
 		img(src="https://1.bp.blogspot.com/-DXeL7LIQcOo/V9vjFch3OeI/AAAAAAABZmE/qypLzBdeOM085i1bVjAGHnl-hLKRLn3JACLcB/s1600/P1070071.jpg")
 		img(src="https://4.bp.blogspot.com/-oxamAnKDS50/V9vjFTZUk-I/AAAAAAABZmA/onU9zTyM6e83dsoiJ4PbtlOpNU_VwijTgCLcB/s1600/P1070073.jpg")
 		img(src="https://4.bp.blogspot.com/-EVrVGOJfU0o/V9vjF3DjckI/AAAAAAABZmI/HhRcyjgq0GQO8RqhFxQ874BjreRb0SHvACLcB/s1600/P1070074.jpg")
-		img(src="https://2.bp.blogspot.com/-NDICp6vMm60/V9vjGoAbRUI/AAAAAAABZmM/ZvCPqxGOmoMuHp4xnKuS9dmYrNOhCj2_ACLcB/s1600/P1070077.jpg")
+		img._(src="https://2.bp.blogspot.com/-NDICp6vMm60/V9vjGoAbRUI/AAAAAAABZmM/ZvCPqxGOmoMuHp4xnKuS9dmYrNOhCj2_ACLcB/s1600/P1070077.jpg")
 		img(src="https://4.bp.blogspot.com/-V43ir7-mZwM/V9vjG__u_8I/AAAAAAABZmQ/9fudNCen5Wouezx7sjQ9lvIiNeFx3NIQwCLcB/s1600/P1070080.jpg")
 		img(src="https://4.bp.blogspot.com/-xhp2RemeG3g/V9vjHKRfz9I/AAAAAAABZmU/0YdhTjD9JWUXm8Y3KyWqbEHU25fclFwugCLcB/s1600/P1070082.jpg")
 		img(src="https://1.bp.blogspot.com/-XW4oNILrI0I/V9vjI3TgIXI/AAAAAAABZmk/zfMBn6YHYjkraCoxrlVluJXGCbYGEwb4ACLcB/s1600/P1070090.jpg")
@@ -181,7 +179,7 @@ header
 		img(src="https://2.bp.blogspot.com/-VR2kEROyOII/V84F1jfiWQI/AAAAAAABZQk/vdd0l5jQLfoK9xbCTdrO2mROBUjpmkjpACLcB/s1600/P1070171.jpg")
 		img(src="https://2.bp.blogspot.com/-Y78Dv6Z24TI/V84F2Q4HlLI/AAAAAAABZQo/T_4EkqDjYvALaD7Ltt2pn8erbICueqxmwCLcB/s1600/P1070175.jpg")
 		img(src="https://1.bp.blogspot.com/-K62pGFiKEks/V84F2gBMEKI/AAAAAAABZQs/XiYH3leucNcPWZMPyucKrpPWqqCF9a-JQCLcB/s1600/P1070176.jpg")
-		img(src="https://2.bp.blogspot.com/-4P6NNcQJWwU/V84F2gGGDZI/AAAAAAABZQw/r4yHbABaPPoTzI_aswN0VhNgoapFQyxpQCLcB/s1600/P1070178.jpg")
+		img._(src="https://2.bp.blogspot.com/-4P6NNcQJWwU/V84F2gGGDZI/AAAAAAABZQw/r4yHbABaPPoTzI_aswN0VhNgoapFQyxpQCLcB/s1600/P1070178.jpg")
 		img(src="https://1.bp.blogspot.com/-qk2R4O0aQc4/V84F3tllxsI/AAAAAAABZQ0/cW22eyJSlaMTo3oAkh8v1tulWOKvWCwCwCLcB/s1600/P1070179.jpg")
 		img(src="https://1.bp.blogspot.com/-_uUPqLn8Obg/V84F3vbwtjI/AAAAAAABZQ4/elluT9XQfPoPHQis8qGnGuom2PiPF33uACLcB/s1600/P1070183.jpg")
 		img(src="https://4.bp.blogspot.com/-Yu0kokttqPk/V84F368m4sI/AAAAAAABZQ8/CFJmV1cC0OAByoGqRO4VCj5pLRH_1eDuQCLcB/s1600/P1070184.jpg")

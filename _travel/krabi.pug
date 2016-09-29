@@ -9,13 +9,12 @@ date: 2013-10-15
 permalink: /krabi
 ---
 header
-	#cover(style="background-image:url({{ page.cover }})")
-		#title
-			h1 {{ page.title }}
-			h2 {{ page.excerpt }}
-		#narrated Narrated by 
-			span.author {{ page.author }}
-			.date {{ page.date | date: "%B %Y" }}
+	ul#coverList
+	#overlay
+		h1 {{ page.title }}
+		.excerpt {{ page.excerpt }}
+		.byline Narrated by {{ page.author }} &middot; {{ page.date | date: "%B %Y" }}
+
 .group
 	.story #[img(src="https://2.bp.blogspot.com/-us6rN_jJ3qg/V8qsRv2tZII/AAAAAAABZEo/q4mvh_2eON0oZxD_nvkz296tnIqK2sU7QCLcB/s90/K-6.jpg" align="left" alt="K")] rabi is a province on the western side of Thailand. Renowned for its clear seas and beautiful sky, we flew here to experience it for ourselves. The resort Centara Anda Dhevi located in Ao Nang and is a walking distance from the beach front. With two king-sized beds in the room, we get to roll around like kids. The view outside the balcony is an enticing pool with a bar for warm food and drinks which we treated ourselves to. It also has an excellent spa where the skilled masseurs did professional work on my muscles. 
 	.photoset(data-layout="32")
@@ -51,7 +50,7 @@ header
 		img(src="https://3.bp.blogspot.com/-ma6XjmRdyEg/V8p3VaTD6WI/AAAAAAABZBU/Yt0Pv7PAvOogARDrfXIi4RG5ZB2VM6ZcQCLcB/s800/20131016_090350.jpg")
 		img(src="https://4.bp.blogspot.com/-P1lKlHjw6TU/V8p3WfkwqXI/AAAAAAABZBc/Cvsx7XqdN1kUxmlAFubnGZwEONOux5_eACLcB/s500/20131016_114819.jpg")
 		img(src="https://3.bp.blogspot.com/-w5eMKDtY-vk/V8p3WUE-4nI/AAAAAAABZBY/zP_mq84tNugimCwggPmonxyCvpm6j697QCLcB/s500/20131016_114839.jpg")
-		img(src="https://2.bp.blogspot.com/-0EIWIpp6rAo/V8p3YIcT0vI/AAAAAAABZBg/9_BpRidyBh0GHa2eh_NxDwNaN52k9tQfgCLcB/s500/20131016_114918.jpg")
+		img._(src="https://2.bp.blogspot.com/-0EIWIpp6rAo/V8p3YIcT0vI/AAAAAAABZBg/9_BpRidyBh0GHa2eh_NxDwNaN52k9tQfgCLcB/s500/20131016_114918.jpg")
 
 		img(src="https://1.bp.blogspot.com/-C_wMjZPUTDc/V8p3YO9hzXI/AAAAAAABZBo/BqX6CNE3wGwE3U6LP1MBlF4rZ0jRti2fgCLcB/s800/20131016_144320.jpg")
 		img(src="https://4.bp.blogspot.com/-cCvyNKIY0oA/V8p3YLIa9PI/AAAAAAABZBk/oYg0L-Dq-NsAV5MIwsmp8gG_Qi0_UoV4wCLcB/s800/20131016_144338.jpg")
@@ -64,7 +63,7 @@ header
 	.photoset(data-layout="1232")
 		img(src="https://1.bp.blogspot.com/-7VYmyyBwbFg/V8p3ZOqz4DI/AAAAAAABZBw/fEH9oO4Hd3opyii6EMjFCYruHLMUJO_YwCLcB/s1600/20131016_184845.jpg")
 		img(src="https://4.bp.blogspot.com/-qL3ZtHRhu9M/V8p3ZMdAi0I/AAAAAAABZB0/z9IlBr4ONH8v9VyEU-OPX-vYPZJWGrOGQCLcB/s800/20131016_184851.jpg")
-		img(src="https://4.bp.blogspot.com/-LQhNdwULxpo/V8p3ZphkjuI/AAAAAAABZB4/HSDaHX-ay1YcmMwwb-CEBQYlJghKa4ZLACLcB/s800/20131016_184937.jpg")
+		img._(src="https://4.bp.blogspot.com/-LQhNdwULxpo/V8p3ZphkjuI/AAAAAAABZB4/HSDaHX-ay1YcmMwwb-CEBQYlJghKa4ZLACLcB/s800/20131016_184937.jpg")
 		img(src="https://2.bp.blogspot.com/-49qgn101hHs/V8p3aBdSzpI/AAAAAAABZB8/Ig_s89Plq5Y7gH5aQgbRF9j270oihzsmgCLcB/s500/20131016_185006.jpg")
 		img(src="https://3.bp.blogspot.com/-pLgygzUG94s/V8p3aaLebbI/AAAAAAABZCA/2YuKbiqN2ooxSc3M47mzbxtfLjA5CcG1QCLcB/s500/20131016_195607.jpg")
 		img(src="https://2.bp.blogspot.com/-rADSjFYJ6JI/V8p3arVHbiI/AAAAAAABZCE/QxidyTB3514frJzpJURejoovyqLWzXlswCLcB/s500/20131016_195625.jpg")
@@ -91,7 +90,7 @@ header
 
 		img(src="https://3.bp.blogspot.com/-KOiEToV8dYE/V8p3TK5I38I/AAAAAAABZBE/40NlU1FJwNoiNqQ1FE8Hm54O6x99CejWwCLcB/s500/20131015_150643.jpg")
 		img(src="https://4.bp.blogspot.com/-1SdegSyY-qI/V8p3Uig70WI/AAAAAAABZBI/9GnQrF8WQHMZKM__uO-C7LIy4SsHeH5uwCLcB/s500/20131015_150748.jpg")
-		img(src="https://2.bp.blogspot.com/-fYqEpaxJU-k/V8p3edTNC-I/AAAAAAABZCs/bFm1dhuHX4wUKeLPZAy7g2dZXLS7NTkOQCLcB/s500/20131018_105027.jpg")
+		img._(src="https://2.bp.blogspot.com/-fYqEpaxJU-k/V8p3edTNC-I/AAAAAAABZCs/bFm1dhuHX4wUKeLPZAy7g2dZXLS7NTkOQCLcB/s500/20131018_105027.jpg")
 		//img(src="https://2.bp.blogspot.com/-nEQSk-7iTUM/V8p3eOgHG2I/AAAAAAABZCo/sD88l4gbY_Mql7LALsWeo38Mf2uk5fb3ACLcB/s1600/20131018_104835.jpg")
 
 	.video.cont(data="sqMBY_ER-xQ")
@@ -101,7 +100,7 @@ header
 		img(src="https://3.bp.blogspot.com/-tC2g2Isaa1g/V8p3hO6OhAI/AAAAAAABZC8/yG99g0hR8Ws2lfTuWZRrlxShAmkVnxZwwCLcB/s500/20131018_173510.jpg")
 		img(src="https://1.bp.blogspot.com/-5wCtJ171zN0/V8p3hMjdPVI/AAAAAAABZDE/ahDckrA7NdwtCjj3qOjYUG_lCgVp2e0jgCLcB/s500/20131018_174329.jpg")
 		img(src="https://1.bp.blogspot.com/-ROakPxp1ajc/V8p3iEptSXI/AAAAAAABZDQ/ddeHLhUtT78KlbZG-AYe4PDNe9j8FuGIgCLcB/s500/20131018_174711.jpg")
-		img(src="https://4.bp.blogspot.com/-E9EkJfrT1ak/V8p3iMFR0hI/AAAAAAABZDI/XdB6ecsoWnMyF5UpSyR-rofKu3e2f9eDgCLcB/s1600/20131018_174911_Richtone%2528HDR%2529.jpg")
+		img._(src="https://4.bp.blogspot.com/-E9EkJfrT1ak/V8p3iMFR0hI/AAAAAAABZDI/XdB6ecsoWnMyF5UpSyR-rofKu3e2f9eDgCLcB/s1600/20131018_174911_Richtone%2528HDR%2529.jpg")
 		//img(src="https://4.bp.blogspot.com/-LH9Ckgf8BxY/V8p3e9Nu-5I/AAAAAAABZC0/Uwb8c5fyVsYX9VCFf3YB93ShNsQm2mB5gCLcB/s1600/20131018_105510.jpg")
 		//img(src="https://2.bp.blogspot.com/--2wRbLl1oGQ/V8p3hERgMSI/AAAAAAABZDA/8_P5m3H_I1kBtrXr6Zd2d9LYcarmhpycgCLcB/s1600/20131018_173519.jpg")
 		//img(src="https://1.bp.blogspot.com/-xQZoQJ8UDQQ/V8p3iACnPzI/AAAAAAABZDM/-fqdmS7JoJs4gSPfcEIYNv2VVubo76oBgCLcB/s1600/20131018_175612_Richtone%2528HDR%2529.jpg")
@@ -110,7 +109,7 @@ header
 	h2 Krabi Town Night Market
 	.story There is another night market not far from here that Ellis has read about. We hired a minivan and set off to Krabi Town. This is the city center of Krabi and it is more urbanized. There are plenty of stores	set up along the roads beside the shop houses. The road lead to a wide open center area where the residents gathered to eat. It likely evolved from the village center in the past. Ellis bought little gifts for her family and friends. 
 	.photoset(data-layout="13")
-		img(src="https://4.bp.blogspot.com/-RWNRmO56pRU/V8p3jyIZZRI/AAAAAAABZDg/-XHVpGJhO08P4zZw1dFECm1bghtdEUEowCLcB/s1600/20131018_194112.jpg")
+		img._(src="https://4.bp.blogspot.com/-RWNRmO56pRU/V8p3jyIZZRI/AAAAAAABZDg/-XHVpGJhO08P4zZw1dFECm1bghtdEUEowCLcB/s1600/20131018_194112.jpg")
 		img(src="https://4.bp.blogspot.com/-u3b9zoQzzXs/V8p3jcac_yI/AAAAAAABZDc/Jf2_rF0pEPMM8UmgUyEUjI2ytQSfABChwCLcB/s500/20131018_194016.jpg")
 		img(src="https://2.bp.blogspot.com/-YkG1TSlgGYM/V8p3kMZFk9I/AAAAAAABZDk/zqnul3AfC6s5H2t_QEdQbUS7UIHe8RyxACLcB/s500/20131018_194121.jpg")
 		img(src="https://4.bp.blogspot.com/-vTEKzK8eOeU/V8p3kuSCJII/AAAAAAABZDs/JyOMVmKDwbYlIT7dbdtBU9WF1ehqHpKCQCLcB/s500/20131018_210625.jpg")
