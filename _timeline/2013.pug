@@ -10,13 +10,11 @@ permalink: /2013
 ---
 
 header
-	#cover(style="background-image:url({{ page.cover }})")
-		#title
-			h1 {{ page.title }}
-			h2 {{ page.excerpt }}
-		#narrated Narrated by 
-			span.author {{ page.author }}
-			.date {{ page.date | date: "%B %Y" }}
+	ul#coverList
+	#overlay
+		h1 {{ page.title }}
+		.excerpt {{ page.excerpt }}
+		.byline Narrated by {{ page.author }} &middot; {{ page.date | date: "%B %Y" }}
 
 .group
 	h2 Universal Studios
@@ -112,7 +110,7 @@ header
 		img(src="https://3.bp.blogspot.com/-dJnyc2VuLMA/V9UQfKMXBlI/AAAAAAABZZw/_GtszQtCG3Yy0chfN0rOS2KJ4jv9lqhVwCLcB/s400/20130707_161530.jpg")
 
 		img(src="https://2.bp.blogspot.com/-xYBcb0sJiQY/V9UQfY7WuwI/AAAAAAABZZ0/QOnEz9LByAo_OJiCBOUnON_GREeJWv-2wCLcB/s500/20130707_161535.jpg")
-		img(src="https://2.bp.blogspot.com/-q2wKxBl5zcA/V9UQf4mjw3I/AAAAAAABZZ4/uGBn7MvLs-MUY33ntYWpHjmPwcNX6y65QCLcB/s500/20130707_161544.jpg")
+		img._(src="https://2.bp.blogspot.com/-q2wKxBl5zcA/V9UQf4mjw3I/AAAAAAABZZ4/uGBn7MvLs-MUY33ntYWpHjmPwcNX6y65QCLcB/s500/20130707_161544.jpg")
 		img(src="https://4.bp.blogspot.com/-QPY0_Sug_M8/V9UQf_j-eII/AAAAAAABZZ8/pOodyjNS2EUzoSa71Li1751-kHzXtwU4gCLcB/s500/20130707_161600.jpg")
 		//img(src="https://3.bp.blogspot.com/-X6RVwNXwJJI/V9UQgJZIoXI/AAAAAAABZaA/RnGb9MPOCfczqeYd13lVRzPAHzgg3wh4QCLcB/s1600/20130707_161618.jpg")
 
@@ -138,7 +136,7 @@ header
 		.date 21 October
 	.story
 	.photoset(data-layout="1231")
-		img(src="https://1.bp.blogspot.com/-do5peufLxEw/V9gLq3QASEI/AAAAAAABZd8/irAWcBf5PR0DLsqQauvg2EpYeLgqBJhNgCLcB/s1600/20131021_113133.jpg")
+		img._(src="https://1.bp.blogspot.com/-do5peufLxEw/V9gLq3QASEI/AAAAAAABZd8/irAWcBf5PR0DLsqQauvg2EpYeLgqBJhNgCLcB/s1600/20131021_113133.jpg")
 		img(src="https://3.bp.blogspot.com/-C95gEOPtTew/V9gLqyAC19I/AAAAAAABZeA/FskTE9choi4JVSvpANjZmWd4MUEVPLhnQCLcB/s800/20131021_113205.jpg")
 		img(src="https://2.bp.blogspot.com/-YVT1QEaFtDI/V9gLqy-oEiI/AAAAAAABZd4/oFXyR0IbBj0cMyfmYCRCSudNO5k-cLh1gCLcB/s800/20131021_113220.jpg")
 		img(src="https://3.bp.blogspot.com/-QCX42B0KLdI/V9gLrvpLvzI/AAAAAAABZeE/NHhE2KFWrLomglb7lR6RsZtB8xaalP_owCLcB/s500/20131021_113258.jpg")
@@ -161,7 +159,7 @@ header
 		//img(src="https://3.bp.blogspot.com/-SMRdJEFB8UA/V9gLu9YPGdI/AAAAAAABZes/wDjXV3mE6_0KlKCSmxTt7bbDrrUf5zYGACLcB/s1600/20131208_101708.jpg")
 
 		img(src="https://2.bp.blogspot.com/-k8T1iuKBO7c/V9gLvSnKUfI/AAAAAAABZew/Gir_hbdYAhYz4sDR0tDkagzQuWsG12DeQCLcB/s1600/20131208_101804.jpg")
-		img(src="https://4.bp.blogspot.com/-DrxmTYWOhpE/V9gLv6A7neI/AAAAAAABZe4/W4U69EHIZBQfquUk-mrnUC0h2cJTrcbKACLcB/s1600/20131208_101857.jpg")
+		img._(src="https://4.bp.blogspot.com/-DrxmTYWOhpE/V9gLv6A7neI/AAAAAAABZe4/W4U69EHIZBQfquUk-mrnUC0h2cJTrcbKACLcB/s1600/20131208_101857.jpg")
 		//img(src="https://4.bp.blogspot.com/-juOhUT3r4NM/V9gLwdcy5dI/AAAAAAABZe8/lJpkb7l1cas5sh-LvpOMT9sEK8cfe8DbQCLcB/s1600/20131208_101944.jpg")
 		img(src="https://2.bp.blogspot.com/-kyYkRsUXK80/V9gLw38n8pI/AAAAAAABZfA/K9PURgZMRM8rn19ol_y59YrUByOGMHj_wCLcB/s1600/20131208_102010.jpg")
 		//img(src="https://4.bp.blogspot.com/-Q6JxIaaLs7k/V9gLxO_PqTI/AAAAAAABZfE/SEDXjYZSqt8iGYwqz4LRwE1zje3jaB90ACLcB/s1600/20131208_102102.jpg")
@@ -200,7 +198,7 @@ header
 		img(src="https://3.bp.blogspot.com/-snhqmT_fn8s/V9k9eYrivUI/AAAAAAABZho/t9-_REaFe6A4iws52HNNTgs06dq2XxVUgCLcB/s1600/20131024_184206.jpg")
 		img(src="https://2.bp.blogspot.com/-l4XnfxN0Mu0/V9k9eyqsVRI/AAAAAAABZhs/m8N6-sOOwi4d_pJhGvdTlVMfLeogUhIIQCLcB/s1600/20131024_184223.jpg")
 		img(src="https://1.bp.blogspot.com/-Q6RuXGgqm_Y/V9k9fKNX1dI/AAAAAAABZh0/95r5w5si2CsffaU4Nv-0PYmo2LUmToHSQCLcB/s1600/20131024_184239.jpg")
-		img(src="https://2.bp.blogspot.com/-B5O-nfnWWc4/V9k9fKHTQyI/AAAAAAABZhw/iSh-ocyA4YgqTXGERnA4dbZ40OmqczpjgCLcB/s1600/20131024_184957.jpg")
+		img._(src="https://2.bp.blogspot.com/-B5O-nfnWWc4/V9k9fKHTQyI/AAAAAAABZhw/iSh-ocyA4YgqTXGERnA4dbZ40OmqczpjgCLcB/s1600/20131024_184957.jpg")
 		img(src="https://4.bp.blogspot.com/-az-qIONqOlY/V9k9fc7y-DI/AAAAAAABZh4/XDGa0GoKaMMXsMVlAImaptXkq6WFSwEEQCLcB/s1600/20131024_185000.jpg")
 
 	.photoset(data-layout="A12333232323232")
@@ -208,7 +206,7 @@ header
 		img(src="https://4.bp.blogspot.com/-do8jNXb_0GE/V9k9gNhwx7I/AAAAAAABZiA/RO4-OS6YNN0UnqdFA8aXay4phoPHu6EvACLcB/s1600/20131026_120500.jpg")
 		img(src="https://4.bp.blogspot.com/-_aUf95yTH9I/V9k9gRjgRxI/AAAAAAABZiE/lTom_-IJCxElAn3LC5MsTWtKmHxbY3cswCLcB/s1600/20131026_120600.jpg")
 		img(src="https://1.bp.blogspot.com/-DN8Q6tmToo4/V9k9glet29I/AAAAAAABZiI/LSbLfscfNXArFMQvf8VRO9Puvx9HqwVtACLcB/s1600/20131026_155022.jpg")
-		img(src="https://4.bp.blogspot.com/-AbMBOXmUv2g/V9k9gmx5tEI/AAAAAAABZiM/FYbUzq702pcenCgx3fgRBf-eLJSf7n4nwCLcB/s1600/20131026_190719.jpg")
+		img._(src="https://4.bp.blogspot.com/-AbMBOXmUv2g/V9k9gmx5tEI/AAAAAAABZiM/FYbUzq702pcenCgx3fgRBf-eLJSf7n4nwCLcB/s1600/20131026_190719.jpg")
 		img(src="https://4.bp.blogspot.com/-67YxHhOlpm8/V9k9hYrbq2I/AAAAAAABZiU/4ul-y_fbZU49kJvDTGTB495UAVm7thMHwCLcB/s1600/20131026_190808.jpg")
 		//img(src="https://3.bp.blogspot.com/-upZQPMVa-64/V9k9hTBaySI/AAAAAAABZiY/AbiIm2aymgYxUlz7TzyBtfgf-PHVSf39wCLcB/s1600/20131026_190813%25280%2529.jpg")
 		img(src="https://2.bp.blogspot.com/-wtrFhR4DoPQ/V9k9hDiINhI/AAAAAAABZiQ/SviKn2eEgCk86Lvn6UIEdTTs0w6eljJmwCLcB/s1600/20131026_190751.jpg")
