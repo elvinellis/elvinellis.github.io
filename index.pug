@@ -19,65 +19,70 @@ header
 	ul#coverList(data="{{ page.cover | join: ',' }}")
 	#overlay
 		h1 Elvin
-			span(style="font: italic normal 4vw Lora;") & 
+			span(style="font: italic normal 4vw Lora; padding: 0 8px 0 10px;") & 
 			span Ellis
 		.byline Established 2013
+.group(style="margin-bottom: 3%")
+	.story #[img(src="https://2.bp.blogspot.com/--S1vDGU0kmo/V_DOpx_ZckI/AAAAAAABaFk/X5rn-FV5W8gtXQVhRrojHmA6fvO_IhxLwCLcB/s100/O-7.jpg" align="left" alt="O")]nce upon a time, there was a boy, Elvin, and a girl, Ellis. Amongst the myriad possibilities of what life should have been, their story became inextricably interwined when they met. Thus began a steady rhythm of courtships and explorations. She fell in love with his vast inner world and took up a special place in it. He was captivated by her beauty and wants to spend his whole life with her. Although fleeting in comparison to the age of Time, their moments together are truly special to them only. They went on merry adventures and collected the world in their thumping hearts. He was king and she was queen...
+	
 .panel
-	.haiku
-		| Love's only weakness
-		| Is also it's greatest strength:
-		| It defies reason
-{% for c in site.romance %}
+{% assign items = site.travel | sort: 'date' %}
+{% for c in items reversed %}
 	.square
-		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s500" }})")
+		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s600" }})")
 			a(href="{{ c.permalink }}")
 				.description
 					h4 {{ c.title }}
 					h5 {{ c.excerpt }}
 					.date {{ c.date | date: "%B %Y" }}
 {% endfor %}
-.clear
-
-.panel
-	.fleuron
+	.clear
 	.haiku 
 		| Here, under the stars
 		| and there too, under the clouds,
 		| everywhere with you.
-{% assign items = site.travel | sort: 'date' %}
-{% for c in items reversed %}
+
+.fleuron
+//.group
+	.story Not long after, Elvin proposed to Ellis.
+.panel
+{% for c in site.romance %}
 	.square
-		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s500" }})")
+		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s600" }})")
 			a(href="{{ c.permalink }}")
 				.description
 					h4 {{ c.title }}
 					h5 {{ c.excerpt }}
 					.date {{ c.date | date: "%B %Y" }}
 {% endfor %}
-.clear
+	.clear
+	.haiku
+		| Love's only weakness
+		| Is also it's greatest strength:
+		| It defies reason
 
+.fleuron
+
+.group
+	.story 
 .panel
-	.fleuron
-	.haiku 
-		| You can't keep waiting
-		| for a better time than this,
-		| all you have is now.
 {% assign items = site.timeline | sort: 'date' %}
 {% for c in items reversed %}
 	.square
-		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s500" }})")
+		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s600" }})")
 			a(href="{{ c.permalink }}")
 				.description
 					h4 {{ c.title }}
 					h5 {{ c.excerpt }}
 					.date {{ c.date | date: "%B %Y" }}
 {% endfor %}
-.clear
-.panel
-	.fleuron
+	.clear
 	.haiku 
 		| To see the world, things dangerous to come to, 
 		| to see behind walls, draw closer, 
 		| to find each other, and to feel. <br>
 		| That is the purpose of life. 
+
+.fleuron
+
 

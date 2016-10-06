@@ -15,10 +15,14 @@ body{
 	font-family: Lora, serif;
 }
 
-	.hor{
-		height: 100vh;
-		float: left;
-	}
+.test img, .test div{
+height: 100vh;
+cursor: pointer;
+display:inline-block;
+*display:inline;
+*zoom:1;
+vertical-align:top;
+}
 h1, h2, h3, h4, h5{
 	font-family: 'Roboto Condensed', sans-serif;
 }
@@ -272,6 +276,7 @@ table tr:nth-child(even){
 	margin-left: 2%;
 	margin-right: auto;
 	margin-bottom: 2%;
+	margin-top: 2%;
 	font-style: italic;
 	font-size: 20px;
 }
