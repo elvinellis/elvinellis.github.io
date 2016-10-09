@@ -15,14 +15,6 @@ body{
 	font-family: Lora, serif;
 }
 
-.test img, .test div{
-height: 100vh;
-cursor: pointer;
-display:inline-block;
-*display:inline;
-*zoom:1;
-vertical-align:top;
-}
 h1, h2, h3, h4, h5{
 	font-family: 'Roboto Condensed', sans-serif;
 }
@@ -391,6 +383,18 @@ table tr:nth-child(even){
 	margin-bottom: 1%;
 	color: #000;
 }
+.group .subline{
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-style: normal;
+	text-transform: uppercase;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+	max-width: 900px;
+}
+
 .group .story{
 	width: 70%;
 	line-height: 30px;
@@ -469,12 +473,49 @@ footer ul li{
 	text-decoration: none;
 	color: #000;
 }
+
+.elvin {
+	/*
+	background-image: url(http://4.bp.blogspot.com/-mCIEAJG5-9w/VTMkg4iHR7I/AAAAAAAA6_s/A9SL7TL-ivg/s80/elvin80.jpg);
+	*/
+	background-image: url(https://3.bp.blogspot.com/-dqTMEaSDIbI/V_m0numvQFI/AAAAAAABaJo/FrHEz7R7UPotDQuP4ekR5IRNWSxLScbqwCLcB/s1600/elvin50.jpg);
+	transition: background 0.1s linear;
+	background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+	box-shadow: 4px 3px 15px #aaa;
+	margin: 7px 15px 3px 7px;
+	float: left;
+}
+.ellis {
+	/*
+	 * background-image: url(http://3.bp.blogspot.com/-drP59vGyCxQ/VTMkgJw99WI/AAAAAAAA6_A/t9jCgKeNvmQ/s50/ellis80.jpg);
+	 */
+	background-image: url(https://1.bp.blogspot.com/-jwOc-Qd1_ww/V_jF_3VwH4I/AAAAAAABaIM/oIbDC1PmmP8JkMSb3J9N4yzZFHQ7WNoGwCLcB/s1600/ellis50.jpg);
+	transition: background 0.1s linear;
+	background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+	box-shadow: 4px 3px 15px #aaa;
+	margin: 7px 15px 3px 7px;
+	float: left;
+}
+.quote{
+	font-size: 25px;
+	text-align: right;
+}
+
 @media (max-width: 1200px) {
 	.square {
 		width: 33%;
 		padding-bottom: 33%;
 	}
-	.group .story, .group h2, .group h3{
+	.group .story, .group h2, .group h3, .group .subline {
 		width: 75%;
 	}
 }
@@ -495,7 +536,7 @@ footer ul li{
 	.group story{
 		line-height: 28px;
 	}
-	.group .story, .group h2, .group h3{
+	.group .story, .group h2, .group h3, .group .subline {
 		width: 80%;
 	}
 	.group h2{
