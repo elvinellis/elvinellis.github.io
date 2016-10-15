@@ -9,12 +9,32 @@ date: 2016-01-01
 permalink: /lovenest
 ---
 header
-	#cover(style="background-image:url({{ page.cover }})")
-		#title
-			h1 {{ page.title }}
-			h2 {{ page.excerpt }}
-		#narrated 
-			.date {{ page.date | date: "%B %Y" }}
+	ul#coverList
+	#overlay
+		h1 {{ page.title }}
+		.excerpt {{ page.excerpt }}
+		.byline Narrated by {{ page.author }} &middot; {{ page.date | date: "%B %Y" }}
+.group
+	h2 Sea Horizon
+	.photoset(data-layout="123213231323132313231323132")
+		img(src="https://3.bp.blogspot.com/-yzc0uHz9MNE/WAIzs1QVmtI/AAAAAAABaMs/xf-PFZ1_fjcaA6pX_2xTbqEiFtys0wmLwCLcB/s1600/IMG_1617.jpg")
+
+		img._(src="https://4.bp.blogspot.com/-PXXupjVIrYQ/WAIz0COIXmI/AAAAAAABaNM/3C5UBGXGDCA-KYAVNViuiHYaMjh8ZBk-QCLcB/s800/IMG_1637.jpg")
+		img._(src="https://2.bp.blogspot.com/-LOsMEuVjCYI/WAIzq7YOaeI/AAAAAAABaMc/F1utCdsd9hA2SZBRPnBl3XOMlWmjbZJwACLcB/s800/IMG_1606.jpg")
+		img(src="https://3.bp.blogspot.com/-2mORUdCSkUE/WAIzvXL6_GI/AAAAAAABaM8/CJzuy-RvkoQp6-HaOaYp1LMddjA-UuMSgCLcB/s500/IMG_1627.jpg")
+		img(src="https://2.bp.blogspot.com/-XRg3cl3od8w/WAIzyUsIO1I/AAAAAAABaNE/7S_RlzK1zBwuCSimo5CMqZjqrPJpf4hjwCLcB/s500/IMG_1630.jpg")
+		img(src="https://4.bp.blogspot.com/-gOyR0CC-ZvU/WAIzvMO1FhI/AAAAAAABaM4/KIgVpwQwIW4O_56id4vm6g3V160v-RjHwCLcB/s500/IMG_1625.jpg")
+		img(src="https://1.bp.blogspot.com/-1x4a4pv0-YM/WAIzyL_CAOI/AAAAAAABaNI/TsPIG4MvbfwkmYzIwodsZDKk5PO2OenbQCLcB/s800/IMG_1632.jpg")
+		img(src="https://3.bp.blogspot.com/-5VeQZFunf1g/WAIz0ozjdPI/AAAAAAABaNQ/xo-Xn6wM88w_sc4b9KaW4gZnjgg1h8UdQCLcB/s800/IMG_1638.jpg")
+		img(src="https://4.bp.blogspot.com/-zLfu1Cl3HaQ/WAIz0iaI6qI/AAAAAAABaNU/--CunGvow0MIerzBtvyf0EU3mEGyCp5pQCLcB/s1600/IMG_1642.jpg")
+		//img(src="https://4.bp.blogspot.com/-U59-H2lHNL0/WAIzq9kuH8I/AAAAAAABaMg/DWzJCyy9PzAPIum2N6Ol3PPrb6_sif3gACLcB/s1600/IMG_1610.jpg")
+		//img(src="https://1.bp.blogspot.com/-eU31WBQZFL8/WAIzrdr0SvI/AAAAAAABaMk/Zb638kYCx4UbZ-DhosvV8jXCm0OFitlhgCLcB/s1600/IMG_1612.jpg")
+		//img(src="https://3.bp.blogspot.com/-055OzSRdzIE/WAIzs1_qeYI/AAAAAAABaMo/h9Z4-acHWCI3QPzZhZGeT-ISvmy1-hdzACLcB/s1600/IMG_1619.jpg")
+		//img(src="https://2.bp.blogspot.com/-affIJOcksRc/WAIzteeMVJI/AAAAAAABaMw/_RHmrMNy0ZsqMgf7rkwnCnNBU5KJm2J5ACLcB/s1600/IMG_1620.jpg")
+		//img(src="https://2.bp.blogspot.com/-yu0jwgD5qFw/WAIzu07GeCI/AAAAAAABaM0/1CN69HcpUJoY7bqj24Rl_qIy5wK3QhHCwCLcB/s1600/IMG_1623.jpg")
+		//img(src="https://2.bp.blogspot.com/-11a0eD2WVvc/WAIzyOafskI/AAAAAAABaNA/MZ57eOTwgAwk73FszFAeHHzw1BeUodTMQCLcB/s1600/IMG_1631.jpg")
+		//img(src="https://2.bp.blogspot.com/-RHxLNkA5MrM/WAIz1fNVFvI/AAAAAAABaNY/gmc3oVUdp3UI5qr4BhVAUGytUriWG0ovwCLcB/s1600/IMG_1644.jpg")
+
 .group
 	h2 Floor Plan
 	.story

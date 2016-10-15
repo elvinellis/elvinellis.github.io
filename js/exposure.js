@@ -160,6 +160,24 @@ $(document).ready(function(){
 		//Default is 75px, set to 0 for demo so any distance triggers swipe
 		threshold:0
 	});
+
+	$(document).ready(function(){
+		var toc = $('#toc');
+		if(toc){
+			toc.html("&#8258; ");
+			$('.group').each(function(i){
+				var title = $(this).find('h2').clone().children().remove().end().text();
+				var anchor = title.replace(/\s+/g, '-');
+
+				$(this).find('h2').attr('id', anchor);
+				var link = '<a href="#' + anchor + '">' + title + '</a>';
+
+				if(i != 0) link = " &middot; " + link;
+				else i = 1;
+				toc.append(link);
+			});
+		}
+	});
 });
 
 var sc_project=10403974; 
