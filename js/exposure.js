@@ -167,6 +167,15 @@ $(document).ready(function(){
 			toc.html("&#8258; ");
 			$('.group').each(function(i){
 				var title = $(this).find('h2').clone().children().remove().end().text();
+
+				var subtitle = '';
+				$(this).find('h3').each(function(x){
+					var subAnchor = $(this).text().replace(/[\s|\(|\)|,]+/g, '-');
+					$(this).attr('id', subAnchor);
+					subtitle += '<li><a href="#'+subAnchor+'">' + $(this).text() + "</a></li>";
+				});
+				$(this).find('h2').after('<div class="subline"><ul>' + subtitle + '</ul></div>');
+
 				var anchor = title.replace(/\s+/g, '-');
 
 				$(this).find('h2').attr('id', anchor);
