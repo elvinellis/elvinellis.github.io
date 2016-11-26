@@ -70,7 +70,7 @@ header
 	.fleuron
 	h3 * 26 July, Tuesday (Week 12) - Bedrest
 	.subline GA: 12w +/- 6d. EDD: 07-02-2017.<br>
-	| CRL: 54.56 mm. 
+		| CRL: 54.56 mm. 
 	.story #[.ellis] We rushed from work to the clinic to do a scan. Found out that there was a slight tear that caused the bleeding. The tear was probably from too much walking and exertion. Dr. Liauw advised for a full bed rest in a serious tone. And also no hanky panky.
 	.photoset(data-layout="1")
 		img(src="https://3.bp.blogspot.com/-z7lgrO0nVIU/V6VvLyjW--I/AAAAAAABYCU/zmPDR54nrUQGuA5-ZUVvYlxKk4EAmmNcACLcB/s1600/Baby-20160726-1.jpg")
@@ -317,6 +317,7 @@ header
 	.subline
 		| GA: 28 Weeks. EDD: 05-02-2017 <br>
 		| BPD: 71.84 mm, HC: 270.22 mm, AC: 248.70 mm, FL: 49.22 mm. <br>
+		| EFW: 1202 g<br>
 		| Mommy's weight: 64.8 Kg
 	.story #[.ellis] Finally, it is our regular gynae visit. It is the 28th weeks and it has been a while since we last saw an image of Audrey. This morning, I talk to Audrey, asking her not to be shy so that Dr Tseng can confirm the gender. She was really cooperative and we were very happy to see her in the ultrasound scan. Dr. Tseng confirmed it's a girl by the "hamburger" pattern. Good job, Audrey! It is time for some online shopping to get the props for your photoshoot. We were done with check-up by 9.30am. Our next visit will be on the 32nd week. Wow, Mommy can't wait to 'see' you again and count down to your arrival. Please continue to grow well inside me and kick me often!
 	.photoset(data-layout="A")
@@ -355,4 +356,77 @@ header
 	.subline &#8258; Hadlock 4: Log10 (weight) = 1.3596 -0.00386 &times; AC &times; FL + 0.0064 &times; HC + 0.00061 &times; BPD &times; AC + 0.0424 &times; AC + 0.174 &times; FL
 	.subline *: Indicates a scan was done.
 	h3 Acronyms
-	.subline AC: Adominal Circumference; BPD: Biparietal Diameter; CRL: Crown-Rump Length; EDD: Estimated Due Date; FHR: Fetal Heart Rate; FL: Femur Length; GA: Gestational Age; GS:Gestational Sac; HC: Head Circumference; NT: Nuchal Translucency
+	.subline AC: Adominal Circumference; BPD: Biparietal Diameter; CRL: Crown-Rump Length; EDD: Estimated Due Date; EFW: Estimated Fetal Weight, FHR: Fetal Heart Rate; FL: Femur Length; GA: Gestational Age; GS:Gestational Sac; HC: Head Circumference; NT: Nuchal Translucency
+
+	h3 Growth Chart
+	.story
+		#figures(style='height: 80vh')
+
+	h3 Weight Chart
+	.story
+		#weight(style='height: 80vh')
+
+script(type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js")
+script.
+	$( document ).ready(function() {
+	var figures = [
+		{
+		name: "CRL",
+		x:[7,9,11,12,13],
+		y:[6.27, 24.97, 45.98, 54.56,63.1]
+		},
+		{
+		name: "HC",
+		x:[12,14,20,22,24,28],
+		y:[71.3, 90.89, 168, 193.24, 221.66, 270.22],
+		},
+		{
+		name: "AC",
+		x:[12,14,20,22,24,28],
+		y:[58.1, 100, 140, 174.93, 200, 248.70],
+		},
+		{
+		name: "BPD",
+		x:[12,14,20,22,24,28],
+		y:[19.8, 26.27, 47, 50.27, 59.83, 71.84],
+		},
+		{
+		name: "FL",
+			   x:[20,22,24,28],
+			   y:[30, 38.75, 43, 49.22],
+		},
+		];
+	var weight =  [
+		{
+		name: "EFW",
+			   x:[20,22,24,28],
+			   y:[289, 491, 862, 1202],
+			   line: {shape: 'spline'},
+		}];
+
+		layout = {
+			//title: 'Baby Audrey Growth Chart',
+			//legend: {"orientation": "h", },
+			margin: {
+			    l: 50,
+				    r: 50,
+					    b: 100,
+						    t: 100,
+							    pad: 4
+								  },
+			xaxis: {
+				title: 'Pregnancy Week (Gestational Age)',
+				dtick: 2,
+			},
+			yaxis: {
+				title: 'Measurement in Millimeters',
+				dtick: '10',
+			}
+		}
+		Plotly.newPlot('figures', figures, layout, {displayModeBar: false});
+
+		//layout['title'] = 'Baby Audrey Weight';
+		layout['yaxis']['title'] = 'Weight in Grams';
+		layout['yaxis']['dtick'] = 100;
+		Plotly.newPlot('weight', weight, layout, {displayModeBar: false});
+	});
