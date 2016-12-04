@@ -330,6 +330,7 @@ header
 	.fleuron
 .group
 	h2#third 3rd Trimester
+	.subline Mommy's waist: 37.5", Mommy's weight: 65.3 Kg
 	.story
 	.fleuron
 	h3 30 November, Wednesday  (Week 30)
@@ -360,11 +361,11 @@ header
 
 	h3 Growth Chart
 	.story
-		#figures(style='height: 80vh')
+		#figures(style='height: 60vh')
 
 	h3 Weight Chart
 	.story
-		#weight(style='height: 80vh')
+		#weight(style='height: 60vh')
 
 script(type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js")
 script.
@@ -409,9 +410,9 @@ script.
 			//legend: {"orientation": "h", },
 			margin: {
 			    l: 50,
-				    r: 50,
-					    b: 100,
-						    t: 100,
+				    r: 0,
+					    b: 50 ,
+						    t: 0,
 							    pad: 4
 								  },
 			xaxis: {
@@ -420,7 +421,7 @@ script.
 			},
 			yaxis: {
 				title: 'Measurement in Millimeters',
-				dtick: '10',
+				dtick: '20',
 			}
 		}
 		Plotly.newPlot('figures', figures, layout, {displayModeBar: false});
