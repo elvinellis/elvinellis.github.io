@@ -11,7 +11,8 @@ multiply = re.compile(r'([0-9]+) x ([0-9]+)', re.MULTILINE)
 fraction = re.compile(r'([0-9]+)/([0-9]+)', re.MULTILINE)
 ordinalFirst = re.compile(r'1st', re.MULTILINE)
 ordinalSecond = re.compile(r'2nd', re.MULTILINE)
-ordinalThirs = re.compile(r'3rd', re.MULTILINE)
+ordinalThird = re.compile(r'3rd', re.MULTILINE)
+ordinalTh = re.compile(r'([0-9+])th', re.MULTILINE)
 
 #&frasl;
 for c in fileinput.input():
@@ -27,7 +28,8 @@ for c in fileinput.input():
         t = fraction.sub(r"\1&frasl;\2", t)
         t = ordinalFirst.sub(r"1#[sup st]", t)
         t = ordinalSecond.sub(r"2#[sup nd]", t)
-        t = ordinalThirs.sub(r"3#[sup rd]", t)
+        t = ordinalThird.sub(r"3#[sup rd]", t)
+        t = ordinalTh.sub(r"\1#[sup th]", t)
 
         print t.rstrip()
     else:
