@@ -382,7 +382,14 @@ header
 	.fleuron
 
 	h3 * 24 December, Saturday (Week 34)
+	.subline GA: 34 Weeks. EDD: 08-02-2017<br>
+		| BPD: 84.95 mm. HC: 301.09 mm. AC: 283.81 mm. FL: 61.14 mm.<br>
+		| EFW: 1980 g. Heart Rate 140 BPM.<br>
+		| Mommy's Weight: 66.1 Kg
 	.story Pack baby and Mommy's bag.
+	.photoset(data-layout="2")
+		img(src="https://3.bp.blogspot.com/-KzlkI2S1OKs/WGDAkoFhUsI/AAAAAAABcl4/ioaUvEqiKdArrEAGWqmvFQR72CIfIB0QQCLcB/s800/20161224-1.jpg")
+		img(src="https://3.bp.blogspot.com/-GGwlmNCrvFI/WGDAkudmSxI/AAAAAAABcl8/ggHwteEoWM0E2-tT_y7PYpMy2uu11LgCACLcB/s800/20161224-2.jpg")
 
 	.fleuron
 
@@ -423,30 +430,30 @@ script.
 		},
 		{
 		name: "HC",
-		x:[12,14,20,22,24,28,32],
-		y:[71.3, 90.89, 168, 193.24, 221.66, 270.22, 284.73],
+		x:[12,14,20,22,24,28,32,34],
+		y:[71.3, 90.89, 168, 193.24, 221.66, 270.22, 284.73, 301.09],
 		},
 		{
 		name: "AC",
-		x:[12,14,20,22,24,28,32],
-		y:[58.1, 100, 140, 174.93, 200, 248.70, 274.16],
+		x:[12,14,20,22,24,28,32,34],
+		y:[58.1, 100, 140, 174.93, 200, 248.70, 274.16,283.81],
 		},
 		{
 		name: "BPD",
-		x:[12,14,20,22,24,28,32],
-		y:[19.8, 26.27, 47, 50.27, 59.83, 71.84, 77.65],
+		x:[12,14,20,22,24,28,32,34],
+		y:[19.8, 26.27, 47, 50.27, 59.83, 71.84, 77.65, 84.95],
 		},
 		{
 		name: "FL",
-			   x:[20,22,24,28,32],
-			   y:[30, 38.75, 43, 49.22, 58.69],
+			   x:[20,22,24,28,32,34],
+			   y:[30, 38.75, 43, 49.22, 58.69, 61.14],
 		},
 		];
 	var weight =  [
 		{
 		name: "EFW",
-			   x:[20,22,24,28],
-			   y:[289, 491, 862, 1202],
+			   x:[20,22,24,28,32,34],
+			   y:[289, 491, 862, 1202, 1712, 1980],
 			   line: {shape: 'spline'},
 		}];
 
@@ -455,11 +462,11 @@ script.
 			//legend: {"orientation": "h", },
 			margin: {
 			    l: 50,
-				    r: 0,
-					    b: 50 ,
-						    t: 0,
-							    pad: 4
-								  },
+				r: 0,
+				b: 50 ,
+				t: 0,
+				pad: 4
+			},
 			xaxis: {
 				title: 'Pregnancy Week (Gestational Age)',
 				dtick: 2,
