@@ -67,6 +67,26 @@ header
 .group
 	.story 
 .panel
+{% assign items = site.family | sort: 'date' %}
+{% for c in items reversed %}
+	.square
+		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s600" }})")
+			a(href="{{ c.permalink }}")
+				.description
+					h4 {{ c.title }}
+					h5 {{ c.excerpt }}
+					.date {{ c.date | date: "%B %Y" }}
+{% endfor %}
+	.clear
+	.haiku
+		| Love's only weakness
+		| Is also it's greatest strength:
+		| It defies reason
+.fleuron
+
+.group
+	.story 
+.panel
 {% assign items = site.timeline | sort: 'date' %}
 {% for c in items reversed %}
 	.square
