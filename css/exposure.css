@@ -282,6 +282,12 @@ table tr:nth-child(even){
 	box-sizing: border-box;
 	background-color: #292525;
 	background-position: center center;
+	color: #FFF;
+}
+
+.square .haiku{
+	padding: 30px 15px;
+	margin: auto;
 }
 
 .square .bg{
@@ -294,6 +300,7 @@ table tr:nth-child(even){
 	background-color: #303030;
 	background-size: cover !important;
 	background-position: center center;
+	text-shadow: 2px 2px 3px #333;
 }
 .square a{
 	text-decoration: none;
