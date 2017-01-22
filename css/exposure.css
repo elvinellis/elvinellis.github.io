@@ -523,7 +523,7 @@ footer ul li{
 		width: 75%;
 	}
 }
-@media (max-width: 750px) {
+@media (max-width: 770px) {
 	#cover title{
 		margin-top: -100px;
 	}
