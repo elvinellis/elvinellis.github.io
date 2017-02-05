@@ -310,7 +310,7 @@ table tr:nth-child(even){
 	top: initial;
 	bottom: 0;
 	height: 100%;
-	padding: 50% 0 0 0;
+	padding: 60% 0 0 0;
 	color: #fff;
 	text-align: center;
 	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, transparent 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
@@ -381,7 +381,7 @@ table tr:nth-child(even){
 	color: #000;
 	letter-spacing: 3px;
 }
-.group h3{
+.group h3, .group h4{
 	word-wrap: break-word;
 	max-width: 900px;
 	width: 70%;
@@ -519,7 +519,7 @@ footer ul li{
 		width: 33%;
 		padding-bottom: 33%;
 	}
-	.group .story, .group h2, .group h3, .group .subline {
+	.group .story, .group h2, .group h3, .group h4, .group .subline {
 		width: 75%;
 	}
 }
@@ -540,7 +540,7 @@ footer ul li{
 	.group story{
 		line-height: 28px;
 	}
-	.group .story, .group h2, .group h3, .group .subline {
+	.group .story, .group h2, .group h3, .group h4, .group .subline {
 		width: 80%;
 	}
 	.group h2{
