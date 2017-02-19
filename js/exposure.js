@@ -12,58 +12,73 @@ function shuffle(array) {
 
 	return array;
 }
-	$.fn.bannerSlides = function (options) {
-		if (this.length > 1) {
-			this.each(function () { $(this).bannerSlides(options) });
-			return this;
-		}
 
-		var that = this;
-		this.coverList = [],
-		this.slideContainer = $(this),
-		this.slides = 0, 
-		this.slidesLen = 0,
-		this.transitionTime = 1300,
-		this.delay = 7000,
-		this.index = 1,
 
-		this.initialize = function () {
-			if(that.slideContainer.attr('data')){
-				that.coverList = that.slideContainer.attr('data').split(',');
-			}
-			if(that.coverList.length == 0){
-				$('img._').map(function(){that.coverList.push($(this).attr('src').replace(/\/s[0-9]+\//, "/s1600/"));});
-			}
-			that.slidesLen = that.coverList.length;
-			for(i=0; i< that.slidesLen; i++){
-				$('#coverList').append("<li id='b"+i+"'></li>");
-			}
-
-			this.index = Math.floor((Math.random() * that.slidesLen));
-			that.slides = that.slideContainer.find('li');
-			that.coverList = shuffle(that.coverList);
-
-			that.doTransition(this.index);
-		};
-
-		this.doTransition = function(index) {
-			var preIndex = index - 1;
-			if(index == that.slidesLen) index = 0;
-			var attr = $('#b'+index).attr('style');
-			if (typeof attr === typeof undefined) {
-				$('#b'+index).css('background-image', 'url('+that.coverList[index]+')');
-			}
-			$(that.slides[preIndex]).fadeOut(that.transitionTime);
-			$(that.slides[index]).fadeIn(that.transitionTime);
-			index++;
-
-			if(that.slidesLen == 1) return;
-
-			setTimeout(function() { that.doTransition(index); }, that.delay);
-		}
-
-		return this.initialize();
+$.fn.bannerSlides = function (options) {
+	if (this.length > 1) {
+		this.each(function () { $(this).bannerSlides(options) });
+		return this;
 	}
+
+	var that = this;
+	this.coverList = [],
+	this.slideContainer = $(this),
+	this.slides = 0, 
+	this.slidesLen = 0,
+	this.transitionTime = 1300,
+	this.delay = 7000,
+	this.index = 1,
+
+	this.initialize = function () {
+		// Get the cover images to show from data attribute
+		if(that.slideContainer.attr('data')){
+			that.coverList = that.slideContainer.attr('data').split(',');
+		}
+
+		// If the data attribute was not defined, we scan the page for image class "_" and add them to coverList
+		if(that.coverList.length == 0){
+			$('img._').map(function(){that.coverList.push($(this).attr('src').replace(/\/s[0-9]+\//, "/s1600/"));});
+		}
+
+		that.slidesLen = that.coverList.length;
+		for(i=0; i< that.slidesLen; i++){
+			$('#coverList').append("<li id='b"+i+"'></li>");
+		}
+
+		this.index = Math.floor((Math.random() * that.slidesLen));
+		that.slides = that.slideContainer.find('li');
+		that.coverList = shuffle(that.coverList);
+
+		/*
+		setTimeout(function(){
+			$("#overlay" ).animate({ "right": "4vh", "width":"33%", "left": "initial" }, {duration: that.transitionTime} ); 
+			$("#overlay h1").animate({"font-size":"-=2vw", "line-height":"-=2vw", "text-align":"right"}, "slow"); 
+			$("#overlay .excerpt").animate({"font-size":"-=3px", "text-align":"right"}, "slow");
+			$("#overlay .byline").animate({"margin-top":"-=3vh", "text-align":"right"}, "slow");
+		}, that.delay - 2000);
+		*/
+				  
+		that.doTransition(this.index);
+	};
+
+	this.doTransition = function(index) {
+		var preIndex = index - 1;
+		if(index == that.slidesLen) index = 0;
+		var attr = $('#b'+index).attr('style');
+		if (typeof attr === typeof undefined) {
+			$('#b'+index).css('background-image', 'url('+that.coverList[index]+')');
+		}
+		$(that.slides[preIndex]).fadeOut(that.transitionTime);
+		$(that.slides[index]).fadeIn(that.transitionTime);
+		index++;
+
+		if(that.slidesLen == 1) return;
+
+		setTimeout(function() { that.doTransition(index); }, that.delay);
+	}
+
+	return this.initialize();
+}
 
 
 function replaceVideo(id){
