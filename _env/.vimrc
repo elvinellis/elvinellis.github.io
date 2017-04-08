@@ -13,12 +13,20 @@ set ignorecase
 set splitright
 set mouse=a
 
+syntax enable
+set background=dark
+"set t_Co = 256
+"colorscheme magellan
+"colorscheme monokai
+colorscheme luna-term
+"colorscheme basic-dark
+"let g:solarized_termtrans = 1
+"colorscheme solarized
+
 " Line numbers
 set number
 highlight LineNr ctermfg=darkgray
 
-syntax enable
-set background=dark
 set hidden
 let mapleader = "\<Space>"
 
@@ -47,8 +55,6 @@ let g:airline_theme='luna'
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#tab_nr_type = 1 
-"colorscheme solarized
-"colorscheme base16-default
 
 hi Pmenu ctermbg=darkgray ctermfg=gray guibg=darkgray guifg=#0DA2B3
 hi PmenuSel ctermbg=gray ctermfg=black guibg=#0DA2B3 guifg=black
