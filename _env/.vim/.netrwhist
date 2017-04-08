@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/ec2-user/git/elvinio.github.io/_site/2016/03/13/how-precision-is-calculated-in-ntp'
+let g:netrw_dirhist_2='/home/ec2-user/git/elvinio.github.io/_plugins'
+let g:netrw_dirhist_3='/home/ec2-user/git/elvinio.github.io/_env'
+let g:netrw_dirhist_4='/home/ec2-user/git/elvinellis.github.io/_plugins'
+let g:netrw_dirhist_5='/home/ec2-user/git/common/timepulse'
