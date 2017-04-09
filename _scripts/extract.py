@@ -2,7 +2,7 @@
 import re
 
 pattern = 'href="(.*?\.jpg)"'
-f = open('bali')
+f = open('t')
 string = f.read()
 pattern = re.compile(pattern, re.IGNORECASE)
 
