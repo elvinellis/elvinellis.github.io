@@ -23,7 +23,7 @@ header
 
 	
 .panel
-{% assign items = site.family | sort: 'date' %}
+{% assign items = site.audrey | sort: 'date' %}
 {% for c in items reversed %}
 	.square
 		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s600" }})")
