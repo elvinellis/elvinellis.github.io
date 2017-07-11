@@ -10,15 +10,28 @@ permalink: /audrey
 ---
 
 header
-	ul#coverList
+	ul#coverList(data="{{ page.cover | join: ',' }}")
 	#overlay
 		h1 {{ page.title }}
 		.excerpt {{ page.excerpt }}
 		.byline Narrated by {{ page.author }} &middot; {{ page.date | date: "%B %Y" }}
 
 .group
-	.story #[img(src="https://3.bp.blogspot.com/-5RmTWUPL_ak/V8iwFUL6OaI/AAAAAAABYzY/Ftmmu5ATU_grnpMI_KauanBIwHxhwGgWACLcB/s90/A-2.jpg" align="left" alt="A")]udrey is our first baby. Mommy and Daddy will write memories of her growing upyears. It will be pleasant surprise for her when she can finally read and understand.
+	.story #[img(src="https://3.bp.blogspot.com/-5RmTWUPL_ak/V8iwFUL6OaI/AAAAAAABYzY/Ftmmu5ATU_grnpMI_KauanBIwHxhwGgWACLcB/s90/A-2.jpg" align="left" alt="A")]udrey is our daughter and we made a mini-site for her. We have written memories and kept photos of her growing up. It will be pleasant surprise for her when she can finally read and understand.
 
 	.fleuron
-	
 
+	
+.panel
+{% assign items = site.family | sort: 'date' %}
+{% for c in items reversed %}
+	.square
+		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s600" }})")
+			a(href="{{ c.permalink }}")
+				.description
+					h4 {{ c.title }}
+					h5 {{ c.excerpt }}
+					.date {{ c.date | date: "%B %Y" }}
+{% endfor %}
+
+	.clear
