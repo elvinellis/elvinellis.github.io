@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta content='{{ page.cover }}' property='og:image'/>
 		<meta content='{{ page.excerpt | escape }}' property='og:description'/>
-		<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+		<title>{% if page.title %}{{ page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
 		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Roboto+Condensed:700'>
 		<link rel="stylesheet" href="/css/colorbox.css" />
@@ -30,29 +30,29 @@
 			{{ content }}
 
 			{% if page.collection == "travel" %}
-			{% assign items = site.travel | sort: 'date' %}
-			{% assign prev = 0 %}
-			{% assign next = 0 %}
-			{% for c in items %}
-			{% if next == 1 %}
-			{% assign next = c %}
-			{% break %}
-			{% endif %}
-			{% if c.url == page.url %}
-			{% if c != forloop.last %}
-			{% assign next = 1 %}
-			{% endif %}
-			{% else %}
-			{% assign prev = c %}
-			{% endif %}
-			{% endfor %}
+				{% assign items = site.travel | sort: 'date' %}
+				{% assign prev = 0 %}
+				{% assign next = 0 %}
+				{% for c in items %}
+					{% if next == 1 %}
+					{% assign next = c %}
+					{% break %}
+					{% endif %}
+					{% if c.url == page.url %}
+						{% if c != forloop.last %}
+							{% assign next = 1 %}
+						{% endif %}
+						{% else %}
+						{% assign prev = c %}
+						{% endif %}
+				{% endfor %}
 			<div class="group">
 				<p style="margin-bottom: 25px; text-align: center">&#8251;</p>
 				<div style="width: 31%; margin-left: 2%; float: left;">
-					<a href="{{ prev.url }}">{{ prev.title }} &nbsp;</a> 
+					<a href="{{ prev.url }}">{{ prev.title }} &nbsp;</a>
 				</div>
 				<div style="width: 34%; float: left; text-align: center">
-					<a href="/">Home</a> 
+					<a href="/">Home</a>
 				</div>
 				<div style="width: 31%; float: left; text-align: right">
 					<a href="{{ next.url }}">{{ next.title }} &nbsp;</a>
