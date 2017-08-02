@@ -414,6 +414,8 @@ footer ul li{
 	text-align: right;
 }
 
+
+
 @media (min-width: 1600px) {
 	body {
 		font-size: 21px;
@@ -434,6 +436,10 @@ footer ul li{
 		margin-top: 14px;
 	}
 
+	.square {
+		width: 25%;
+		padding-bottom: 25%;
+	}
 	.square h4{
 		font-size: 30px;
 	}
@@ -449,6 +455,14 @@ footer ul li{
 		width: 960px;
 	}
 }
+
+@media (min-width: 1920px) {
+	.square {
+		width: 20%;
+		padding-bottom: 20%;
+	}
+}
+
 @media (max-width: 1599px) {
 	body {
 		font-size: 21px;
