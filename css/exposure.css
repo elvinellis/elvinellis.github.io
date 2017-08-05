@@ -304,6 +304,12 @@ table tr:nth-child(even){
 	margin-bottom: 15px;
 }
 
+.group .subline ul li{
+	list-style-type:  none;
+	line-height: 20px;
+	font-size: 14px;
+}
+
 .group .story{
 	margin-left: auto;
 	margin-right: auto;
