@@ -31,6 +31,8 @@ collections:
             output: true
     timeline:
             output: true
+    photography:
+            output: true
 
 # Build settings
 markdown: kramdown

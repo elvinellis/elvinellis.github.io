@@ -95,6 +95,24 @@ header
 					h5 {{ c.excerpt }}
 					.date {{ c.date | date: "%B %Y" }}
 {% endfor %}
+	.square
+		.bg(style="background-image:url(https://1.bp.blogspot.com/-rJns_Gm8a1Y/WHeXIyOoPvI/AAAAAAABcv0/OoepI8-SclkpZJA0nJnIXchGJ3f_XKj_gCLcB/s800/galaxy-apple-space-kosmos-1920x1200-wallpaper110272.jpg); background-position: 50% 100%")
+			.haiku
+				| Dawn
+				| a piece of fruit
+				| in a robin's beak
+			p &middot;
+			p Photography &raquo;
+{% assign items = site.photography | sort: 'date' %}
+{% for c in items reversed %}
+	.square
+		.bg(style="background-image:url({{ c.cover | replace: "s1600", "s600" }})")
+			a(href="{{ c.permalink }}")
+				.description
+					h4 {{ c.title }}
+					h5 {{ c.excerpt }}
+					.date {{ c.date | date: "%B %Y" }}
+{% endfor %}
 	//.square
 		.bg
 			.haiku
