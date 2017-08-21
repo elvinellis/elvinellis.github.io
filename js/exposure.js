@@ -23,7 +23,7 @@ $.fn.bannerSlides = function (options) {
 	var that = this;
 	this.coverList = [],
 	this.slideContainer = $(this),
-	this.slides = 0, 
+	this.slides = 0,
 	this.slidesLen = 0,
 	this.transitionTime = 1300,
 	this.delay = 7000,
@@ -37,7 +37,7 @@ $.fn.bannerSlides = function (options) {
 
 		// If the data attribute was not defined, we scan the page for image class "_" and add them to coverList
 		if(that.coverList.length == 0){
-			$('img._').map(function(){that.coverList.push($(this).attr('src').replace(/\/s[0-9]+\//, "/s1600/"));});
+			$('img._').map(function(){that.coverList.push($(this).attr('src').replace(/\/s[0-9]+\//, "/s2400/"));});
 		}
 
 		that.slidesLen = that.coverList.length;
@@ -51,13 +51,13 @@ $.fn.bannerSlides = function (options) {
 
 		/*
 		setTimeout(function(){
-			$("#overlay" ).animate({ "right": "4vh", "width":"33%", "left": "initial" }, {duration: that.transitionTime} ); 
-			$("#overlay h1").animate({"font-size":"-=2vw", "line-height":"-=2vw", "text-align":"right"}, "slow"); 
+			$("#overlay" ).animate({ "right": "4vh", "width":"33%", "left": "initial" }, {duration: that.transitionTime} );
+			$("#overlay h1").animate({"font-size":"-=2vw", "line-height":"-=2vw", "text-align":"right"}, "slow");
 			$("#overlay .excerpt").animate({"font-size":"-=3px", "text-align":"right"}, "slow");
 			$("#overlay .byline").animate({"margin-top":"-=3vh", "text-align":"right"}, "slow");
 		}, that.delay - 2000);
 		*/
-				  
+
 		that.doTransition(this.index);
 	};
 
@@ -98,7 +98,6 @@ $(document).ready(function(){
 	}
 
 	$('.photoset img').each(function(i){
-		//var highres = $(this).attr('src').substr(0,101) + 's1600/';
 		var highres = $(this).attr('src').replace(/\/s([\d]*)\//,"/s1600/");
 			$(this).attr('data-highres', highres);
 	});
@@ -112,7 +111,12 @@ $(document).ready(function(){
 				photo: true,
 				scalePhotos: true,
 				maxHeight: '100%',
-				maxWidth: '100%'
+				maxWidth: '100%',
+        slideshow: true,
+        slideshowAuto: false,
+        slideshowSpeed: 5000,
+        speed: 500,
+        transition: 'fade'
 			});
 		}
 	});
@@ -204,8 +208,8 @@ $(document).ready(function(){
 	});
 });
 
-var sc_project=10403974; 
-var sc_invisible=1; 
-var sc_security="54511e28"; 
+var sc_project=10403974;
+var sc_invisible=1;
+var sc_security="54511e28";
 var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
 document.write("<script type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter_xhtml.js'></script>");
