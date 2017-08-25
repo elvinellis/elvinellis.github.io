@@ -28,6 +28,7 @@ $.fn.bannerSlides = function (options) {
 	this.transitionTime = 1300,
 	this.delay = 7000,
 	this.index = 1,
+  this.resolution = 800,
 
 	this.initialize = function () {
 		// Get the cover images to show from data attribute
@@ -35,9 +36,13 @@ $.fn.bannerSlides = function (options) {
 			that.coverList = that.slideContainer.attr('data').split(',');
 		}
 
+    if (screen.width >= 3200) that.resolution = 3200;
+    else if (screen.width >= 2400) that.resolution = 2400;
+    else if (screen.width >= 1600) that.resolution = 1600;
+    else if (screen.with >= 1200) that.resolution = 1200;
 		// If the data attribute was not defined, we scan the page for image class "_" and add them to coverList
 		if(that.coverList.length == 0){
-			$('img._').map(function(){that.coverList.push($(this).attr('src').replace(/\/s[0-9]+\//, "/s2400/"));});
+			$('img._').map(function(){that.coverList.push($(this).attr('src').replace(/\/s[0-9]+\//, "/s" + that.resolution + "/"));});
 		}
 
 		that.slidesLen = that.coverList.length;
@@ -97,10 +102,21 @@ $(document).ready(function(){
 		$('#coverList').bannerSlides();
 	}
 
+  var resolution = 800;
+  if (screen.width >= 3200) resolution = 3200;
+  else if (screen.width >= 2400) resolution = 2400;
+  else if (screen.width >= 1600) resolution = 1600;
+  else if (screen.width >= 1200) resolution = 1200;
+
 	$('.photoset img').each(function(i){
-		var highres = $(this).attr('src').replace(/\/s([\d]*)\//,"/s1600/");
-			$(this).attr('data-highres', highres);
+		var highres = $(this).attr('src').replace(/\/s([\d]*)\//,"/s" + resolution + "/");
+		$(this).attr('data-highres', highres);
+    if ($(this).attr('src').includes('/s1600')) {
+      var reres = $(this).attr('src').replace(/\/s([\d]*)\//,"/s" + resolution + "/");
+      $(this).attr('src', reres);
+    }
 	});
+
 	$('.photoset').photosetGrid({
 		highresLinks: true,
 		rel: 'gallery',
