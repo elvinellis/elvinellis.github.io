@@ -14,9 +14,9 @@ function shuffle(array) {
 }
 
 
-$.fn.bannerSlides = function (options) {
+$.fn.bannerSlides = function (resolution) {
 	if (this.length > 1) {
-		this.each(function () { $(this).bannerSlides(options) });
+		this.each(function () { $(this).bannerSlides(resolution) });
 		return this;
 	}
 
@@ -28,7 +28,6 @@ $.fn.bannerSlides = function (options) {
 	this.transitionTime = 1300,
 	this.delay = 7000,
 	this.index = 1,
-  this.resolution = 800,
 
 	this.initialize = function () {
 		// Get the cover images to show from data attribute
@@ -36,13 +35,9 @@ $.fn.bannerSlides = function (options) {
 			that.coverList = that.slideContainer.attr('data').split(',');
 		}
 
-    if (screen.width >= 3200) that.resolution = 3200;
-    else if (screen.width >= 2400) that.resolution = 2400;
-    else if (screen.width >= 1600) that.resolution = 1600;
-    else if (screen.with >= 1200) that.resolution = 1200;
 		// If the data attribute was not defined, we scan the page for image class "_" and add them to coverList
 		if(that.coverList.length == 0){
-			$('img._').map(function(){that.coverList.push($(this).attr('src').replace(/\/s[0-9]+\//, "/s" + that.resolution + "/"));});
+			$('img._').map(function(){that.coverList.push($(this).attr('src').replace(/\/s[0-9]+\//, "/s" + resolution + "/"));});
 		}
 
 		that.slidesLen = that.coverList.length;
@@ -98,19 +93,24 @@ function loadVideo(el, youtube_id){
 }
 
 $(document).ready(function(){
+  var resolution = 800;
+  var youtubeRes = "sddefault"
+  var width = $(window).width();
+  if (width >= 3200) resolution = 3200;
+  else if (width >= 2400) { resolution = 2400; youtubeRes = "maxresdefault"; }
+  else if (width >= 1600) { resolution = 1600;  }
+  else if (width >= 1200) { resolution = 1200; }
+
+
 	if($('#coverList').length){
-		$('#coverList').bannerSlides();
+		$('#coverList').bannerSlides(resolution);
 	}
 
-  var resolution = 800;
-  if (screen.width >= 3200) resolution = 3200;
-  else if (screen.width >= 2400) resolution = 2400;
-  else if (screen.width >= 1600) resolution = 1600;
-  else if (screen.width >= 1200) resolution = 1200;
 
 	$('.photoset img').each(function(i){
 		var highres = $(this).attr('src').replace(/\/s([\d]*)\//,"/s" + resolution + "/");
 		$(this).attr('data-highres', highres);
+
     if ($(this).attr('src').includes('/s1600')) {
       var reres = $(this).attr('src').replace(/\/s([\d]*)\//,"/s" + resolution + "/");
       $(this).attr('src', reres);
@@ -175,7 +175,7 @@ $(document).ready(function(){
 			$(this).attr('data-layout', list.length);
 			for(l in list){
 				//$(this).append('<img src="https://img.youtube.com/vi/' + list[l] + '/0.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
-				$(this).append('<img src="http://i.ytimg.com/vi/' + list[l] + '/sddefault.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
+				$(this).append('<img src="https://i.ytimg.com/vi/' + list[l] + '/' + youtubeRes + '.jpg" onclick="loadVideo(\'' + layer + '\', \'' + list[l] + '\')" />');
 			}
 			$(this).after('<div class="video" id="'+ layer +'" style="display:none"></div>');
 		}
@@ -224,8 +224,9 @@ $(document).ready(function(){
 	});
 });
 
+/*
 var sc_project=10403974;
 var sc_invisible=1;
 var sc_security="54511e28";
-var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
-document.write("<script type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter_xhtml.js'></script>");
+<script type='text/javascript' src='https://secure.statcounter.com/counter/counter_xhtml.js'></script>
+*/
