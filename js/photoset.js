@@ -107,7 +107,7 @@
 				var col = 3;
 				if(val == 'A' || val == 'D') col = 4;
 				else if (val == 'B' || val == 'C') col = 3;
-				else if (val == 'W') col = 1;
+				else if (val == 'W' || val == 'Z') col = 1;
 				else col = parseInt(val, 10);
 
 				var rowStart = imageIndex;
@@ -184,6 +184,7 @@
 				var $colsC = $(elem).find('.cols-C .photoset-cell');
 				var $colsD = $(elem).find('.cols-D .photoset-cell');
 				var $colsW = $(elem).find('.cols-W .photoset-cell');
+				var $colsZ = $(elem).find('.cols-Z .photoset-cell');
 				var $cellBorder = $(elem).find('.photoset-content-border');
 
 				// Apply styles initial structure styles to the grid
@@ -337,14 +338,13 @@
 								});
 								return;
 							}
-							else if($(this).hasClass('cols-W')){
+							else if ($(this).hasClass('cols-W') || $(this).hasClass('cols-Z')) {
 								//console.log(w)
 								if (w >= 600){
-								
-								var breakoutMargin = -w / 8;
-								// Wide-style to break out of parent div
-								$(this).css({'margin-left' : breakoutMargin + 'px', 'margin-right': breakoutMargin + 'px'});
-								return;
+  								var breakoutMargin = -w / 8;
+  								// Wide-style to break out of parent div
+  								$(this).css({'margin-left' : breakoutMargin + 'px', 'margin-right': breakoutMargin + 'px'});
+  								return;
 								}
 							}
 
@@ -385,6 +385,16 @@
 
 						});
 						$(elem).attr('data-width', w );
+
+            $('.cols-Z').each(function(){
+              var imgurl = $('a > img', this).attr('src')
+              if (imgurl) {
+                $('a > img', this).css({'height': '0', 'width': '0'})
+                $(this).css({'background': 'fixed center no-repeat', 'background-size': 'cover', 'min-height': '100vh',
+              'background-image': 'url(' + imgurl + ')'});
+              }
+
+            })
 					}
 
 				}
