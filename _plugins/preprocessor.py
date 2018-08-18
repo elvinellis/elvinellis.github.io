@@ -31,8 +31,6 @@ for c in fileinput.input():
         t = ordinalThird.sub(r"3#[sup rd]", t)
         t = ordinalTh.sub(r"\1#[sup th]", t)
 
-        print t.rstrip()
+        print(t.rstrip())
     else:
-        print c.rstrip()
-    
-
+        print(c.rstrip())
