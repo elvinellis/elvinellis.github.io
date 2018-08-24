@@ -98,7 +98,7 @@ $(document).ready(function(){
   var width = $(window).width();
   if (width >= 3200) resolution = 3200;
   else if (width >= 2400) { resolution = 2400; youtubeRes = "maxresdefault"; }
-  else if (width >= 1280) { resolution = 1600;  }
+  else if (width >= 1200) { resolution = 1600;  }
   else if (width >= 900) { resolution = 1200; }
 
 
